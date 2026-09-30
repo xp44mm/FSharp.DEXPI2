@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.5:1", "", "DEXPI Process", "EARoot/EA5/EA962.htm", "176.png", "301", "0", "", "Package diagram0","{D41E2626-C4F5-410d-9C9A-5ABD251B3D07}");
+tocTab[tocTab.length] = new Array("0.5:2", "", "ProcessModel", "EARoot/EA5/EA974.htm", "5.png", "E4648", "0", "", "Class0","{6790F834-FFD1-49c2-BD1C-03986258DE0C}");
+tocTab[tocTab.length] = new Array("0.5.1", "1", "Enumerations", "EARoot/EA5/EA1/EA980.htm", "4.png", "", "", "{D30B7DB2-7B7F-451f-845E-B14641EE5E66}", "Package");
+tocTab[tocTab.length] = new Array("0.5.2", "1", "Process", "EARoot/EA5/EA2/EA996.htm", "4.png", "", "", "{87F23F95-71DD-4589-B778-8ACBA9319B68}", "Package");
+tocTab[tocTab.length] = new Array("0.5.3", "1", "[Views]", "EARoot/EA5/EA3/EA1155.htm", "4.png", "", "", "{9A9257C1-1197-424f-82E3-76EA3FD44C48}", "Package");

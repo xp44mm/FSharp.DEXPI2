@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.2:1", "", "Builtin", "EARoot/EA2/EA142.htm", "175.png", "289", "0", "", "Logical diagram0","{96789B4D-AE94-4cb9-9BDE-51450B131159}");
+tocTab[tocTab.length] = new Array("0.2:2", "", "AnyURI", "EARoot/EA2/EA146.htm", "229.png", "E4202", "0", "", "PrimitiveType0","{785D3EA2-4125-4314-8DD2-887617077F33}");
+tocTab[tocTab.length] = new Array("0.2:3", "", "Boolean", "EARoot/EA2/EA147.htm", "229.png", "E4203", "0", "", "PrimitiveType0","{49243AAB-C654-4b58-BAA3-9257789BC5D3}");
+tocTab[tocTab.length] = new Array("0.2:4", "", "DateTime", "EARoot/EA2/EA148.htm", "229.png", "E4204", "0", "", "PrimitiveType0","{89E611FE-3BD4-4413-95E5-BCA58B071049}");
+tocTab[tocTab.length] = new Array("0.2:5", "", "Double", "EARoot/EA2/EA149.htm", "229.png", "E4205", "0", "", "PrimitiveType0","{3873A18F-2EBC-4a17-AC6B-217169D4FFDE}");
+tocTab[tocTab.length] = new Array("0.2:6", "", "Integer", "EARoot/EA2/EA150.htm", "229.png", "E4206", "0", "", "PrimitiveType0","{8275D4A7-A416-4d06-964B-9B8B55EB6AF8}");
+tocTab[tocTab.length] = new Array("0.2:7", "", "String", "EARoot/EA2/EA151.htm", "229.png", "E4207", "0", "", "PrimitiveType0","{A8F53FC3-A1EF-4fc0-8E47-EF3AD5BF6A10}");
+tocTab[tocTab.length] = new Array("0.2:8", "", "Undefined", "EARoot/EA2/EA152.htm", "229.png", "E4208", "0", "", "PrimitiveType0","{31B8556D-9658-4931-B18B-FE6A1EE6A524}");
+tocTab[tocTab.length] = new Array("0.2:9", "", "UnsignedByte", "EARoot/EA2/EA153.htm", "229.png", "E4209", "0", "", "PrimitiveType0","{66BB0A87-0F95-459c-8081-5D9FFA90358B}");

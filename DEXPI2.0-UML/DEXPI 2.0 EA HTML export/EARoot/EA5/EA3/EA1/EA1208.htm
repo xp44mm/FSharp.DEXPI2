@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Splitting</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Splitting </h1>
+			<!-- <img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../EA3.htm">DEXPI 2.0</a> / <a href="../../EA964.htm">Process</a> / <a href="../EA1155.htm">[Views]</a> / <a href="EA1232.htm">Process Steps</a> / <a href="EA1208.htm">Splitting</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../images/176.png" alt="Diagram"/> <a href="EA1178.htm">Process Steps</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1180.htm">Process Steps Hierarchy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1182.htm">Emitting</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1184.htm">ExchangingThermalEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1186.htm">Flaring</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1188.htm">FormingSolidMaterial</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1190.htm">GeneratingFlow</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1192.htm">IncreasingParticleSize</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1194.htm">Mixing</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1196.htm">Packaging</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1198.htm">ReactingChemicals</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1200.htm">ReducingParticleSize</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1202.htm">RemovingThermalEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1204.htm">Separating</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1206.htm">Source and Sink</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1208.htm">Splitting</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1210.htm">SteeringFlow</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1212.htm">Storing</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1214.htm">StoringEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1216.htm">SupplyingFluids</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1218.htm">SupplyingElectricalEnergy </a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1220.htm">SupplyingMechanicalEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1222.htm">SupplyingSolids</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1224.htm">SupplyingThermalEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1226.htm">TransportingElectricalEnergy</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1228.htm">TransportingFluids</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA1230.htm">TransportingSolids</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA1209.png" usemap="#EA1209" border="0" />
+
+<MAP NAME="EA1209">
+<area shape="rect" coords="16,379,383,445" href="../../../EA1/EA77.htm" target="_self">
+<area shape="rect" coords="411,379,742,445" href="../../../EA1/EA79.htm" target="_self">
+<area shape="rect" coords="330,84,420,130" href="../../EA2/EA1071.htm" target="_self">
+<area shape="rect" coords="234,284,324,330" href="../../EA2/EA1105.htm" target="_self">
+<area shape="rect" coords="411,284,501,330" href="../../EA2/EA1104.htm" target="_self">
+<area shape="rect" coords="330,163,420,209" href="../../EA2/EA1103.htm" target="_self">
+<area shape="rect" coords="534,35,680,67" href="../../../EA15.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Splitting : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">12/09/2025 14:47:38</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">26/01/2026 12:03:44</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

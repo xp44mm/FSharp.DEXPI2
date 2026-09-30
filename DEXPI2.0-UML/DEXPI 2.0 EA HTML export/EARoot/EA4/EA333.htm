@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Piping</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Piping </h1>
+			<!-- <img class="header_image" src="../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA3.htm">DEXPI 2.0</a> / <a href="EA320.htm">Plant</a> / <a href="./EA4/EA498.htm">Piping</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA499.htm">AngleBallValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA500.htm">AngleGlobeValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA501.htm">AnglePlugValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA502.htm">AngleValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA503.htm">BallValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA504.htm">BlindFlange</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA505.htm">BreatherValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA506.htm">ButterflyValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA507.htm">CheckValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA508.htm">ClampedFlangeCoupling</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA509.htm">Compensator</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA510.htm">ConicalStrainer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA511.htm">DirectPipingConnection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA512.htm">ElectromagneticFlowMeter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA513.htm">FlameArrestor</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA514.htm">Flange</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA515.htm">FlangedConnection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA516.htm">FlowInPipeOffPageConnector</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA517.htm">FlowMeasuringElement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA518.htm">FlowNozzle</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA519.htm">FlowOutPipeOffPageConnector</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA520.htm">Funnel</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA521.htm">GateValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA522.htm">GlobeCheckValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA523.htm">GlobeValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA524.htm">Hose</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA525.htm">IlluminatedSightGlass</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA526.htm">InlineMeasuringElement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA527.htm">InLineMixer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA528.htm">LineBlind</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA529.htm">MassFlowMeasuringElement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA530.htm">NeedleValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA531.htm">OperatedValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA532.htm">Penetration</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA533.htm">Pipe</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA534.htm">PipeCoupling</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA535.htm">PipeFitting</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA536.htm">PipeFlangeSpacer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA537.htm">PipeFlangeSpade</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA538.htm">PipeOffPageConnector</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA539.htm">PipeOffPageConnectorObjectReference</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA540.htm">PipeOffPageConnectorReference</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA541.htm">PipeOffPageConnectorReferenceByNumber</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA542.htm">PipeReducer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA543.htm">PipeTee</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA544.htm">PipingComponent</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA545.htm">PipingConnection</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA546.htm">PipingNetworkSegment</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA547.htm">PipingNetworkSegmentItem</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA548.htm">PipingNetworkSystem</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA549.htm">PipingNode</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA550.htm">PipingNodeOwner</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA551.htm">PipingSourceItem</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA552.htm">PipingTargetItem</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA553.htm">PlugValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA554.htm">PositiveDisplacementFlowMeter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA555.htm">PropertyBreak</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA556.htm">RestrictionOrifice</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA557.htm">RuptureDisc</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA558.htm">SafetyValveOrFitting</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA559.htm">Sensorwell</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA560.htm">SightGlass</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA561.htm">Silencer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA562.htm">SpringLoadedAngleGlobeSafetyValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA563.htm">SpringLoadedGlobeSafetyValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA564.htm">SteamTrap</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA565.htm">StraightwayValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA566.htm">Strainer</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA567.htm">SwingCheckValve</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA568.htm">TurbineFlowMeter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA569.htm">VariableAreaFlowMeter</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA570.htm">VentLine</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA571.htm">VenturiTube</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA4/EA572.htm">VolumeFlowMeasuringElement</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Piping  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">23/12/2025 14:44:47</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/12/2025 14:44:47</td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{D957FD58-11A2-466d-9835-322C024FC6AE}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

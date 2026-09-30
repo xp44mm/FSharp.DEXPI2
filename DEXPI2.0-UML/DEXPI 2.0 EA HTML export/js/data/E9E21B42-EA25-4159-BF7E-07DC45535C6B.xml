@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("0.3.4:1", "", "Core Views", "EARoot/EA3/EA4/EA280.htm", "176.png", "300", "0", "", "Package diagram0","{39D39F96-7348-42a2-85E3-99B8A3D807C3}");
+tocTab[tocTab.length] = new Array("0.3.4:2", "", "Core classes", "EARoot/EA3/EA4/EA282.htm", "175.png", "291", "0", "", "Logical diagram0","{E7969E18-935D-499e-98BC-D36E72E36034}");
+tocTab[tocTab.length] = new Array("0.3.4:3", "", "Conceptual Object sub classes", "EARoot/EA3/EA4/EA284.htm", "175.png", "185", "0", "", "Logical diagram0","{BC789D24-7E14-4c98-B99C-3DA24C27A54D}");
+tocTab[tocTab.length] = new Array("0.3.4:4", "", "Diagram: Graphical Primitives and Text", "EARoot/EA3/EA4/EA286.htm", "175.png", "216", "0", "", "Logical diagram0","{611CEB3D-1C64-4b9c-B650-66C673559F11}");
+tocTab[tocTab.length] = new Array("0.3.4:5", "", "Diagram: Graphics Groups", "EARoot/EA3/EA4/EA288.htm", "175.png", "214", "0", "", "Logical diagram0","{B921F5B8-66E3-443c-8D09-C6FE313820E6}");
+tocTab[tocTab.length] = new Array("0.3.4:6", "", "Label subclasses", "EARoot/EA3/EA4/EA290.htm", "175.png", "215", "0", "", "Logical diagram0","{50BCBAD2-CEA8-4296-AC21-40BE474192D0}");
+tocTab[tocTab.length] = new Array("0.3.4:7", "", "Diagram: Node Position", "EARoot/EA3/EA4/EA292.htm", "175.png", "217", "0", "", "Logical diagram0","{14A56546-FD6F-49cc-8E49-3486DDEA3E86}");
+tocTab[tocTab.length] = new Array("0.3.4:8", "", "Diagram: Shape", "EARoot/EA3/EA4/EA294.htm", "175.png", "213", "0", "", "Logical diagram0","{48AC8E9A-443B-47eb-B29E-0E8DD01CFBF1}");

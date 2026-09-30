@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.5.3:1", "", "DEXPI Process", "EARoot/EA5/EA3/EA1139.htm", "176.png", "286", "0", "", "Package diagram0","{B45D60E6-A668-4939-9D60-8531ED006797}");
+tocTab[tocTab.length] = new Array("0.5.3:2", "", "Process Step, Port, Connection", "EARoot/EA5/EA3/EA1141.htm", "175.png", "148", "0", "", "Logical diagram0","{97E23A93-E78A-40d0-A961-35A083669B8C}");
+tocTab[tocTab.length] = new Array("0.5.3:3", "", "Process Step Detail", "EARoot/EA5/EA3/EA1143.htm", "175.png", "151", "0", "", "Logical diagram0","{23494F92-C801-4835-B7D3-94E4B18314EC}");
+tocTab[tocTab.length] = new Array("0.5.3:4", "", "Process step with Physical Quantities", "EARoot/EA5/EA3/EA1145.htm", "175.png", "154", "0", "", "Logical diagram0","{8A26A726-1A9F-4a11-98BA-52CE1B822257}");
+tocTab[tocTab.length] = new Array("0.5.3:5", "", "Process Connection Physical Quantities", "EARoot/EA5/EA3/EA1147.htm", "175.png", "297", "0", "", "Logical diagram0","{31DBD044-2504-475e-B23E-F7CB49FBDCDA}");
+tocTab[tocTab.length] = new Array("0.5.3:6", "", "Process Step subclasses", "EARoot/EA5/EA3/EA1149.htm", "175.png", "149", "0", "", "Logical diagram0","{5673A6ED-B2F6-4cc6-AF83-BDED69156BBD}");
+tocTab[tocTab.length] = new Array("0.5.3:7", "", "Stream, Material Template and Material State", "EARoot/EA5/EA3/EA1151.htm", "175.png", "152", "0", "", "Logical diagram0","{B9D3EFB8-5D14-4aa9-821A-71A1597541E6}");
+tocTab[tocTab.length] = new Array("0.5.3:8", "", "Structure of streams: Material Template", "EARoot/EA5/EA3/EA1153.htm", "175.png", "153", "0", "", "Logical diagram0","{6B6FCD00-9899-477c-9E07-9D4C1A696FED}");
+tocTab[tocTab.length] = new Array("0.5.3.1", "1", "Process Steps", "EARoot/EA5/EA3/EA1/EA1232.htm", "4.png", "", "", "{2F2C17B9-7CA5-41b2-8F60-9FF073CEB2F5}", "Package");

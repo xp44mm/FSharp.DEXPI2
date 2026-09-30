@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Instrumentation</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Instrumentation </h1>
+			<!-- <img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA3.htm">DEXPI 2.0</a> / <a href="../EA320.htm">Plant</a> / <a href="EA465.htm">Instrumentation</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA466.htm">ActuatingElectricalFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA467.htm">ActuatingElectricalLocation</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA468.htm">ActuatingElectricalSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA469.htm">ActuatingFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA470.htm">ActuatingSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA471.htm">ControlledActuator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA472.htm">ElectronicFrequencyConverter</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA473.htm">FlowDetector</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA474.htm">FlowInSignalOffPageConnector</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA475.htm">FlowOutSignalOffPageConnector</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA476.htm">InlineMeasuringElementReference</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA477.htm">InstrumentationLoopFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA478.htm">MeasuringElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA479.htm">MeasuringLineFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA480.htm">MeasuringSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA481.htm">OfflineMeasuringElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA482.htm">OperatedValveReference</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA483.htm">Positioner</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA484.htm">ProcessControlFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA485.htm">ProcessInstrumentationFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA486.htm">ProcessSignalGeneratingFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA487.htm">SensingLocation</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA488.htm">SensorwellReference</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA489.htm">SignalConveyingFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA490.htm">SignalConveyingFunctionSource</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA491.htm">SignalConveyingFunctionTarget</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA492.htm">SignalLineFunction</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA493.htm">SignalOffPageConnector</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA494.htm">SignalOffPageConnectorObjectReference</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA495.htm">SignalOffPageConnectorReference</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA496.htm">SignalOffPageConnectorReferenceByNumber</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA497.htm">Transmitter</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Instrumentation  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">23/12/2025 14:44:43</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/12/2025 14:44:43</td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{DF890274-3740-47e4-AE8F-4D0E1372E81B}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

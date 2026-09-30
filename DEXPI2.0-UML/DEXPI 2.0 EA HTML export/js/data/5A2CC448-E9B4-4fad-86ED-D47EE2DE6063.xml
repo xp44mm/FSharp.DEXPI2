@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("0.4.7.4:1", "", "PlantSection, ProcessPlant, PlantArea", "EARoot/EA4/EA7/EA4/EA949.htm", "175.png", "279", "0", "", "Logical diagram0","{902B3729-E7EA-4c4e-B2C2-1DF592C7A2B0}");
+tocTab[tocTab.length] = new Array("0.4.7.4:2", "", "PlantSystem, PlantTrain", "EARoot/EA4/EA7/EA4/EA951.htm", "175.png", "280", "0", "", "Logical diagram0","{8DBC63DA-031B-45f3-B990-278FB27336A3}");
+tocTab[tocTab.length] = new Array("0.4.7.4:3", "", "Site, Enterprise, IndustrialComplex", "EARoot/EA4/EA7/EA4/EA953.htm", "175.png", "278", "0", "", "Logical diagram0","{6516F7D3-CF62-497f-A7B5-D77F50EDD6EF}");
+tocTab[tocTab.length] = new Array("0.4.7.4:4", "", "TechnicalItem", "EARoot/EA4/EA7/EA4/EA955.htm", "175.png", "281", "0", "", "Logical diagram0","{E977F23E-9DBB-4661-A18D-3A1635606C3F}");

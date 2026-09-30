@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ProcessEquipment</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> ProcessEquipment </h1>
+			<!-- <img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA3.htm">DEXPI 2.0</a> / <a href="../EA320.htm">Plant</a> / <a href="EA591.htm">ProcessEquipment</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA592.htm">AccessNozzle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA593.htm">Agglomerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA594.htm">Agitator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA595.htm">AgitatorRotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA596.htm">AirCoolingSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA597.htm">AirEjector</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA598.htm">AlternatingCurrentGenerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA599.htm">AlternatingCurrentMotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA600.htm">AlternatingCurrentMotorAsComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA601.htm">AxialBlower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA602.htm">AxialCompressor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA603.htm">AxialFan</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA604.htm">BatchWeigher</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA605.htm">Blower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA606.htm">Boiler</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA607.htm">BriquettingRoller</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA608.htm">Burner</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA609.htm">CentrifugalBlower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA610.htm">CentrifugalCompressor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA611.htm">CentrifugalPump</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA612.htm">Centrifuge</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA613.htm">Chamber</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA614.htm">ChamberOwner</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA615.htm">Chimney</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA616.htm">ColumnInternalsArrangement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA617.htm">ColumnPackingsArrangement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA618.htm">ColumnSection</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA619.htm">ColumnTraysArrangement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA620.htm">CombustionEngine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA621.htm">CombustionEngineAsComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA622.htm">Compressor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA623.htm">ContinuousWeigher</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA624.htm">ConvectionDryer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA625.htm">Conveyor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA626.htm">CoolingTower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA627.htm">CoolingTowerRotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA628.htm">Crusher</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA629.htm">CrusherElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA630.htm">DirectCurrentGenerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA631.htm">DirectCurrentMotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA632.htm">DirectCurrentMotorAsComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA633.htm">Displacer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA634.htm">DryCoolingTower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA635.htm">Dryer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA636.htm">DryingChamber</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA637.htm">EjectorPump</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA638.htm">ElectricalSeparator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA639.htm">ElectricGenerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA640.htm">ElectricHeater</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA641.htm">EquipmentVent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA642.htm">Extruder</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA643.htm">Fan</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA644.htm">Feeder</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA645.htm">Filter</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA646.htm">FilteringCentrifuge</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA647.htm">FilteringCentrifugeDrum</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA648.htm">FilterUnit</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA649.htm">Flare</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA650.htm">ForkliftTruck</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA651.htm">Furnace</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA652.htm">GasFilter</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA653.htm">GasTurbine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA654.htm">GearBox</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA655.htm">GravitationalSeparator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA656.htm">Grinder</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA657.htm">GrindingElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA658.htm">HeatedSurfaceDryer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA659.htm">Heater</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA660.htm">HeatExchanger</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA661.htm">HeatExchangerRotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA662.htm">Impeller</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA663.htm">InstrumentNozzle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA664.htm">Kneader</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA665.htm">Lift</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA666.htm">LiquidFilter</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA667.htm">LoadingUnloadingSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA668.htm">MechanicalSeparator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA669.htm">Mill</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA670.htm">Mixer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA671.htm">MixingElementAssembly</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA672.htm">MobileTransportSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA673.htm">Motor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA674.htm">MotorAsComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA675.htm">Mount</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA676.htm">Nozzle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA677.htm">NozzleOwner</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA678.htm">PackagingSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA679.htm">PelletizerDisc</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA680.htm">PlateHeatExchanger</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA681.htm">PressureVessel</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA682.htm">ProcessColumn</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA683.htm">ProcessEquipment</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA684.htm">ProcessNozzle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA685.htm">Pump</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA686.htm">RadialFan</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA687.htm">RailWaggon</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA688.htm">ReciprocatingCompressor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA689.htm">ReciprocatingExtruder</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA690.htm">ReciprocatingPressureAgglomerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA691.htm">ReciprocatingPump</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA692.htm">RevolvingSieve</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA693.htm">RotaryCompressor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA694.htm">RotaryMixer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA695.htm">RotaryPump</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA696.htm">RotatingExtruder</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA697.htm">RotatingGrowthAgglomerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA698.htm">RotatingPressureAgglomerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA699.htm">Screw</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA700.htm">ScrubbingSeparator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA701.htm">SedimentalCentrifuge</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA702.htm">SedimentalCentrifugeDrum</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA703.htm">Separator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA704.htm">Ship</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA705.htm">Sieve</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA706.htm">SieveElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA707.htm">Silo</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA708.htm">SpiralHeatExchanger</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA709.htm">SprayCooler</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA710.htm">SprayNozzle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA711.htm">StaticMixer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA712.htm">StationarySieve</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA713.htm">StationaryTransportSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA714.htm">SteamGenerator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA715.htm">SteamTurbine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA716.htm">SubTaggedColumnSection</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA717.htm">TaggedColumnSection</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA718.htm">TaggedPlantItem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA719.htm">Tank</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA720.htm">ThinFilmEvaporator</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA721.htm">TransmissionDriver</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA722.htm">TransmissionSystem</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA723.htm">TransportableContainer</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA724.htm">Truck</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA725.htm">TubeBundle</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA726.htm">TubularHeatExchanger</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA727.htm">Turbine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA728.htm">Vent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA729.htm">Vessel</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA730.htm">VibratingSieve</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA731.htm">WasteGasEmitter</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA732.htm">Weigher</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA733.htm">WetCoolingTower</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">ProcessEquipment  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">23/12/2025 14:44:57</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/12/2025 14:44:57</td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{91F57B52-06B9-45fe-908C-1D5A20640DC5}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

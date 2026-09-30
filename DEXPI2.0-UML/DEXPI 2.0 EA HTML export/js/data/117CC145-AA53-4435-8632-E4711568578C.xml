@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.3.2.2:1", "", "AttributeRepresentationType", "EARoot/EA3/EA2/EA2/EA222.htm", "247.png", "E4226", "0", "", "Enumeration0","{CEC21643-7F52-4b6a-97FD-B5C9ADD20135}");
+tocTab[tocTab.length] = new Array("0.3.2.2:2", "", "ConfidentialityClassification", "EARoot/EA3/EA2/EA2/EA223.htm", "247.png", "E4229", "0", "", "Enumeration0","{B79BC6AE-0E46-4141-95EC-EFB2EA4483AA}");
+tocTab[tocTab.length] = new Array("0.3.2.2:3", "", "DashStyle", "EARoot/EA3/EA2/EA2/EA224.htm", "247.png", "E4232", "0", "", "Enumeration0","{8F3F08E2-B65E-46e0-A0DF-FE26501A3255}");
+tocTab[tocTab.length] = new Array("0.3.2.2:4", "", "FillStyle", "EARoot/EA3/EA2/EA2/EA225.htm", "247.png", "E4236", "0", "", "Enumeration0","{59C325FB-FC43-4f9e-9788-06D793E74704}");
+tocTab[tocTab.length] = new Array("0.3.2.2:5", "", "TextAlignment", "EARoot/EA3/EA2/EA2/EA226.htm", "247.png", "E4259", "0", "", "Enumeration0","{4B899E95-4FDE-4c8d-8CD6-F49961600865}");

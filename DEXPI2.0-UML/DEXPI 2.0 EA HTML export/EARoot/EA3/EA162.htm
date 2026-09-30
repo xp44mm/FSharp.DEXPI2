@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Diagram</title>
+<link href="../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Diagram </h1>
+			<!-- <img class="header_image" src="../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../EA3.htm">DEXPI 2.0</a> / <a href="EA156.htm">Core</a> / <a href="./EA2/EA183.htm">Diagram</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../images/175.png" alt="Diagram"/> <a href="./EA2/EA181.htm">Diagram</a></li>
+<li><img src="../../images/4.png" alt="Package"/> <a href="./EA2/EA1/EA217.htm">data types</a></li>
+<li><img src="../../images/4.png" alt="Package"/> <a href="./EA2/EA2/EA221.htm">enumerations</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA186.htm">AttributeRepresentation</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA187.htm">Border</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA188.htm">ConnectorLine</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA189.htm">CustomSymbol</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA191.htm">Diagram</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA192.htm">Ellipse</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA193.htm">EllipseArc</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA195.htm">GraphicalElement</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA196.htm">GraphicalPrimitive</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA197.htm">GraphicsGroup</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA198.htm">InsulationSymbol</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA199.htm">Label</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA200.htm">LiteralText</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA201.htm">MetaData</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA202.htm">NodePosition</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA203.htm">PipeFlowArrow</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA204.htm">PipeSlopeSymbol</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA205.htm">Polygon</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA206.htm">PolyLine</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA207.htm">RepresentationGroup</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA208.htm">RepresentationTypeGroup</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA209.htm">Shape</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA210.htm">ShapeCatalogue</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA211.htm">ShapeUsage</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA212.htm">Static</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA213.htm">Symbol</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA214.htm">Text</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA215.htm">TextTemplate</a></li>
+<li><img src="../../images/5.png" alt="Class"/> <a href="./EA2/EA216.htm">TextTemplateFragment</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Diagram  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">23/12/2025 14:44:26</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/12/2025 14:44:26</td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{0E8CCED5-82E1-4249-B4CB-7519257EFA6B}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA154.htm">Core</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Two-dimensional engineering diagrams.&#160;&#160;&#160;&#160;&lt;br/&gt;&lt;br/&gt;The Diagram package provides concepts&lt;br/&gt;&lt;br/&gt;1. for the graphical representation of a ConceptualObject,&lt;br/&gt;&lt;br/&gt;2. for linking parts of this graphical representation to parts of the&lt;br/&gt;&#160;&#160;&#160;ConceptualObject, and&lt;br/&gt;&lt;br/&gt;3. for semantic annotations of the graphical representation.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;.. admonition:: technical&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;This specification is not a drawing standard. It does not prescribe any drawing style or&lt;br/&gt;&#160;&#160;&#160;standard and it does not prescribe which information in a&lt;br/&gt;&#160;&#160;&#160;ConceptualObject has to be represented in a Diagram.&lt;br/&gt;&lt;br/&gt;.. admonition:: technical&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;Until version 1.2, graphics has not been in the scope of the DEXPI P&ID Specification.&lt;br/&gt;&#160;&#160;&#160;Graphics was handled as prescribed by :ref:`standard-proteus`. Over the years, some best&lt;br/&gt;&#160;&#160;&#160;practices concerning graphics have evolved in the DEXPI community, and fragmentary&lt;br/&gt;&#160;&#160;&#160;annotations have been added to the DEXPI P&ID Specification.&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;In DEXPI P&ID Specification 1.3, an informative Graphics package was added to cover&lt;br/&gt;&#160;&#160;&#160;conceptual and graphics information in a single comprehensive model.&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;For the P&ID Specification 1.4, the Graphics package was further&lt;br/&gt;&#160;&#160;&#160;elaborated, and it is now a normative part of the specification. It serves to document&lt;br/&gt;&#160;&#160;&#160;the best practices that have emerged in the past, but no new features have been added.&#160;&#160;&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;The Graphics package is independent from Proteus Schema in the sense that it is a pure&lt;br/&gt;&#160;&#160;&#160;UML package. But, like for all other packages in this specification, mappings to Proteus&lt;br/&gt;&#160;&#160;&#160;Schema are defined that describe how instances of the package&#39;s types are serialized.&lt;br/&gt;&#160;&#160;&#160;In consequence, the features of the Graphics package are constrained to what is supported&lt;br/&gt;&#160;&#160;&#160;by Proteus Schema. Future versions of the DEXPI P&ID Specification will skip support for&lt;br/&gt;&#160;&#160;&#160;Proteus Schema, such that additional features can be added to the Graphics package&lt;br/&gt;&#160;&#160;&#160;depending on the DEXPI community&#39;s needs.&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;Since DEXPI 2.0, the Graphics package can be used for both P&IDs and process models.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Example&lt;br/&gt;-------&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;We consider a simple ConceptualModel cm that contains a&lt;br/&gt;single CentrifugalPump with two&lt;br/&gt;ProcessNozzles and a&lt;br/&gt;Chamber; in total, there are five&lt;br/&gt;ConceptualObjects:&lt;br/&gt;&lt;br/&gt;.. image:: /images/img0.*&lt;br/&gt;&lt;br/&gt;A typical graphical representation of this model may look like this:&lt;br/&gt;&lt;br/&gt;.. image:: /images/img1.*&lt;br/&gt;&lt;br/&gt;Linking Graphics and Conceptual Objects&lt;br/&gt;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&lt;br/&gt;&lt;br/&gt;The graphics can be decomposed in parts each of which represents one of the&lt;br/&gt;ConceptualObjects. For each of these parts, we use a&lt;br/&gt;RepresentationGroup:&lt;br/&gt;&lt;br/&gt;.. image:: /images/img2.*&lt;br/&gt;&lt;br/&gt;- The Diagram d represents the entire ConceptualModel.&lt;br/&gt;&#160;&#160;Diagram is a subclass of RepresentationGroup that is meant to be used for&lt;br/&gt;&#160;&#160;the entire graphics. In addition to a conventional RepresentationGroup, a&lt;br/&gt;&#160;&#160;Diagram has a size (width and height) and a background color.&lt;br/&gt;&lt;br/&gt;- cp_grp is the RepresentationGroup for the&lt;br/&gt;&#160;&#160;CentrifugalPump cp.&lt;br/&gt;&lt;br/&gt;- pn1_grp and pn2_grp represent the two&lt;br/&gt;&#160;&#160;ProcessNozzles pn1 and&lt;br/&gt;&#160;&#160;pn2.&lt;br/&gt;&lt;br/&gt;Note that the composition hierarchy of the Diagram corresponds exactly to the&lt;br/&gt;composition hierarchy of the ConceptualModel. In the&lt;br/&gt;ConceptualModel, pn1 is a component of cp, and in&lt;br/&gt;the Diagram, pn1_grp is a component of cp_grp.&lt;br/&gt;&lt;br/&gt;However, if a ConceptualObject (including all its descendants) has no&lt;br/&gt;graphical representation at all, no RepresentationGroup is required: In the example&lt;br/&gt;above, there is no RepresentationGroup for the Chamber&lt;br/&gt;ch. &lt;br/&gt;&lt;br/&gt;Adding Semantics&lt;br/&gt;~~~~~~~~~~~~~~~~&lt;br/&gt;&lt;br/&gt;So far, we have decomposed the overall graphics in&lt;br/&gt;RepresentationGroups that correspond to&lt;br/&gt;certain ConceptualObjects. On a finer level of&lt;br/&gt;granularity, we can identify parts with different meanings. These meanings are covered by&lt;br/&gt;different subclasses of the abstract class RepresentationTypeGroup. In the example,&lt;br/&gt;two of these subclasses are used: Static and&lt;br/&gt;EquipmentTagNameLabel.&lt;br/&gt;&lt;br/&gt;.. image:: /images/img3.*&lt;br/&gt;&lt;br/&gt;- Consider cp_grp, the RepresentationGroup of the &lt;br/&gt;&#160;&#160;CentrifugalPump cp. In addition to the two&lt;br/&gt;&#160;&#160;groups for the ProcessNozzles,&lt;br/&gt;&#160;&#160;cp_grp now contains two&lt;br/&gt;&#160;&#160;RepresentationTypeGroups.&lt;br/&gt;&lt;br/&gt;&#160;&#160;- The Static group contains the actual&lt;br/&gt;&#160;&#160;&#160;&#160;CentrifugalPump graphics without any annotations, labels,&lt;br/&gt;&#160;&#160;&#160;&#160;etc.&lt;br/&gt;&lt;br/&gt;&#160;&#160;- The EquipmentTagNameLabel group displays the tag name of&lt;br/&gt;&#160;&#160;&#160;&#160;the CentrifugalPump.&lt;br/&gt;&lt;br/&gt;- pn1_grp contains a Static group for the basic symbol of the&lt;br/&gt;&#160;&#160;ProcessNozzle.&lt;br/&gt;&lt;br/&gt;- pn2_grp contains another Static group for the second&lt;br/&gt;&#160;&#160;ProcessNozzle symbol.&lt;br/&gt;&lt;br/&gt;Whereas RepresentationGroups can be&lt;br/&gt;decomposed in further groups,&lt;br/&gt;RepresentationTypeGroups cannot contain&lt;br/&gt;further groups.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Adding Graphical Elements&lt;br/&gt;~~~~~~~~~~~~~~~~~~~~~~~~~&lt;br/&gt;&lt;br/&gt;RepresentationTypeGroups rather contain&lt;br/&gt;GraphicalElements such as geometric&lt;br/&gt;primitives, texts, or ShapeUsages.&lt;br/&gt;&lt;br/&gt;.. image:: /images/img4.*&lt;br/&gt;&lt;br/&gt;- The Static group for the CentrifugalPump contains a&lt;br/&gt;&#160;&#160;ShapeUsage, i.e., a reference to a reusable Shape with information about&lt;br/&gt;&#160;&#160;this specific usage (scaling, rotation, position).&lt;br/&gt;&lt;br/&gt;- The EquipmentTagNameLabel for the&lt;br/&gt;&#160;&#160;CentrifugalPump contains a Text.&lt;br/&gt;&lt;br/&gt;- Both Static groups for the two&lt;br/&gt;&#160;&#160;ProcessNozzles contain a ShapeUsage.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Coordinate System&lt;br/&gt;-----------------&lt;br/&gt;&lt;br/&gt;The coordinate system used is a 2D Cartesian system whose horizontal axis is oriented to the right and whose vertical axis is oriented to the bottom. In consequence, angles are measured clockwise.&lt;br/&gt;&lt;br/&gt;Lengths are dimensionless. In the examples, we assume they are in millimeters.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;.. admonition:: proteus&lt;br/&gt;&lt;br/&gt;In Proteus Schema, the vertical axis to the top, and angles are measured anti-clockwise.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Mapping to SVG&lt;br/&gt;--------------&lt;br/&gt;&lt;br/&gt;The purpose of these mappings is to define the visualization of instances of the types in&lt;br/&gt;this package, i.e., &quot;how they look like&quot;.&lt;br/&gt;&lt;br/&gt;In order to keep the mappings simple, the SVG mappings for all&lt;br/&gt;GraphicalPrimitives are defined such that&lt;br/&gt;they can be easily scaled when they appear in a Shape (in particular, they use&lt;br/&gt;``vector-effect = &quot;non-scaling-stroke&quot;``). In consequence, further scaling, e.g., in an&lt;br/&gt;application, will lead to unacceptable results.&lt;br/&gt;&lt;br/&gt;.. admonition:: technical&lt;br/&gt;&lt;br/&gt;The SVG mappings in this specification must not be misunderstood as a proposal for&lt;br/&gt;exchanging P&ID graphics via SVG.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;.. _modulo-operator:&lt;br/&gt;&lt;br/&gt;Modulo Operator&lt;br/&gt;---------------&lt;br/&gt;&lt;br/&gt;In some calculations for the SVG and Proteus mappings, the *modulo operator* (or *remainder&lt;br/&gt;of division*) is used. As the modulo operator can be defined in different ways, we give a&lt;br/&gt;definition of how the operator is used in this specification. We content ourselves with a&lt;br/&gt;definition for positive quotients.&lt;br/&gt;&lt;br/&gt;Let :math:`q #gt; 0, a \in \mathbb R`. Then&lt;br/&gt;&lt;br/&gt;.. math::&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;a\,\textrm{mod}\,q = a - \left\lfloor \frac a q \right\rfloor \cdot q \quad .&lt;br/&gt;&lt;br/&gt;:math:`\lfloor.\rfloor` is the *floor function* that for :math:`x \in \mathbb R` yields the largest integer :math:`n` such that :math:`n \leq x`.&lt;br/&gt;&lt;br/&gt;For example,&lt;br/&gt;&lt;br/&gt;.. math::&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;0\,\textrm{mod}\,360 &= 0 - \left\lfloor \frac {0} {360} \right\rfloor \cdot 360 = 0 - 0 \cdot 360 = 0 \quad, \\&lt;br/&gt;&#160;&#160;&#160;100\,\textrm{mod}\,360 &= 100 - \left\lfloor \frac {100} {360} \right\rfloor \cdot 360 = 100 - 0 \cdot 360 = 100 \quad, \\&lt;br/&gt;&#160;&#160;&#160;359\,\textrm{mod}\,360 &= 359 - \left\lfloor \frac {359} {360} \right\rfloor \cdot 360 = 359 - 0 \cdot 360 = 359 \quad, \\&lt;br/&gt;&#160;&#160;&#160;360\,\textrm{mod}\,360 &= 360 - \left\lfloor \frac {360} {360} \right\rfloor \cdot 360 = 360 - 1 \cdot 360 = 0 \quad, \\&lt;br/&gt;&#160;&#160;&#160;(-100)\,\textrm{mod}\,360 &= -100 - \left\lfloor \frac {-100} {360} \right\rfloor \cdot 360 = -100 - (-1) \cdot 360 = 260 \quad. \\&lt;br/&gt;&lt;br/&gt;.. admonition:: technical&lt;br/&gt;&lt;br/&gt;&#160;&#160;&#160;The definition of the modulo operator differs between programming languages. For example, the modulo operator in Python, written :code:`%`, coincides with the definition above. The modulo operator in JavaScript (ECMAScript), also written :code:`%`, behaves differently for negative dividends: :code:`-100 % 360` is evaluated to :code:`-100`.&lt;br/&gt;</div>
+
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

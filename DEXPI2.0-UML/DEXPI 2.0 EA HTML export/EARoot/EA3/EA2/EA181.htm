@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Diagram</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Diagram </h1>
+			<!-- <img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA3.htm">DEXPI 2.0</a> / <a href="../EA156.htm">Core</a> / <a href="EA183.htm">Diagram</a> / <a href="EA181.htm">Diagram</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/175.png" alt="Diagram"/> <a href="EA181.htm">Diagram</a></li>
+<li><img src="../../../images/4.png" alt="Package"/> <a href="./EA1/EA217.htm">data types</a></li>
+<li><img src="../../../images/4.png" alt="Package"/> <a href="./EA2/EA221.htm">enumerations</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA186.htm">AttributeRepresentation</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA187.htm">Border</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA188.htm">ConnectorLine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA189.htm">CustomSymbol</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA191.htm">Diagram</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA192.htm">Ellipse</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA193.htm">EllipseArc</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA195.htm">GraphicalElement</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA196.htm">GraphicalPrimitive</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA197.htm">GraphicsGroup</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA198.htm">InsulationSymbol</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA199.htm">Label</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA200.htm">LiteralText</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA201.htm">MetaData</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA202.htm">NodePosition</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA203.htm">PipeFlowArrow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA204.htm">PipeSlopeSymbol</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA205.htm">Polygon</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA206.htm">PolyLine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA207.htm">RepresentationGroup</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA208.htm">RepresentationTypeGroup</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA209.htm">Shape</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA210.htm">ShapeCatalogue</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA211.htm">ShapeUsage</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA212.htm">Static</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA213.htm">Symbol</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA214.htm">Text</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA215.htm">TextTemplate</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA216.htm">TextTemplateFragment</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA182.png" usemap="#EA182" border="0" />
+
+<MAP NAME="EA182">
+<area shape="rect" coords="1142,624,1246,678" href="EA215.htm" target="_self">
+<area shape="rect" coords="943,820,1050,993" href="./EA2/EA226.htm" target="_self">
+<area shape="rect" coords="789,728,892,810" href="./EA1/EA220.htm" target="_self">
+<area shape="rect" coords="669,741,759,810" href="./EA1/EA219.htm" target="_self">
+<area shape="rect" coords="1045,10,1130,52" href="EA204.htm" target="_self">
+<area shape="rect" coords="943,10,1028,52" href="EA203.htm" target="_self">
+<area shape="rect" coords="79,702,336,1167" href="EA201.htm" target="_self">
+<area shape="rect" coords="1411,745,1506,821" href="EA200.htm" target="_self">
+<area shape="rect" coords="841,10,926,52" href="EA198.htm" target="_self">
+<area shape="rect" coords="780,820,888,915" href="./EA2/EA225.htm" target="_self">
+<area shape="rect" coords="301,351,406,465" href="EA191.htm" target="_self">
+<area shape="rect" coords="574,820,725,980" href="./EA2/EA224.htm" target="_self">
+<area shape="rect" coords="739,10,824,52" href="EA189.htm" target="_self">
+<area shape="rect" coords="371,820,519,902" href="./EA2/EA223.htm" target="_self">
+<area shape="rect" coords="922,728,1018,810" href="./EA1/EA218.htm" target="_self">
+<area shape="rect" coords="1193,843,1337,938" href="./EA2/EA222.htm" target="_self">
+<area shape="rect" coords="1193,745,1359,821" href="EA186.htm" target="_self">
+<area shape="rect" coords="1330,624,1444,678" href="EA216.htm" target="_self">
+<area shape="rect" coords="910,120,979,162" href="EA213.htm" target="_self">
+<area shape="rect" coords="836,120,905,162" href="EA212.htm" target="_self">
+<area shape="rect" coords="762,120,831,162" href="EA199.htm" target="_self">
+<area shape="rect" coords="688,120,757,162" href="EA187.htm" target="_self">
+<area shape="rect" coords="262,115,390,167" href="../../EA4/EA1/EA417.htm" target="_self">
+<area shape="rect" coords="74,115,220,167" href="../../EA4/EA1/EA404.htm" target="_self">
+<area shape="rect" coords="147,234,298,284" href="EA202.htm" target="_self">
+<area shape="rect" coords="944,588,1058,715" href="EA214.htm" target="_self">
+<area shape="rect" coords="669,588,798,663" href="EA206.htm" target="_self">
+<area shape="rect" coords="808,588,937,663" href="EA205.htm" target="_self">
+<area shape="rect" coords="529,588,658,715" href="EA193.htm" target="_self">
+<area shape="rect" coords="389,588,516,702" href="EA192.htm" target="_self">
+<area shape="rect" coords="147,588,371,677" href="EA188.htm" target="_self">
+<area shape="rect" coords="1084,486,1186,542" href="EA210.htm" target="_self">
+<area shape="rect" coords="728,418,972,531" href="EA209.htm" target="_self">
+<area shape="rect" coords="431,234,607,284" href="EA207.htm" target="_self">
+<area shape="rect" coords="1083,349,1186,471" href="EA211.htm" target="_self">
+<area shape="rect" coords="664,234,802,284" href="EA208.htm" target="_self">
+<area shape="rect" coords="579,120,674,167" href="EA197.htm" target="_self">
+<area shape="rect" coords="917,234,1035,284" href="EA195.htm" target="_self">
+<area shape="rect" coords="460,451,579,498" href="EA196.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Diagram : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">15/01/2025 00:00:00</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">24/12/2025 08:55:02</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

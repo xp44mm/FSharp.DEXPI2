@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  精简示例：储罐（箱子）怎么带上管嘴
+  格式忠实取自官方 reference_pid.xml（DEXPI Specification V2.0.0 发布包），T4750 对象结构。
+  链条：PlantModel.TaggedPlantItems → Tank → Nozzles(Nozzle) → Nodes(PipingNode，DN 在此) → PipingNetworkSystem.Segments(SourceItem/TargetItem = 管嘴)
+-->
+<Model name="TankWithNozzles" uri="http://www.example.org">
+  <Import prefix="Core" source="https://data.dexpi.org/models/2.0.0/Core.xml"/>
+  <Import prefix="Plant" source="https://data.dexpi.org/models/2.0.0/Plant.xml"/>
+  <Object type="Core/EngineeringModel">
+    <Components property="ConceptualModel">
+      <Object id="PlantModel1" type="Plant/PlantModel">
+        <Components property="TaggedPlantItems">
+          <Object id="Tank1" type="Plant/ProcessEquipment.Tank">
+            <!-- ① 箱子本体：双腔室（ChamberOwner.Chambers），DN 20000 mm -->
+            <Components property="Chambers">
+              <Object id="Chamber1" type="Plant/ProcessEquipment.Chamber">
+                <Data property="SubTagName"><String>Chamber 1</String></Data>
+                <Data property="NominalDiameter">
+                  <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+                    <Data property="Unit"><DataReference data="Core/PhysicalQuantities.LengthUnit.Millimetre"/></Data>
+                    <Data property="Value"><Double>20000.0</Double></Data>
+                  </AggregatedDataValue>
+                </Data>
+                <Data property="MaterialOfConstructionCode"><String>1.4306</String></Data>
+                <Data property="LowerLimitDesignPressure">
+                  <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+                    <Data property="Unit"><DataReference data="Core/PhysicalQuantities.PressureGaugeUnit.Bar"/></Data>
+                    <Data property="Value"><Double>-0.1</Double></Data>
+                  </AggregatedDataValue>
+                </Data>
+                <Data property="UpperLimitDesignPressure">
+                  <AggregatedDataValue type="Core/PhysicalQuantities.PhysicalQuantity">
+                    <Data property="Unit"><DataReference data="Core/PhysicalQuantities.PressureGaugeUnit.Bar"/></Data>
+                    <Data property="Value"><Double>0.1</Double></Data>
+                  </AggregatedDataValue>
+                </Data>
+              </Object>
+            </Components>
+            <!-- ② 箱子带管嘴：NozzleOwner.Nozzles（组合，每个 Nozzle 一个对象） -->
+            <Components property="Nozzles">
+              <Object id="Nozzle1" type="Plant/ProcessEquipment.Nozzle">
+                <!-- ③ 管嘴带管道节点：PipingNodeOwner.Nodes，DN 标注在这里（图上的 "N1 80"） -->
+                <Components property="Nodes">
+                  <Object id="PipingNode1" type="Plant/Piping.PipingNode">
+                    <Data property="NominalDiameterNumericalValueRepresentation"><String>80</String></Data>
+                    <Data property="NominalDiameterRepresentation"><String>DN 80</String></Data>
+                    <Data property="NominalDiameterStandard"><DataReference data="Plant/Enumerations.NominalDiameterStandardClassification.Din2448ObjectDn80"/></Data>
+                    <Data property="NominalDiameterTypeRepresentation"><String>DN</String></Data>
+                  </Object>
+                </Components>
+                <Data property="SubTagName"><String>N1</String></Data>
+              </Object>
+              <Object id="Nozzle2" type="Plant/ProcessEquipment.Nozzle">
+                <Components property="Nodes">
+                  <Object id="PipingNode2" type="Plant/Piping.PipingNode">
+                    <Data property="NominalDiameterNumericalValueRepresentation"><String>25</String></Data>
+                    <Data property="NominalDiameterRepresentation"><String>DN 25</String></Data>
+                    <Data property="NominalDiameterStandard"><DataReference data="Plant/Enumerations.NominalDiameterStandardClassification.Din2448ObjectDn25"/></Data>
+                    <Data property="NominalDiameterTypeRepresentation"><String>DN</String></Data>
+                  </Object>
+                </Components>
+                <Data property="SubTagName"><String>N2</String></Data>
+              </Object>
+            </Components>
+            <Data property="TagName"><String>T4750</String></Data>
+            <Data property="TagNamePrefix"><String>T</String></Data>
+            <Data property="TagNameSequenceNumber"><String>4750</String></Data>
+          </Object>
+        </Components>
+        <!-- ④ 管嘴接管道：管段用 References 把 Nozzle 当作 SourceItem/TargetItem（PipingSourceItem/PipingTargetItem） -->
+        <Components property="PipingNetworkSystems">
+          <Object id="PipingNetworkSystem1" type="Plant/Piping.PipingNetworkSystem">
+            <Components property="Segments">
+              <Object id="PipingNetworkSegment1" type="Plant/Piping.PipingNetworkSegment">
+                <Components property="Items">
+                  <Object type="Plant/Piping.PipingConnection">
+                    <References objects="#Nozzle1" property="SourceItem"/>
+                    <References objects="#Nozzle2" property="TargetItem"/>
+                  </Object>
+                </Components>
+              </Object>
+            </Components>
+          </Object>
+        </Components>
+      </Object>
+    </Components>
+  </Object>
+</Model>

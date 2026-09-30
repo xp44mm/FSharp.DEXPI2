@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Piping Connection</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Piping Connection </h1>
+			<!-- <img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../EA3.htm">DEXPI 2.0</a> / <a href="../../EA320.htm">Plant</a> / <a href="../EA736.htm">[Views]</a> / <a href="EA941.htm">Piping</a> / <a href="EA935.htm">Piping Connection</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA927.htm">CheckValve</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA929.htm">InlineMeasuringElement</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA931.htm">OperatedValve</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA933.htm">PipeFitting</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA935.htm">Piping Connection</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA937.htm">PropertyBreak</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA939.htm">SafetyValveOrFitting</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA936.png" usemap="#EA936" border="0" />
+
+<MAP NAME="EA936">
+<area shape="rect" coords="273,801,408,842" href="../../EA4/EA547.htm" target="_self">
+<area shape="rect" coords="691,106,870,164" href="../../EA4/EA540.htm" target="_self">
+<area shape="rect" coords="356,33,588,95" href="../../EA4/EA541.htm" target="_self">
+<area shape="rect" coords="356,111,588,165" href="../../EA4/EA539.htm" target="_self">
+<area shape="rect" coords="10,203,161,247" href="../../EA4/EA519.htm" target="_self">
+<area shape="rect" coords="179,258,330,302" href="../../EA4/EA516.htm" target="_self">
+<area shape="rect" coords="506,230,750,295" href="../../EA4/EA538.htm" target="_self">
+<area shape="rect" coords="971,230,1123,285" href="../../EA1/EA417.htm" target="_self">
+<area shape="rect" coords="823,230,927,285" href="../../EA4/EA550.htm" target="_self">
+<area shape="rect" coords="1077,780,1220,824" href="../../EA3/EA487.htm" target="_self">
+<area shape="rect" coords="1077,720,1220,764" href="../../EA3/EA467.htm" target="_self">
+<area shape="rect" coords="33,414,139,457" href="../../EA4/EA552.htm" target="_self">
+<area shape="rect" coords="204,351,305,394" href="../../EA4/EA551.htm" target="_self">
+<area shape="rect" coords="816,351,1143,466" href="../../EA4/EA549.htm" target="_self">
+<area shape="rect" coords="508,594,1000,968" href="../../EA4/EA546.htm" target="_self">
+<area shape="rect" coords="421,525,534,571" href="../../EA4/EA511.htm" target="_self">
+<area shape="rect" coords="403,351,649,457" href="../../EA4/EA545.htm" target="_self">
+<area shape="rect" coords="551,525,608,571" href="../../EA4/EA533.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Piping Connection : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">06/01/2025 14:09:59</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">09/03/2026 12:45:51</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.4:1", "", "DEXPI Plant Views", "EARoot/EA4/EA318.htm", "176.png", "285", "0", "", "Package diagram0","{F383659B-C461-4d7b-8667-4DA4EE08011C}");
+tocTab[tocTab.length] = new Array("0.4:2", "", "PlantModel", "EARoot/EA4/EA345.htm", "5.png", "E4309", "0", "", "Class0","{D4D7A0A8-5318-4894-8F36-2F12916FB62E}");
+tocTab[tocTab.length] = new Array("0.4.1", "1", "Diagram", "EARoot/EA4/EA1/EA395.htm", "4.png", "", "", "{FF0D428A-7370-4e33-B408-14DFC0239EAD}", "Package");
+tocTab[tocTab.length] = new Array("0.4.2", "1", "Enumerations", "EARoot/EA4/EA2/EA437.htm", "4.png", "", "", "{3117BC73-FC5D-4178-BAFF-879E0917B1A7}", "Package");
+tocTab[tocTab.length] = new Array("0.4.3", "1", "Instrumentation", "EARoot/EA4/EA3/EA465.htm", "4.png", "", "", "{DF890274-3740-47e4-AE8F-4D0E1372E81B}", "Package");
+tocTab[tocTab.length] = new Array("0.4.4", "1", "Piping", "EARoot/EA4/EA4/EA498.htm", "4.png", "", "", "{D957FD58-11A2-466d-9835-322C024FC6AE}", "Package");
+tocTab[tocTab.length] = new Array("0.4.5", "1", "PlantStructure", "EARoot/EA4/EA5/EA573.htm", "4.png", "", "", "{E2156E58-FF25-458f-961B-81497E6CC261}", "Package");
+tocTab[tocTab.length] = new Array("0.4.6", "1", "ProcessEquipment", "EARoot/EA4/EA6/EA591.htm", "4.png", "", "", "{91F57B52-06B9-45fe-908C-1D5A20640DC5}", "Package");
+tocTab[tocTab.length] = new Array("0.4.7", "1", "[Views]", "EARoot/EA4/EA7/EA736.htm", "4.png", "", "", "{95EC4679-83E4-4d99-B68A-4010A100632E}", "Package");

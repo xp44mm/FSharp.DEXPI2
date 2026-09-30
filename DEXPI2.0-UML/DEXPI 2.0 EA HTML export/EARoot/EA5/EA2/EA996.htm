@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Process</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Process </h1>
+			<!-- <img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../EA3.htm">DEXPI 2.0</a> / <a href="../EA964.htm">Process</a> / <a href="EA996.htm">Process</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA997.htm">Absorbing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA998.htm">Adsorbing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA999.htm">Agglomerating</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1000.htm">Agitating</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1001.htm">BlowingDown</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1002.htm">Boiling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1003.htm">CalculatingProcessVariable</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1004.htm">CalculatingRatio</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1005.htm">CalculatingSplitRange</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1006.htm">Coalescing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1007.htm">Composition</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1008.htm">Compressing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1009.htm">ContactingInPacking</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1010.htm">ContactingOnTray</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1011.htm">ControllingProcessVariable</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1012.htm">ConveyingSignal</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1013.htm">Cooling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1014.htm">Crushing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1015.htm">Crystallizing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1016.htm">CustomMaterialComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1017.htm">Cutting</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1018.htm">Distilling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1019.htm">Draining</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1020.htm">DrivingByEngine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1021.htm">DrivingByMotor</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1022.htm">DrivingByTurbine</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1023.htm">Drying</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1024.htm">ElectricalEnergyFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1025.htm">ElectricalEnergyPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1026.htm">Emitting</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1027.htm">EnergyFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1028.htm">EnergyPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1029.htm">Evaporating</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1030.htm">ExchangingThermalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1031.htm">Extruding</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1032.htm">FeedingMaterial</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1033.htm">Filtering</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1034.htm">Flaring</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1035.htm">Flocculating</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1036.htm">FormingSolidMaterial</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1037.htm">GeneratingACPower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1038.htm">GeneratingDCPower</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1039.htm">GeneratingFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1040.htm">GeneratingInFuelCell</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1041.htm">GeneratingSteam</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1042.htm">Grinding</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1043.htm">HeatingElectrical</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1044.htm">HeatingInFurnace</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1045.htm">Humidifying</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1046.htm">IncreasingParticleSize</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1047.htm">InformationFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1048.htm">InformationPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1049.htm">InformationVariant</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1050.htm">InstrumentationActivity</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1051.htm">InstrumentationSystemActivity</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1052.htm">Kneading</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1053.htm">LimitingFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1054.htm">ListOfMaterialComponents</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1055.htm">MaterialComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1056.htm">MaterialPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1057.htm">MaterialState</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1058.htm">MaterialStateType</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1059.htm">MaterialTemplate</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1060.htm">MeasuringProcessVariable</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1061.htm">MechanicalEnergyFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1062.htm">MechanicalEnergyPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1063.htm">Milling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1064.htm">Mixing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1065.htm">MixingSimple</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1066.htm">Packaging</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1067.htm">Pelletizing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1068.htm">Port</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1069.htm">PreventingBackflow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1070.htm">ProcessConnection</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1071.htm">ProcessStep</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1072.htm">ProcessStepDetail</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1073.htm">Pumping</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1074.htm">PureMaterialComponent</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1075.htm">ReactingChemicals</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1076.htm">ReducingParticleSize</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1077.htm">RegulatingFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1078.htm">RelievingOverpressure</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1079.htm">RelievingVacuum</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1080.htm">RelievingVacuumAndOverpressure</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1081.htm">RemovingThermalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1082.htm">RotaryMixing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1083.htm">Separating</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1084.htm">SeparatingByCentrifugalForce</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1085.htm">SeparatingByContact</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1086.htm">SeparatingByCyclonicMotion</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1087.htm">SeparatingByElectromagneticForce</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1088.htm">SeparatingByElectrostaticForce</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1089.htm">SeparatingByFlash</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1090.htm">SeparatingByGravity</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1091.htm">SeparatingByIonExchange</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1092.htm">SeparatingByMagneticForce</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1093.htm">SeparatingByPhaseSeparation</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1094.htm">SeparatingByPhysicalProcess</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1095.htm">SeparatingBySurfaceTension</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1096.htm">SeparatingByThermalProcess</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1097.htm">SeparatingMechanically</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1098.htm">ShuttingOffFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1099.htm">Sieving</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1100.htm">Sink</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1101.htm">Skimming</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1102.htm">Source</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1103.htm">Splitting</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1104.htm">SplittingEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1105.htm">SplittingMaterial</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1106.htm">StabilizingDistilling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1107.htm">StaticMixing</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1108.htm">SteeringFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1109.htm">StoringElectricalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1110.htm">StoringEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1111.htm">StoringFluids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1112.htm">StoringInBattery</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1113.htm">StoringInPressureVessel</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1114.htm">StoringInSilo</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1115.htm">StoringInTank</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1116.htm">StoringMaterial</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1117.htm">StoringSolids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1118.htm">StoringThermalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1119.htm">Stream</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1120.htm">StrippingDistilling</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1121.htm">SupplyingElectricalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1122.htm">SupplyingFluids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1123.htm">SupplyingMechanicalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1124.htm">SupplyingSolids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1125.htm">SupplyingThermalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1126.htm">SupplyingThermalEnergyWithBurner</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1127.htm">ThermalEnergyFlow</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1128.htm">ThermalEnergyPort</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1129.htm">TransformingProcessVariable</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1130.htm">TransportingElectricalEnergy</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1131.htm">TransportingFluids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1132.htm">TransportingFluidsInChannel</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1133.htm">TransportingFluidsInHose</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1134.htm">TransportingFluidsInPipe</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1135.htm">TransportingSolids</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1136.htm">TransportingSolidsContinuously</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1137.htm">TransportingSolidsDiscontinuously</a></li>
+<li><img src="../../../images/5.png" alt="Class"/> <a href="EA1138.htm">VacuumDistilling</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Process  : Public   Package</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">23/12/2025 14:45:10</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/12/2025 14:45:10</td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{87F23F95-71DD-4589-B778-8ACBA9319B68}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA962.htm">DEXPI Process</a></td>
+		</tr>
+	</table>
+	
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

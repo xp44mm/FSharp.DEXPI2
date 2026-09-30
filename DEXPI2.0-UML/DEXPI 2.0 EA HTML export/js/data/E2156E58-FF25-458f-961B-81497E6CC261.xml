@@ -1,0 +1,17 @@
+tocTab[tocTab.length] = new Array("0.4.5:1", "", "Enterprise", "EARoot/EA4/EA5/EA574.htm", "5.png", "E4487", "0", "", "Class0","{A023273D-691B-4438-A39D-C267E0DCB028}");
+tocTab[tocTab.length] = new Array("0.4.5:2", "", "IndustrialComplex", "EARoot/EA4/EA5/EA575.htm", "5.png", "E4488", "0", "", "Class0","{92104E2E-13DD-469e-8A00-B67EBBC0FDEF}");
+tocTab[tocTab.length] = new Array("0.4.5:3", "", "IndustrialComplexParentStructure", "EARoot/EA4/EA5/EA576.htm", "5.png", "E4489", "0", "", "Class0","{DA4332F2-CB12-4c82-BE7F-D7CFC7B418A9}");
+tocTab[tocTab.length] = new Array("0.4.5:4", "", "PlantArea", "EARoot/EA4/EA5/EA577.htm", "5.png", "E4490", "0", "", "Class0","{F5201FC7-848C-4229-A532-77A8F07E0436}");
+tocTab[tocTab.length] = new Array("0.4.5:5", "", "PlantAreaLocatedStructure", "EARoot/EA4/EA5/EA578.htm", "5.png", "E4491", "0", "", "Class0","{2FDD6648-0F35-4ff5-99CF-6BFB734E4210}");
+tocTab[tocTab.length] = new Array("0.4.5:6", "", "PlantSection", "EARoot/EA4/EA5/EA579.htm", "5.png", "E4492", "0", "", "Class0","{A6FD1C31-4CCC-4162-8A2B-5FDC4D08D7DD}");
+tocTab[tocTab.length] = new Array("0.4.5:7", "", "PlantSectionParentStructure", "EARoot/EA4/EA5/EA580.htm", "5.png", "E4493", "0", "", "Class0","{DEEA8DAD-5E76-44db-AE21-C00714E12CF7}");
+tocTab[tocTab.length] = new Array("0.4.5:8", "", "PlantStructureItem", "EARoot/EA4/EA5/EA581.htm", "5.png", "E4494", "0", "", "Class0","{27000C58-75F4-4b72-A726-C06C1B291784}");
+tocTab[tocTab.length] = new Array("0.4.5:9", "", "PlantSystem", "EARoot/EA4/EA5/EA582.htm", "5.png", "E4495", "0", "", "Class0","{C38BCE58-1500-48a9-898B-146586E882C9}");
+tocTab[tocTab.length] = new Array("0.4.5:10", "", "PlantSystemLocatedStructure", "EARoot/EA4/EA5/EA583.htm", "5.png", "E4496", "0", "", "Class0","{FFB4A71C-D944-4b87-B308-06974363B759}");
+tocTab[tocTab.length] = new Array("0.4.5:11", "", "PlantTrain", "EARoot/EA4/EA5/EA584.htm", "5.png", "E4497", "0", "", "Class0","{254153B6-C65F-4f78-9843-0A7F08BE911F}");
+tocTab[tocTab.length] = new Array("0.4.5:12", "", "PlantTrainLocatedStructure", "EARoot/EA4/EA5/EA585.htm", "5.png", "E4498", "0", "", "Class0","{CAD963B3-FC84-4689-85E2-D265CF6A9867}");
+tocTab[tocTab.length] = new Array("0.4.5:13", "", "ProcessPlant", "EARoot/EA4/EA5/EA586.htm", "5.png", "E4499", "0", "", "Class0","{4D0B2F7C-9B3F-4f83-ACB6-B61E16D97E91}");
+tocTab[tocTab.length] = new Array("0.4.5:14", "", "ProcessPlantParentStructure", "EARoot/EA4/EA5/EA587.htm", "5.png", "E4500", "0", "", "Class0","{48982332-933C-4622-87D1-E65DDF9CFA24}");
+tocTab[tocTab.length] = new Array("0.4.5:15", "", "Site", "EARoot/EA4/EA5/EA588.htm", "5.png", "E4501", "0", "", "Class0","{0F0898A0-CFCC-40fa-84EF-B12EC2B925D4}");
+tocTab[tocTab.length] = new Array("0.4.5:16", "", "TechnicalItem", "EARoot/EA4/EA5/EA589.htm", "5.png", "E4502", "0", "", "Class0","{49470AF3-2D2F-4c81-B22F-D05856787329}");
+tocTab[tocTab.length] = new Array("0.4.5:17", "", "TechnicalItemParentStructure", "EARoot/EA4/EA5/EA590.htm", "5.png", "E4503", "0", "", "Class0","{CCFD164C-796A-4edf-8F13-9A6343BC29CC}");

@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.4.7:1", "", "DEXPI Plant Model", "EARoot/EA4/EA7/EA734.htm", "175.png", "183", "0", "", "Logical diagram0","{A79088AE-3D7C-49b3-905F-8A7BB3CF037B}");
+tocTab[tocTab.length] = new Array("0.4.7.1", "1", "ProcessEquipment", "EARoot/EA4/EA7/EA1/EA868.htm", "4.png", "", "", "{BD672595-3E96-4a8d-A3D6-9763B4CA9263}", "Package");
+tocTab[tocTab.length] = new Array("0.4.7.2", "1", "Instrumentation", "EARoot/EA4/EA7/EA2/EA917.htm", "4.png", "", "", "{6B79126E-97D3-4b2c-85D1-0A4F6F03A155}", "Package");
+tocTab[tocTab.length] = new Array("0.4.7.3", "1", "Piping", "EARoot/EA4/EA7/EA3/EA941.htm", "4.png", "", "", "{F10AC3CE-6204-4dd9-A6A2-6534FF655984}", "Package");
+tocTab[tocTab.length] = new Array("0.4.7.4", "1", "Plant Structure", "EARoot/EA4/EA7/EA4/EA957.htm", "4.png", "", "", "{5A2CC448-E9B4-4fad-86ED-D47EE2DE6063}", "Package");

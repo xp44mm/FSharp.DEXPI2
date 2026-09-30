@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Process Instrumentation Function details</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../../../../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Process Instrumentation Function details </h1>
+			<!-- <img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../../../../images/dexpi.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="../../../EA3.htm">DEXPI 2.0</a> / <a href="../../EA320.htm">Plant</a> / <a href="../EA736.htm">[Views]</a> / <a href="EA917.htm">Instrumentation</a> / <a href="EA913.htm">Process Instrumentation Function details</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">Project: </div>
+						<ul>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA913.htm">Process Instrumentation Function details</a></li>
+<li><img src="../../../../images/175.png" alt="Diagram"/> <a href="EA915.htm">Signal Conveying Function Source and Target subclasses</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="PageBody">
+	<div class="diagram_image"> 
+<img src="EA914.png" usemap="#EA914" border="0" />
+
+<MAP NAME="EA914">
+<area shape="rect" coords="171,408,289,459" href="../../EA3/EA484.htm" target="_self">
+<area shape="rect" coords="537,983,765,1053" href="../../EA3/EA496.htm" target="_self">
+<area shape="rect" coords="780,983,1027,1036" href="../../EA3/EA494.htm" target="_self">
+<area shape="rect" coords="719,660,819,694" href="../../EA3/EA492.htm" target="_self">
+<area shape="rect" coords="1757,360,2192,578" href="../../EA3/EA481.htm" target="_self">
+<area shape="rect" coords="41,501,349,566" href="../../EA3/EA477.htm" target="_self">
+<area shape="rect" coords="836,660,954,694" href="../../EA3/EA479.htm" target="_self">
+<area shape="rect" coords="1756,292,2011,344" href="../../EA3/EA476.htm" target="_self">
+<area shape="rect" coords="1140,783,1292,824" href="../../EA3/EA474.htm" target="_self">
+<area shape="rect" coords="1044,718,1196,759" href="../../EA3/EA475.htm" target="_self">
+<area shape="rect" coords="1195,378,1286,415" href="../../EA3/EA473.htm" target="_self">
+<area shape="rect" coords="1509,501,1692,563" href="../../EA3/EA497.htm" target="_self">
+<area shape="rect" coords="1509,427,1692,489" href="../../EA3/EA488.htm" target="_self">
+<area shape="rect" coords="1509,363,1692,415" href="../../EA3/EA478.htm" target="_self">
+<area shape="rect" coords="1510,268,1693,328" href="../../EA3/EA483.htm" target="_self">
+<area shape="rect" coords="1726,208,1942,268" href="../../EA3/EA482.htm" target="_self">
+<area shape="rect" coords="1726,110,1942,198" href="../../EA3/EA471.htm" target="_self">
+<area shape="rect" coords="1587,28,1810,79" href="../../EA3/EA472.htm" target="_self">
+<area shape="rect" coords="692,880,857,920" href="../../EA3/EA495.htm" target="_self">
+<area shape="rect" coords="1044,561,1196,601" href="../../EA3/EA491.htm" target="_self">
+<area shape="rect" coords="1140,501,1292,541" href="../../EA3/EA490.htm" target="_self">
+<area shape="rect" coords="1132,430,1292,467" href="../../EA3/EA487.htm" target="_self">
+<area shape="rect" coords="1132,267,1349,344" href="../../EA3/EA480.htm" target="_self">
+<area shape="rect" coords="1132,162,1340,250" href="../../EA3/EA470.htm" target="_self">
+<area shape="rect" coords="1132,28,1404,90" href="../../EA3/EA468.htm" target="_self">
+<area shape="rect" coords="1132,106,1291,146" href="../../EA3/EA467.htm" target="_self">
+<area shape="rect" coords="692,716,964,824" href="../../EA3/EA493.htm" target="_self">
+<area shape="rect" coords="692,487,964,601" href="../../EA3/EA489.htm" target="_self">
+<area shape="rect" coords="692,283,964,468" href="../../EA3/EA486.htm" target="_self">
+<area shape="rect" coords="692,177,964,258" href="../../EA3/EA469.htm" target="_self">
+<area shape="rect" coords="692,47,964,152" href="../../EA3/EA466.htm" target="_self">
+<area shape="rect" coords="41,97,420,339" href="../../EA3/EA485.htm" target="_self">
+</MAP>
+ </div>
+	<div class="ObjectTitle">Process Instrumentation Function details : Class diagram</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">15/01/2025 00:00:00</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">24/12/2025 08:57:38</td>
+		</tr>
+	</table>
+	
+</div>
+
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+
