@@ -1,4 +1,4 @@
-A:link, A:hover {
+﻿A:link, A:hover {
 	color: #CC6633;
 	text-decoration: underline
 }
@@ -312,8 +312,8 @@ UL {
 	display: none;
 	margin-top: 17px;
 	border: 1px solid #999999;
-	height: 693px;
-	overflow: scroll;
+	max-height: 693px;
+	overflow: auto;
 }
 .ItemData {
 	overflow: auto;
@@ -327,6 +327,7 @@ UL {
 	position: relative;
 	margin-left: 0px;
 	margin-bottom: 16px;
+	overflow: hidden;
 }
 .ItemTitle LI {
 	background-color: #FFFFFF;

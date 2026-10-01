@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="ObjectId.fs" />
+    <Compile Include="MinimalXmlModel.fs" />
   </ItemGroup>
 
 </Project>

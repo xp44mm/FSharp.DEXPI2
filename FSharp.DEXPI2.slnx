@@ -2,4 +2,5 @@
   <Project Path="FSharp.DEXPI2/FSharp.DEXPI2.fsproj" />
   <Project Path="Dexpi2.Cpp/Dexpi2.Cpp.vcxproj" Id="5f8d2e4a-9b71-4c0e-8f3a-2d4c6e8a1b90" />
   <Project Path="Dexpi2CppGen/Dexpi2CppGen.csproj" />
+  <Project Path="FSharp.DEXPI2.Test/FSharp.DEXPI2.Test.fsproj" />
 </Solution>

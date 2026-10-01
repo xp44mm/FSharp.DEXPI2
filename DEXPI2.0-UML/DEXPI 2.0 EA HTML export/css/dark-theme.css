@@ -1,0 +1,82 @@
+﻿/* DEXPI 2.0 EA HTML export - dark theme override */
+/* 追加在 ea.css 之后加载；!important 确保覆盖原亮色规则。 */
+:root { color-scheme: dark; }
+
+html { background: #16181d; }
+body { background: #16181d !important; max-width: none !important; }
+BODY { background-color: #16181d !important; }
+BODY.Content { background-color: #1e2228 !important; }
+
+TD, TH, P, LI, OL, UL, DIV, SPAN, B, I, EM, STRONG { color: #c8c8c8; }
+H1, H2, H3, H4, .ObjectTitle, .projectBrowserTitle, .DiagramLabel { color: #e8e8e8 !important; }
+
+A:link, A:hover { color: #4da3ff !important; }
+A:active, A:visited { color: #8ab4f8 !important; }
+
+CODE { color: #e59866 !important; }
+PRE { background-color: #2b2f36 !important; color: #dcdcaa !important; }
+
+.content { background-color: #23272e !important; border: #3a3f46 1px solid !important; }
+.header { background-color: #2d333b !important; border: #3a3f46 1px solid !important; color: #d0d0d0 !important; }
+.tablehdr { background-color: #2d333b !important; }
+.tablecell1 { background-color: #23272e !important; }
+.Table2 { background-color: #1e2228 !important; }
+.TableRow { background-color: #23272e !important; color: #c8c8c8 !important; }
+.TableRowBottomDashed { background-color: #23272e !important; color: #c8c8c8 !important; border-color: #3a3f46 !important; }
+.TableGroup { background: #1e2228 !important; border: 1px solid #3a3f46 !important; }
+.TableHeading { background: #2d333b !important; border-color: #3a3f46 !important; }
+.TableField1, .TableField2 { color: #c8c8c8 !important; }
+
+.DetailsDivParent { background-color: #1e2228 !important; }
+.ObjectDetailsNotes { background-color: #262b33 !important; border: 1px solid #3a3f46 !important; color: #c8c8c8 !important; }
+.ObjectDetailsValue { color: #c8c8c8 !important; }
+.ObjectDetailsTopic { color: #9db4d0 !important; }
+.ObjectSubTitle, .ObjectSubTitleConstraint, .ObjectSubTitleIntReq,
+.ObjectSubTitleScenario, .ObjectSubTitleTaggedValues { color: #8ab4f8 !important; }
+.DiagramTitle { color: #8ab4f8 !important; }
+.LinkTitle, .ObjectLinkTitle { color: #8ab4f8 !important; }
+.NoteHeading { color: #9db4d0 !important; }
+.NoScript { background-color: #23272e !important; border: 1px solid #3a3f46 !important; color: #c8c8c8 !important; }
+
+.issuetable { background-color: #23272e !important; color: #c8c8c8 !important; }
+.issuehdr { background-color: #2d333b !important; border-color: #3a3f46 !important; color: #d0d0d0 !important; }
+.issuenone { background-color: #23272e !important; color: #c8c8c8 !important; }
+.issuetitle { background-color: #23272e !important; border-color: #3a3f46 !important; color: #8ab4f8 !important; }
+.issuecontent { background-color: #23272e !important; border-color: #3a3f46 !important; }
+
+.foot { background-color: #1e2228 !important; border-color: #3a3f46 !important; }
+.Footer { background-color: #2d333b !important; color: #9aa4af !important; }
+.FooterDetails, .HeaderDetails { background-color: #1e2228 !important; }
+.Header { background-color: #2d333b !important; color: #9aa4af !important; }
+
+.ItemTitle LI { background-color: #1e2228 !important; border-color: #3a3f46 !important; color: #c8c8c8 !important; }
+.menu { background-color: #2d333b !important; border: #3a3f46 1px solid !important; color: #d0d0d0 !important; }
+button { background-color: #2d333b !important; }
+
+.IndexHeader { background-color: #1e2228 !important; border-bottom-color: #3a3f46 !important; }
+.IndexTitle { color: #8ab4f8 !important; }
+.blank_diagram { background-color: #1e2228 !important; }
+.welcome_message, .body_object { color: #c8c8c8 !important; }
+
+.menu_frame, .indexcell, .contentcell, .breadcrumb_frame, .header_frame {
+    background-color: #1e2228 !important;
+    box-shadow: none !important;
+}
+
+#tocIFrame { background: #1e2228 !important; border-color: #3a3f46 !important; }
+#contentIFrame { border-color: #3a3f46 !important; }
+#linkDocIFrame { background-color: #1e2228 !important; }
+#Preload { background: #1e2228 !important; border-color: #3a3f46 !important; }
+#tmpRF { background: #33383f !important; border-color: #33383f !important; }
+
+/* 图面保持原样（PNG 白底图），不反色，保证模型图内容可读 */
+.diagram_image img { filter: none !important; background: #ffffff; }
+
+/* 字体放大一号：左侧导航 + 右侧内容正文（8pt 正文 → 10pt；11px 行 → 13px；标题保持原层级不放大） */
+BODY, TD, TH, P, LI, OL, UL, DIV, SPAN, A, B, I, EM, STRONG { font-size: 10pt !important; }
+.TableRow, .TableRowBottomDashed, .TableField1, .TableField2 { font-size: 13px !important; }
+.ItemTitle LI { font-size: 13px !important; }
+.ObjectDetails, .ObjectDetailsValue { font-size: 11pt !important; }
+.ObjectDetailsNotes { font-size: 10pt !important; }
+.IndexTitle, .projectBrowserTitle, .ObjectTitle { font-size: inherit !important; }
+
