@@ -230,8 +230,8 @@ let csTypeRef (currentNs: string list) (c: ClassDecl) : string =
     else csNamespace c.Ns + "." + c.Name
 
 /// Emit a closed discriminated union after the target class:
-/// one Case per non-abstract descendant (including non-leaf classes),
-/// each case carrying the corresponding C# System.Type.
+/// one distinct sealed-record case per non-abstract descendant
+/// (non-leaf classes included), each case carrying the C# System.Type.
 let emitUnion (b: StringBuilder) (target: ClassDecl) (desc: ClassDecl list) =
     let append (s: string) = b.Append(s).Append("\r\n") |> ignore
     append (sprintf "    /// <summary>可区分联合：%s 的所有非抽象派生类型（含非叶类）。每个案例荷载对应的 C# 类型。</summary>" target.Name)
@@ -239,14 +239,15 @@ let emitUnion (b: StringBuilder) (target: ClassDecl) (desc: ClassDecl list) =
     append "    {"
     append (sprintf "        private %sUnion() { }" target.Name)
     append ""
-    append "        /// <summary>一个联合案例：荷载 C# 类型。</summary>"
-    append ("        public sealed record Case(Type Type) : " + target.Name + "Union;")
-    append ""
+    for d in desc do
+        append (sprintf "        /// <summary>案例：%s，荷载 C# 类型。</summary>" (csTypeRef target.Ns d))
+        append (sprintf "        public sealed record %sCase(Type Type) : %sUnion;" d.Name target.Name)
+        append ""
     append "        /// <summary>全部案例（含非叶类），按 C# 类型全名排序。</summary>"
     append (sprintf "        public static readonly %sUnion[] All =" target.Name)
     append "        {"
     for d in desc do
-        append (sprintf "            new Case(typeof(%s))," (csTypeRef target.Ns d))
+        append (sprintf "            new %sCase(typeof(%s))," d.Name (csTypeRef target.Ns d))
     append "        };"
     append "    }"
     append ""

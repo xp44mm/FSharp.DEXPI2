@@ -3152,112 +3152,409 @@ namespace Dexpi2.Plant.Processequipment
     {
         private TaggedPlantItemUnion() { }
 
-        /// <summary>一个联合案例：荷载 C# 类型。</summary>
-        public sealed record Case(Type Type) : TaggedPlantItemUnion;
+        /// <summary>案例：Agglomerator，荷载 C# 类型。</summary>
+        public sealed record AgglomeratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Agitator，荷载 C# 类型。</summary>
+        public sealed record AgitatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AirCoolingSystem，荷载 C# 类型。</summary>
+        public sealed record AirCoolingSystemCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AirEjector，荷载 C# 类型。</summary>
+        public sealed record AirEjectorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AlternatingCurrentGenerator，荷载 C# 类型。</summary>
+        public sealed record AlternatingCurrentGeneratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AlternatingCurrentMotor，荷载 C# 类型。</summary>
+        public sealed record AlternatingCurrentMotorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AxialBlower，荷载 C# 类型。</summary>
+        public sealed record AxialBlowerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AxialCompressor，荷载 C# 类型。</summary>
+        public sealed record AxialCompressorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：AxialFan，荷载 C# 类型。</summary>
+        public sealed record AxialFanCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：BatchWeigher，荷载 C# 类型。</summary>
+        public sealed record BatchWeigherCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Blower，荷载 C# 类型。</summary>
+        public sealed record BlowerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Boiler，荷载 C# 类型。</summary>
+        public sealed record BoilerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Burner，荷载 C# 类型。</summary>
+        public sealed record BurnerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：CentrifugalBlower，荷载 C# 类型。</summary>
+        public sealed record CentrifugalBlowerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：CentrifugalCompressor，荷载 C# 类型。</summary>
+        public sealed record CentrifugalCompressorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：CentrifugalPump，荷载 C# 类型。</summary>
+        public sealed record CentrifugalPumpCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Centrifuge，荷载 C# 类型。</summary>
+        public sealed record CentrifugeCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Chimney，荷载 C# 类型。</summary>
+        public sealed record ChimneyCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：CombustionEngine，荷载 C# 类型。</summary>
+        public sealed record CombustionEngineCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Compressor，荷载 C# 类型。</summary>
+        public sealed record CompressorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ContinuousWeigher，荷载 C# 类型。</summary>
+        public sealed record ContinuousWeigherCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ConvectionDryer，荷载 C# 类型。</summary>
+        public sealed record ConvectionDryerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Conveyor，荷载 C# 类型。</summary>
+        public sealed record ConveyorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：CoolingTower，荷载 C# 类型。</summary>
+        public sealed record CoolingTowerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Crusher，荷载 C# 类型。</summary>
+        public sealed record CrusherCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：DirectCurrentGenerator，荷载 C# 类型。</summary>
+        public sealed record DirectCurrentGeneratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：DirectCurrentMotor，荷载 C# 类型。</summary>
+        public sealed record DirectCurrentMotorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：DryCoolingTower，荷载 C# 类型。</summary>
+        public sealed record DryCoolingTowerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Dryer，荷载 C# 类型。</summary>
+        public sealed record DryerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：EjectorPump，荷载 C# 类型。</summary>
+        public sealed record EjectorPumpCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ElectricGenerator，荷载 C# 类型。</summary>
+        public sealed record ElectricGeneratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ElectricHeater，荷载 C# 类型。</summary>
+        public sealed record ElectricHeaterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ElectricalSeparator，荷载 C# 类型。</summary>
+        public sealed record ElectricalSeparatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Extruder，荷载 C# 类型。</summary>
+        public sealed record ExtruderCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Fan，荷载 C# 类型。</summary>
+        public sealed record FanCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Feeder，荷载 C# 类型。</summary>
+        public sealed record FeederCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Filter，荷载 C# 类型。</summary>
+        public sealed record FilterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：FilteringCentrifuge，荷载 C# 类型。</summary>
+        public sealed record FilteringCentrifugeCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Flare，荷载 C# 类型。</summary>
+        public sealed record FlareCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ForkliftTruck，荷载 C# 类型。</summary>
+        public sealed record ForkliftTruckCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Furnace，荷载 C# 类型。</summary>
+        public sealed record FurnaceCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：GasFilter，荷载 C# 类型。</summary>
+        public sealed record GasFilterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：GasTurbine，荷载 C# 类型。</summary>
+        public sealed record GasTurbineCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：GravitationalSeparator，荷载 C# 类型。</summary>
+        public sealed record GravitationalSeparatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Grinder，荷载 C# 类型。</summary>
+        public sealed record GrinderCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：HeatExchanger，荷载 C# 类型。</summary>
+        public sealed record HeatExchangerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：HeatedSurfaceDryer，荷载 C# 类型。</summary>
+        public sealed record HeatedSurfaceDryerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Heater，荷载 C# 类型。</summary>
+        public sealed record HeaterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Kneader，荷载 C# 类型。</summary>
+        public sealed record KneaderCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Lift，荷载 C# 类型。</summary>
+        public sealed record LiftCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：LiquidFilter，荷载 C# 类型。</summary>
+        public sealed record LiquidFilterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：LoadingUnloadingSystem，荷载 C# 类型。</summary>
+        public sealed record LoadingUnloadingSystemCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：MechanicalSeparator，荷载 C# 类型。</summary>
+        public sealed record MechanicalSeparatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Mill，荷载 C# 类型。</summary>
+        public sealed record MillCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Mixer，荷载 C# 类型。</summary>
+        public sealed record MixerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：MobileTransportSystem，荷载 C# 类型。</summary>
+        public sealed record MobileTransportSystemCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Motor，荷载 C# 类型。</summary>
+        public sealed record MotorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：PackagingSystem，荷载 C# 类型。</summary>
+        public sealed record PackagingSystemCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：PlateHeatExchanger，荷载 C# 类型。</summary>
+        public sealed record PlateHeatExchangerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：PressureVessel，荷载 C# 类型。</summary>
+        public sealed record PressureVesselCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ProcessColumn，荷载 C# 类型。</summary>
+        public sealed record ProcessColumnCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Pump，荷载 C# 类型。</summary>
+        public sealed record PumpCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RadialFan，荷载 C# 类型。</summary>
+        public sealed record RadialFanCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RailWaggon，荷载 C# 类型。</summary>
+        public sealed record RailWaggonCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ReciprocatingCompressor，荷载 C# 类型。</summary>
+        public sealed record ReciprocatingCompressorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ReciprocatingExtruder，荷载 C# 类型。</summary>
+        public sealed record ReciprocatingExtruderCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ReciprocatingPressureAgglomerator，荷载 C# 类型。</summary>
+        public sealed record ReciprocatingPressureAgglomeratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ReciprocatingPump，荷载 C# 类型。</summary>
+        public sealed record ReciprocatingPumpCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RevolvingSieve，荷载 C# 类型。</summary>
+        public sealed record RevolvingSieveCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotaryCompressor，荷载 C# 类型。</summary>
+        public sealed record RotaryCompressorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotaryMixer，荷载 C# 类型。</summary>
+        public sealed record RotaryMixerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotaryPump，荷载 C# 类型。</summary>
+        public sealed record RotaryPumpCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotatingExtruder，荷载 C# 类型。</summary>
+        public sealed record RotatingExtruderCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotatingGrowthAgglomerator，荷载 C# 类型。</summary>
+        public sealed record RotatingGrowthAgglomeratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：RotatingPressureAgglomerator，荷载 C# 类型。</summary>
+        public sealed record RotatingPressureAgglomeratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ScrubbingSeparator，荷载 C# 类型。</summary>
+        public sealed record ScrubbingSeparatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：SedimentalCentrifuge，荷载 C# 类型。</summary>
+        public sealed record SedimentalCentrifugeCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Separator，荷载 C# 类型。</summary>
+        public sealed record SeparatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Ship，荷载 C# 类型。</summary>
+        public sealed record ShipCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Sieve，荷载 C# 类型。</summary>
+        public sealed record SieveCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Silo，荷载 C# 类型。</summary>
+        public sealed record SiloCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：SpiralHeatExchanger，荷载 C# 类型。</summary>
+        public sealed record SpiralHeatExchangerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：SprayCooler，荷载 C# 类型。</summary>
+        public sealed record SprayCoolerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：StaticMixer，荷载 C# 类型。</summary>
+        public sealed record StaticMixerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：StationarySieve，荷载 C# 类型。</summary>
+        public sealed record StationarySieveCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：StationaryTransportSystem，荷载 C# 类型。</summary>
+        public sealed record StationaryTransportSystemCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：SteamGenerator，荷载 C# 类型。</summary>
+        public sealed record SteamGeneratorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：SteamTurbine，荷载 C# 类型。</summary>
+        public sealed record SteamTurbineCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：TaggedColumnSection，荷载 C# 类型。</summary>
+        public sealed record TaggedColumnSectionCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Tank，荷载 C# 类型。</summary>
+        public sealed record TankCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：ThinFilmEvaporator，荷载 C# 类型。</summary>
+        public sealed record ThinFilmEvaporatorCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：TransportableContainer，荷载 C# 类型。</summary>
+        public sealed record TransportableContainerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Truck，荷载 C# 类型。</summary>
+        public sealed record TruckCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：TubularHeatExchanger，荷载 C# 类型。</summary>
+        public sealed record TubularHeatExchangerCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Turbine，荷载 C# 类型。</summary>
+        public sealed record TurbineCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Vessel，荷载 C# 类型。</summary>
+        public sealed record VesselCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：VibratingSieve，荷载 C# 类型。</summary>
+        public sealed record VibratingSieveCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：WasteGasEmitter，荷载 C# 类型。</summary>
+        public sealed record WasteGasEmitterCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：Weigher，荷载 C# 类型。</summary>
+        public sealed record WeigherCase(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>案例：WetCoolingTower，荷载 C# 类型。</summary>
+        public sealed record WetCoolingTowerCase(Type Type) : TaggedPlantItemUnion;
 
         /// <summary>全部案例（含非叶类），按 C# 类型全名排序。</summary>
         public static readonly TaggedPlantItemUnion[] All =
         {
-            new Case(typeof(Agglomerator)),
-            new Case(typeof(Agitator)),
-            new Case(typeof(AirCoolingSystem)),
-            new Case(typeof(AirEjector)),
-            new Case(typeof(AlternatingCurrentGenerator)),
-            new Case(typeof(AlternatingCurrentMotor)),
-            new Case(typeof(AxialBlower)),
-            new Case(typeof(AxialCompressor)),
-            new Case(typeof(AxialFan)),
-            new Case(typeof(BatchWeigher)),
-            new Case(typeof(Blower)),
-            new Case(typeof(Boiler)),
-            new Case(typeof(Burner)),
-            new Case(typeof(CentrifugalBlower)),
-            new Case(typeof(CentrifugalCompressor)),
-            new Case(typeof(CentrifugalPump)),
-            new Case(typeof(Centrifuge)),
-            new Case(typeof(Chimney)),
-            new Case(typeof(CombustionEngine)),
-            new Case(typeof(Compressor)),
-            new Case(typeof(ContinuousWeigher)),
-            new Case(typeof(ConvectionDryer)),
-            new Case(typeof(Conveyor)),
-            new Case(typeof(CoolingTower)),
-            new Case(typeof(Crusher)),
-            new Case(typeof(DirectCurrentGenerator)),
-            new Case(typeof(DirectCurrentMotor)),
-            new Case(typeof(DryCoolingTower)),
-            new Case(typeof(Dryer)),
-            new Case(typeof(EjectorPump)),
-            new Case(typeof(ElectricGenerator)),
-            new Case(typeof(ElectricHeater)),
-            new Case(typeof(ElectricalSeparator)),
-            new Case(typeof(Extruder)),
-            new Case(typeof(Fan)),
-            new Case(typeof(Feeder)),
-            new Case(typeof(Filter)),
-            new Case(typeof(FilteringCentrifuge)),
-            new Case(typeof(Flare)),
-            new Case(typeof(ForkliftTruck)),
-            new Case(typeof(Furnace)),
-            new Case(typeof(GasFilter)),
-            new Case(typeof(GasTurbine)),
-            new Case(typeof(GravitationalSeparator)),
-            new Case(typeof(Grinder)),
-            new Case(typeof(HeatExchanger)),
-            new Case(typeof(HeatedSurfaceDryer)),
-            new Case(typeof(Heater)),
-            new Case(typeof(Kneader)),
-            new Case(typeof(Lift)),
-            new Case(typeof(LiquidFilter)),
-            new Case(typeof(LoadingUnloadingSystem)),
-            new Case(typeof(MechanicalSeparator)),
-            new Case(typeof(Mill)),
-            new Case(typeof(Mixer)),
-            new Case(typeof(MobileTransportSystem)),
-            new Case(typeof(Motor)),
-            new Case(typeof(PackagingSystem)),
-            new Case(typeof(PlateHeatExchanger)),
-            new Case(typeof(PressureVessel)),
-            new Case(typeof(ProcessColumn)),
-            new Case(typeof(Pump)),
-            new Case(typeof(RadialFan)),
-            new Case(typeof(RailWaggon)),
-            new Case(typeof(ReciprocatingCompressor)),
-            new Case(typeof(ReciprocatingExtruder)),
-            new Case(typeof(ReciprocatingPressureAgglomerator)),
-            new Case(typeof(ReciprocatingPump)),
-            new Case(typeof(RevolvingSieve)),
-            new Case(typeof(RotaryCompressor)),
-            new Case(typeof(RotaryMixer)),
-            new Case(typeof(RotaryPump)),
-            new Case(typeof(RotatingExtruder)),
-            new Case(typeof(RotatingGrowthAgglomerator)),
-            new Case(typeof(RotatingPressureAgglomerator)),
-            new Case(typeof(ScrubbingSeparator)),
-            new Case(typeof(SedimentalCentrifuge)),
-            new Case(typeof(Separator)),
-            new Case(typeof(Ship)),
-            new Case(typeof(Sieve)),
-            new Case(typeof(Silo)),
-            new Case(typeof(SpiralHeatExchanger)),
-            new Case(typeof(SprayCooler)),
-            new Case(typeof(StaticMixer)),
-            new Case(typeof(StationarySieve)),
-            new Case(typeof(StationaryTransportSystem)),
-            new Case(typeof(SteamGenerator)),
-            new Case(typeof(SteamTurbine)),
-            new Case(typeof(TaggedColumnSection)),
-            new Case(typeof(Tank)),
-            new Case(typeof(ThinFilmEvaporator)),
-            new Case(typeof(TransportableContainer)),
-            new Case(typeof(Truck)),
-            new Case(typeof(TubularHeatExchanger)),
-            new Case(typeof(Turbine)),
-            new Case(typeof(Vessel)),
-            new Case(typeof(VibratingSieve)),
-            new Case(typeof(WasteGasEmitter)),
-            new Case(typeof(Weigher)),
-            new Case(typeof(WetCoolingTower)),
+            new AgglomeratorCase(typeof(Agglomerator)),
+            new AgitatorCase(typeof(Agitator)),
+            new AirCoolingSystemCase(typeof(AirCoolingSystem)),
+            new AirEjectorCase(typeof(AirEjector)),
+            new AlternatingCurrentGeneratorCase(typeof(AlternatingCurrentGenerator)),
+            new AlternatingCurrentMotorCase(typeof(AlternatingCurrentMotor)),
+            new AxialBlowerCase(typeof(AxialBlower)),
+            new AxialCompressorCase(typeof(AxialCompressor)),
+            new AxialFanCase(typeof(AxialFan)),
+            new BatchWeigherCase(typeof(BatchWeigher)),
+            new BlowerCase(typeof(Blower)),
+            new BoilerCase(typeof(Boiler)),
+            new BurnerCase(typeof(Burner)),
+            new CentrifugalBlowerCase(typeof(CentrifugalBlower)),
+            new CentrifugalCompressorCase(typeof(CentrifugalCompressor)),
+            new CentrifugalPumpCase(typeof(CentrifugalPump)),
+            new CentrifugeCase(typeof(Centrifuge)),
+            new ChimneyCase(typeof(Chimney)),
+            new CombustionEngineCase(typeof(CombustionEngine)),
+            new CompressorCase(typeof(Compressor)),
+            new ContinuousWeigherCase(typeof(ContinuousWeigher)),
+            new ConvectionDryerCase(typeof(ConvectionDryer)),
+            new ConveyorCase(typeof(Conveyor)),
+            new CoolingTowerCase(typeof(CoolingTower)),
+            new CrusherCase(typeof(Crusher)),
+            new DirectCurrentGeneratorCase(typeof(DirectCurrentGenerator)),
+            new DirectCurrentMotorCase(typeof(DirectCurrentMotor)),
+            new DryCoolingTowerCase(typeof(DryCoolingTower)),
+            new DryerCase(typeof(Dryer)),
+            new EjectorPumpCase(typeof(EjectorPump)),
+            new ElectricGeneratorCase(typeof(ElectricGenerator)),
+            new ElectricHeaterCase(typeof(ElectricHeater)),
+            new ElectricalSeparatorCase(typeof(ElectricalSeparator)),
+            new ExtruderCase(typeof(Extruder)),
+            new FanCase(typeof(Fan)),
+            new FeederCase(typeof(Feeder)),
+            new FilterCase(typeof(Filter)),
+            new FilteringCentrifugeCase(typeof(FilteringCentrifuge)),
+            new FlareCase(typeof(Flare)),
+            new ForkliftTruckCase(typeof(ForkliftTruck)),
+            new FurnaceCase(typeof(Furnace)),
+            new GasFilterCase(typeof(GasFilter)),
+            new GasTurbineCase(typeof(GasTurbine)),
+            new GravitationalSeparatorCase(typeof(GravitationalSeparator)),
+            new GrinderCase(typeof(Grinder)),
+            new HeatExchangerCase(typeof(HeatExchanger)),
+            new HeatedSurfaceDryerCase(typeof(HeatedSurfaceDryer)),
+            new HeaterCase(typeof(Heater)),
+            new KneaderCase(typeof(Kneader)),
+            new LiftCase(typeof(Lift)),
+            new LiquidFilterCase(typeof(LiquidFilter)),
+            new LoadingUnloadingSystemCase(typeof(LoadingUnloadingSystem)),
+            new MechanicalSeparatorCase(typeof(MechanicalSeparator)),
+            new MillCase(typeof(Mill)),
+            new MixerCase(typeof(Mixer)),
+            new MobileTransportSystemCase(typeof(MobileTransportSystem)),
+            new MotorCase(typeof(Motor)),
+            new PackagingSystemCase(typeof(PackagingSystem)),
+            new PlateHeatExchangerCase(typeof(PlateHeatExchanger)),
+            new PressureVesselCase(typeof(PressureVessel)),
+            new ProcessColumnCase(typeof(ProcessColumn)),
+            new PumpCase(typeof(Pump)),
+            new RadialFanCase(typeof(RadialFan)),
+            new RailWaggonCase(typeof(RailWaggon)),
+            new ReciprocatingCompressorCase(typeof(ReciprocatingCompressor)),
+            new ReciprocatingExtruderCase(typeof(ReciprocatingExtruder)),
+            new ReciprocatingPressureAgglomeratorCase(typeof(ReciprocatingPressureAgglomerator)),
+            new ReciprocatingPumpCase(typeof(ReciprocatingPump)),
+            new RevolvingSieveCase(typeof(RevolvingSieve)),
+            new RotaryCompressorCase(typeof(RotaryCompressor)),
+            new RotaryMixerCase(typeof(RotaryMixer)),
+            new RotaryPumpCase(typeof(RotaryPump)),
+            new RotatingExtruderCase(typeof(RotatingExtruder)),
+            new RotatingGrowthAgglomeratorCase(typeof(RotatingGrowthAgglomerator)),
+            new RotatingPressureAgglomeratorCase(typeof(RotatingPressureAgglomerator)),
+            new ScrubbingSeparatorCase(typeof(ScrubbingSeparator)),
+            new SedimentalCentrifugeCase(typeof(SedimentalCentrifuge)),
+            new SeparatorCase(typeof(Separator)),
+            new ShipCase(typeof(Ship)),
+            new SieveCase(typeof(Sieve)),
+            new SiloCase(typeof(Silo)),
+            new SpiralHeatExchangerCase(typeof(SpiralHeatExchanger)),
+            new SprayCoolerCase(typeof(SprayCooler)),
+            new StaticMixerCase(typeof(StaticMixer)),
+            new StationarySieveCase(typeof(StationarySieve)),
+            new StationaryTransportSystemCase(typeof(StationaryTransportSystem)),
+            new SteamGeneratorCase(typeof(SteamGenerator)),
+            new SteamTurbineCase(typeof(SteamTurbine)),
+            new TaggedColumnSectionCase(typeof(TaggedColumnSection)),
+            new TankCase(typeof(Tank)),
+            new ThinFilmEvaporatorCase(typeof(ThinFilmEvaporator)),
+            new TransportableContainerCase(typeof(TransportableContainer)),
+            new TruckCase(typeof(Truck)),
+            new TubularHeatExchangerCase(typeof(TubularHeatExchanger)),
+            new TurbineCase(typeof(Turbine)),
+            new VesselCase(typeof(Vessel)),
+            new VibratingSieveCase(typeof(VibratingSieve)),
+            new WasteGasEmitterCase(typeof(WasteGasEmitter)),
+            new WeigherCase(typeof(Weigher)),
+            new WetCoolingTowerCase(typeof(WetCoolingTower)),
         };
     }
 

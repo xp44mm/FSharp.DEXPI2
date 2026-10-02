@@ -105,14 +105,17 @@ Dexpi2.CSharp.SmokeTest/  # 反射冒烟测试（527/86/89、零继承、成员�
 public abstract record TaggedPlantItemUnion
 {
     private TaggedPlantItemUnion() { }
-    public sealed record Case(Type Type) : TaggedPlantItemUnion;   // 案例荷载 C# 类型
-    public static readonly TaggedPlantItemUnion[] All = { new Case(typeof(CentrifugalPump)), ... };
+    public sealed record CentrifugalPumpCase(Type Type) : TaggedPlantItemUnion;   // 每派生类一个独立案例
+    public sealed record BatchWeigherCase(Type Type) : TaggedPlantItemUnion;
+    // ... 其余案例 ...
+    public static readonly TaggedPlantItemUnion[] All =
+        { new CentrifugalPumpCase(typeof(CentrifugalPump)), ... };
 }
 ```
 
 - 收集**全部非抽象派生类型**（传递闭包，含非叶类）；抽象后代（如 `ProcessEquipment`）不进入；
-- 每个案例荷载对应的 C# `System.Type`，可用 `is`/`switch` 做穷尽匹配，
-  或直接遍历 `All` 做类型注册/序列化映射；
+- **每个派生类一个独立 sealed record 案例**（`<类名>Case`），案例荷载对应的 C# `System.Type`，
+  可用 `is`/`switch` 对 `TaggedPlantItemUnion` 做穷尽匹配，或遍历 `All` 做类型注册/序列化映射；
 - 当前 `TaggedPlantItemUnion` 共 **100 个案例**（DEXPI 2.0 中 `TaggedPlantItem`
   直系子类仅 `ProcessEquipment`（抽象）与 `TaggedColumnSection`，其余均为
   `ProcessEquipment` 的具体子类）；

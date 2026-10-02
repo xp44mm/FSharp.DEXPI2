@@ -83,7 +83,7 @@ Check(qvProp?.PropertyType == typeof(PhysicalQuantity), $"Value property type {q
 Check(typeof(QuantityProvenance).GetEnumNames().Length == 5, "QuantityProvenance member count");
 
 // Discriminated union for TaggedPlantItem: all non-abstract descendants
-// (non-leaf classes included), each case carrying the C# type.
+// (non-leaf classes included); one distinct case per class, carrying the C# type.
 var unionType = typeof(TaggedPlantItemUnion);
 var unionAll = (System.Collections.IEnumerable)unionType.GetField("All", BindingFlags.Public | BindingFlags.Static)!.GetValue(null)!;
 var cases = unionAll.Cast<object>().ToArray();
@@ -91,6 +91,10 @@ var payloads = cases
     .Select(c => (Type)c.GetType().GetProperty("Type")!.GetValue(c)!)
     .ToArray();
 Check(cases.Length == 100, $"TaggedPlantItemUnion case count {cases.Length} != 100");
+Check(cases.Select(c => c.GetType()).Distinct().Count() == 100,
+    "TaggedPlantItemUnion cases must be distinct record types (one per derived class)");
+Check(cases.All(c => c.GetType().Name == ((Type)c.GetType().GetProperty("Type")!.GetValue(c)!).Name + "Case"),
+    "TaggedPlantItemUnion case type name must be '<class>Case'");
 Check(payloads.All(t => t.IsClass && !t.IsAbstract), "TaggedPlantItemUnion payloads must be concrete classes");
 Check(payloads.All(t => t.Assembly == asm), "TaggedPlantItemUnion payloads must live in this assembly");
 foreach (var expected in new[] { typeof(CentrifugalPump), typeof(BatchWeigher), typeof(TaggedColumnSection) })
