@@ -52,7 +52,7 @@ namespace Dexpi2.Core.Datatypes
     /// <summary>DEXPI 2.0 model class MultiLanguageString (XMI id ID35)</summary>
     public class MultiLanguageString
     {
-        public List<SingleLanguageString?> SingleLanguageStrings { get; set; } = new();
+        public List<SingleLanguageString> SingleLanguageStrings { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SingleLanguageString (XMI id ID37)</summary>
@@ -151,7 +151,7 @@ namespace Dexpi2.Core.Diagram
     public class Shape
     {
         public string Name { get; set; } = "";
-        public List<GraphicalPrimitive?> Primitives { get; set; } = new();
+        public List<GraphicalPrimitive> Primitives { get; set; } = new();
         public string SymbolRegistrationNumber { get; set; } = "";
     }
 
@@ -159,7 +159,7 @@ namespace Dexpi2.Core.Diagram
     public class ShapeCatalogue
     {
         public string Name { get; set; } = "";
-        public List<Shape?> Shapes { get; set; } = new();
+        public List<Shape> Shapes { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Stroke (XMI id ID95)</summary>
@@ -171,7 +171,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class TextTemplate (XMI id ID234)</summary>
     public class TextTemplate
     {
-        public List<TextTemplateFragment?> Fragments { get; set; } = new();
+        public List<TextTemplateFragment> Fragments { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TextTemplateFragment (XMI id ID67) [abstract in DEXPI]</summary>
@@ -183,9 +183,9 @@ namespace Dexpi2.Core.Diagram
     public class MetaData
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public string? ApprovalDateRepresentation { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? ApprovalDescription { get; set; }
         public string? ApproverName { get; set; }
@@ -240,15 +240,15 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class RepresentationGroup (XMI id ID111)</summary>
     public class RepresentationGroup
     {
-        public List<GraphicsGroup?> Groups { get; set; } = new();
-        public List<NodePosition?> NodePositions { get; set; } = new();
+        public List<GraphicsGroup> Groups { get; set; } = new();
+        public List<NodePosition> NodePositions { get; set; } = new();
         public Dexpi2.Core.ConceptualObject? Represents { get; set; }
     }
 
     /// <summary>DEXPI 2.0 model class RepresentationTypeGroup (XMI id ID78) [abstract in DEXPI]</summary>
     public abstract class RepresentationTypeGroup
     {
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class AttributeRepresentation (XMI id ID66)</summary>
@@ -267,7 +267,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class ConnectorLine (XMI id ID86)</summary>
     public class ConnectorLine
     {
-        public List<Point?> InnerPoints { get; set; } = new();
+        public List<Point> InnerPoints { get; set; } = new();
         public NodePosition? Source { get; set; }
         public Stroke? Stroke { get; set; }
         public NodePosition? Target { get; set; }
@@ -294,7 +294,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class PolyLine (XMI id ID182)</summary>
     public class PolyLine
     {
-        public List<Point?> Points { get; set; } = new();
+        public List<Point> Points { get; set; } = new();
         public Stroke? Stroke { get; set; }
     }
 
@@ -312,8 +312,8 @@ namespace Dexpi2.Core.Diagram
     public class Diagram
     {
         // inherited from RepresentationGroup (XMI id ID111)
-        public List<GraphicsGroup?> Groups { get; set; } = new();
-        public List<NodePosition?> NodePositions { get; set; } = new();
+        public List<GraphicsGroup> Groups { get; set; } = new();
+        public List<NodePosition> NodePositions { get; set; } = new();
         public Dexpi2.Core.ConceptualObject? Represents { get; set; }
         public Color? BackgroundColor { get; set; }
         public double MaxX { get; set; } = 0.0;
@@ -327,56 +327,56 @@ namespace Dexpi2.Core.Diagram
     public class Border
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Label (XMI id ID140)</summary>
     public class Label
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Static (XMI id ID221)</summary>
     public class Static
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Symbol (XMI id ID100)</summary>
     public class Symbol
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class CustomSymbol (XMI id ID99)</summary>
     public class CustomSymbol
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class InsulationSymbol (XMI id ID139)</summary>
     public class InsulationSymbol
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class PipeFlowArrow (XMI id ID178)</summary>
     public class PipeFlowArrow
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class PipeSlopeSymbol (XMI id ID179)</summary>
     public class PipeSlopeSymbol
     {
         // inherited from RepresentationTypeGroup (XMI id ID78)
-        public List<GraphicalElement?> Elements { get; set; } = new();
+        public List<GraphicalElement> Elements { get; set; } = new();
     }
 
 }
@@ -761,9 +761,9 @@ namespace Dexpi2.Core
     /// <summary>DEXPI 2.0 model class ConceptualObject (XMI id ID11) [abstract in DEXPI]</summary>
     public abstract class ConceptualObject
     {
-        public List<Role?> PerformedRoles { get; set; } = new();
-        public List<PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Note?> ReferencedNotes { get; set; } = new();
+        public List<Role> PerformedRoles { get; set; } = new();
+        public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Note> ReferencedNotes { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class EngineeringModel (XMI id ID250)</summary>
@@ -775,7 +775,7 @@ namespace Dexpi2.Core
         public string OriginatingSystemName { get; set; } = "";
         public string OriginatingSystemVendorName { get; set; } = "";
         public string OriginatingSystemVersion { get; set; } = "";
-        public List<Dexpi2.Core.Diagram.ShapeCatalogue?> ShapeCatalogues { get; set; } = new();
+        public List<Dexpi2.Core.Diagram.ShapeCatalogue> ShapeCatalogues { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class PersistentIdentifier (XMI id ID28)</summary>
@@ -797,21 +797,21 @@ namespace Dexpi2.Core
     public abstract class ConceptualModel
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Role?> PerformedRoles { get; set; } = new();
-        public List<PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Note?> ReferencedNotes { get; set; } = new();
+        public List<Role> PerformedRoles { get; set; } = new();
+        public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Diagram.MetaData? MetaData { get; set; }
-        public List<Note?> Notes { get; set; } = new();
-        public List<Role?> Roles { get; set; } = new();
+        public List<Note> Notes { get; set; } = new();
+        public List<Role> Roles { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Note (XMI id ID17)</summary>
     public class Note
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Role?> PerformedRoles { get; set; } = new();
-        public List<PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Note?> ReferencedNotes { get; set; } = new();
+        public List<Role> PerformedRoles { get; set; } = new();
+        public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Note> ReferencedNotes { get; set; } = new();
         public string? LocalNoteIdentifier { get; set; }
         public string? NoteClassification { get; set; }
         public string? NoteRegistrationNumber { get; set; }
@@ -822,9 +822,9 @@ namespace Dexpi2.Core
     public class QualifiedValue
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Role?> PerformedRoles { get; set; } = new();
-        public List<PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Note?> ReferencedNotes { get; set; } = new();
+        public List<Role> PerformedRoles { get; set; } = new();
+        public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Note> ReferencedNotes { get; set; } = new();
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }

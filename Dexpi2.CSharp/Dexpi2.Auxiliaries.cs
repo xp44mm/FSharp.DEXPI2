@@ -17,9 +17,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeForceUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -38,9 +38,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -59,9 +59,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -80,9 +80,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -101,9 +101,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfDouble
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -122,9 +122,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -143,9 +143,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -164,9 +164,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMoleFlowRateUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -185,9 +185,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfInteger
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -206,9 +206,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -227,9 +227,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -248,9 +248,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -269,9 +269,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -290,9 +290,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -311,9 +311,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -332,9 +332,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -353,9 +353,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -374,9 +374,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -395,9 +395,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -416,9 +416,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -437,9 +437,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -458,9 +458,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -479,9 +479,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -500,9 +500,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeDynamicViscosityUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -521,9 +521,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantity
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -542,9 +542,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMomentOfForceUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -563,9 +563,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -584,9 +584,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -605,9 +605,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -626,9 +626,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeMagneticFieldIntensityUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -647,9 +647,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypepHUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -668,9 +668,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }
@@ -689,9 +689,9 @@ namespace Dexpi2.Auxiliaries
     public abstract class QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
         public string? Case { get; set; }
         public string? CaseUID { get; set; }

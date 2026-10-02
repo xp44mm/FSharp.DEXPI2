@@ -170,23 +170,23 @@ namespace Dexpi2.Process.Process
     public class Composition
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Process.Enumerations.CompositionDisplay? Display { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> MassFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit?> MassFractions { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMoleFlowRateUnit?> MoleFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit?> MoleFractiona { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit> MassFractions { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMoleFlowRateUnit> MoleFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit> MoleFractiona { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class InformationVariant (XMI id ID2092)</summary>
     public class InformationVariant
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public bool BooleanValue { get; set; } = false;
         public double DoubleValue { get; set; } = 0.0;
         public int IntegerValue { get; set; } = 0;
@@ -196,9 +196,9 @@ namespace Dexpi2.Process.Process
     public abstract class InstrumentationActivity
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -208,12 +208,12 @@ namespace Dexpi2.Process.Process
     public class InstrumentationSystemActivity
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
-        public List<InstrumentationActivity?> InstrumentationActivities { get; set; } = new();
+        public List<InstrumentationActivity> InstrumentationActivities { get; set; } = new();
         public string Label { get; set; } = "";
     }
 
@@ -221,19 +221,19 @@ namespace Dexpi2.Process.Process
     public class ListOfMaterialComponents
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
-        public List<MaterialComponent?> Component { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        public List<MaterialComponent> Component { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class MaterialComponent (XMI id ID2104) [abstract in DEXPI]</summary>
     public abstract class MaterialComponent
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
         public string? Label { get; set; }
@@ -243,13 +243,13 @@ namespace Dexpi2.Process.Process
     public class MaterialState
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public string Description { get; set; } = "";
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<MaterialStateType?> Phase { get; set; } = new();
+        public List<MaterialStateType> Phase { get; set; } = new();
         public MaterialStateType? State { get; set; }
     }
 
@@ -257,27 +257,27 @@ namespace Dexpi2.Process.Process
     public class MaterialStateType
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Composition? Composition { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit?> Density { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit> Density { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> MassFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit?> SpecificEnthalpy { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDynamicViscosityUnit?> Viscosity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> SpecificEnthalpy { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDynamicViscosityUnit> Viscosity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class MaterialTemplate (XMI id ID2411)</summary>
     public class MaterialTemplate
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -291,9 +291,9 @@ namespace Dexpi2.Process.Process
     public abstract class Port
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -303,9 +303,9 @@ namespace Dexpi2.Process.Process
     public abstract class ProcessConnection
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -317,43 +317,43 @@ namespace Dexpi2.Process.Process
     public abstract class ProcessStep
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ProcessStepDetail (XMI id ID1976) [abstract in DEXPI]</summary>
     public abstract class ProcessStepDetail
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class CalculatingProcessVariable (XMI id ID1994) [abstract in DEXPI]</summary>
     public abstract class CalculatingProcessVariable
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -364,25 +364,25 @@ namespace Dexpi2.Process.Process
     public class ControllingProcessVariable
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> InputValue { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> OutputValue { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Setpoint { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Setpoint { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ConveyingSignal (XMI id ID2090)</summary>
     public class ConveyingSignal
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -394,18 +394,18 @@ namespace Dexpi2.Process.Process
     public class MeasuringProcessVariable
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
         public ProcessConnection? ConnectionReference { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> InputValue { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> MeasuredVariable { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> MeasuredVariable { get; set; } = new();
         public Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantity? MeasuredVariableReference { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> OutputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
         public ProcessStepDetail? ProcessStepDetailReference { get; set; }
         public ProcessStep? ProcessStepReference { get; set; }
     }
@@ -414,9 +414,9 @@ namespace Dexpi2.Process.Process
     public class CustomMaterialComponent
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from MaterialComponent (XMI id ID2104)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
@@ -428,9 +428,9 @@ namespace Dexpi2.Process.Process
     public class PureMaterialComponent
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from MaterialComponent (XMI id ID2104)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
@@ -443,9 +443,9 @@ namespace Dexpi2.Process.Process
     public class EnergyPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -456,9 +456,9 @@ namespace Dexpi2.Process.Process
     public class InformationPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -469,9 +469,9 @@ namespace Dexpi2.Process.Process
     public class MaterialPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -482,25 +482,25 @@ namespace Dexpi2.Process.Process
     public class EnergyFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
         public Port? Source { get; set; }
         public Port? Target { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class InformationFlow (XMI id ID2368)</summary>
     public class InformationFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -514,329 +514,329 @@ namespace Dexpi2.Process.Process
     public class Stream
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
         public Port? Source { get; set; }
         public Port? Target { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> MassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
         public MaterialState? MaterialStateReference { get; set; }
         public MaterialTemplate? MaterialTemplateReference { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Emitting (XMI id ID2199)</summary>
     public class Emitting
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> MassFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ExchangingThermalEnergy (XMI id ID2221)</summary>
     public class ExchangingThermalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> ColdFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> HotFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> ColdFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> HotFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Flaring (XMI id ID2278)</summary>
     public class Flaring
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class FormingSolidMaterial (XMI id ID2255)</summary>
     public class FormingSolidMaterial
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingFlow (XMI id ID2050)</summary>
     public class GeneratingFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class IncreasingParticleSize (XMI id ID1963)</summary>
     public class IncreasingParticleSize
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> LiquidFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Mixing (XMI id ID2343)</summary>
     public class Mixing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Packaging (XMI id ID2510)</summary>
     public class Packaging
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ReactingChemicals (XMI id ID2592)</summary>
     public class ReactingChemicals
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ReducingParticleSize (XMI id ID2098)</summary>
     public class ReducingParticleSize
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RemovingThermalEnergy (XMI id ID2096)</summary>
     public class RemovingThermalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Separating (XMI id ID2650)</summary>
     public class Separating
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Sink (XMI id ID2772)</summary>
     public class Sink
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         public string? SourceReference { get; set; }
     }
 
@@ -844,21 +844,21 @@ namespace Dexpi2.Process.Process
     public class Source
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         public string? SinkReference { get; set; }
     }
 
@@ -866,336 +866,336 @@ namespace Dexpi2.Process.Process
     public abstract class Splitting
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SteeringFlow (XMI id ID1986) [abstract in DEXPI]</summary>
     public abstract class SteeringFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringEnergy (XMI id ID2798) [abstract in DEXPI]</summary>
     public abstract class StoringEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit?> EnergyDensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit?> MassSpecificEnergy { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringMaterial (XMI id ID2828) [abstract in DEXPI]</summary>
     public abstract class StoringMaterial
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SupplyingElectricalEnergy (XMI id ID2305)</summary>
     public class SupplyingElectricalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SupplyingFluids (XMI id ID2876)</summary>
     public class SupplyingFluids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SupplyingMechanicalEnergy (XMI id ID2145)</summary>
     public class SupplyingMechanicalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> ShaftPower { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SupplyingSolids (XMI id ID2892)</summary>
     public class SupplyingSolids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SupplyingThermalEnergy (XMI id ID1988)</summary>
     public class SupplyingThermalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TemperatureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingElectricalEnergy (XMI id ID2947)</summary>
     public class TransportingElectricalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> Current { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit?> Frequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger?> NumberOfPhases { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger> NumberOfPhases { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingFluids (XMI id ID2963)</summary>
     public class TransportingFluids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Length { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingSolids (XMI id ID2991)</summary>
     public class TransportingSolids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Agitating (XMI id ID1975)</summary>
     public class Agitating
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStepDetail (XMI id ID1976)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> ShaftPower { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ContactingInPacking (XMI id ID2071)</summary>
     public class ContactingInPacking
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStepDetail (XMI id ID1976)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Height { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger?> NumberOfTheoreticalStages { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger> NumberOfTheoreticalStages { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ContactingOnTray (XMI id ID2078)</summary>
     public class ContactingOnTray
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStepDetail (XMI id ID1976)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         public int? Number { get; set; }
     }
 
@@ -1203,76 +1203,76 @@ namespace Dexpi2.Process.Process
     public class SupplyingThermalEnergyWithBurner
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStepDetail (XMI id ID1976)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> FuelConsumption { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelConsumption { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class CalculatingRatio (XMI id ID1996)</summary>
     public class CalculatingRatio
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Gain { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Offset { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> OutputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Gain { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Offset { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class CalculatingSplitRange (XMI id ID2008)</summary>
     public class CalculatingSplitRange
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> InputValue { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Output1Value { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Output2Value { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> SplitValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Output1Value { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Output2Value { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> SplitValue { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransformingProcessVariable (XMI id ID2934)</summary>
     public class TransformingProcessVariable
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from InstrumentationActivity (XMI id ID1995)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Gain { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> InputValue { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> Offset { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> OutputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Gain { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Offset { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ElectricalEnergyPort (XMI id ID2197)</summary>
     public class ElectricalEnergyPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -1283,9 +1283,9 @@ namespace Dexpi2.Process.Process
     public class MechanicalEnergyPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -1296,9 +1296,9 @@ namespace Dexpi2.Process.Process
     public class ThermalEnergyPort
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from Port (XMI id ID2213)
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -1309,9 +1309,9 @@ namespace Dexpi2.Process.Process
     public class ElectricalEnergyFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -1319,20 +1319,20 @@ namespace Dexpi2.Process.Process
         public Port? Source { get; set; }
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> Current { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit?> Frequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger?> NumberOfPhases { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger> NumberOfPhases { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class MechanicalEnergyFlow (XMI id ID2495)</summary>
     public class MechanicalEnergyFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -1340,18 +1340,18 @@ namespace Dexpi2.Process.Process
         public Port? Source { get; set; }
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMomentOfForceUnit?> Torque { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMomentOfForceUnit> Torque { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ThermalEnergyFlow (XMI id ID2929)</summary>
     public class ThermalEnergyFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessConnection (XMI id ID2209)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -1359,1123 +1359,1123 @@ namespace Dexpi2.Process.Process
         public Port? Source { get; set; }
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Extruding (XMI id ID2254)</summary>
     public class Extruding
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from FormingSolidMaterial (XMI id ID2255)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Pelletizing (XMI id ID2511)</summary>
     public class Pelletizing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from FormingSolidMaterial (XMI id ID2255)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Compressing (XMI id ID2049)</summary>
     public class Compressing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from GeneratingFlow (XMI id ID2050)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> CompressionRatio { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> CompressionRatio { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Pumping (XMI id ID2580)</summary>
     public class Pumping
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from GeneratingFlow (XMI id ID2050)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Head { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Head { get; set; } = new();
         public Dexpi2.Process.Enumerations.PumpingMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Agglomerating (XMI id ID1962)</summary>
     public class Agglomerating
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from IncreasingParticleSize (XMI id ID1963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> LiquidFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeForceUnit?> PressingForce { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeForceUnit> PressingForce { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Coalescing (XMI id ID2021)</summary>
     public class Coalescing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from IncreasingParticleSize (XMI id ID1963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> LiquidFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Crystallizing (XMI id ID2099)</summary>
     public class Crystallizing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from IncreasingParticleSize (XMI id ID1963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> LiquidFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Flocculating (XMI id ID2288)</summary>
     public class Flocculating
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from IncreasingParticleSize (XMI id ID1963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> LiquidFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Humidifying (XMI id ID2342)</summary>
     public class Humidifying
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> WaterFlow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> WaterFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Kneading (XMI id ID2388)</summary>
     public class Kneading
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class MixingSimple (XMI id ID2509)</summary>
     public class MixingSimple
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RotaryMixing (XMI id ID2643)</summary>
     public class RotaryMixing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StaticMixing (XMI id ID2790)</summary>
     public class StaticMixing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Crushing (XMI id ID2097)</summary>
     public class Crushing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from ReducingParticleSize (XMI id ID2098)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Cutting (XMI id ID2106)</summary>
     public class Cutting
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from ReducingParticleSize (XMI id ID2098)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Grinding (XMI id ID2321)</summary>
     public class Grinding
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from ReducingParticleSize (XMI id ID2098)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Milling (XMI id ID2508)</summary>
     public class Milling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from ReducingParticleSize (XMI id ID2098)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> FeedParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ProductParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Cooling (XMI id ID2095)</summary>
     public class Cooling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from RemovingThermalEnergy (XMI id ID2096)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByElectromagneticForce (XMI id ID2679)</summary>
     public class SeparatingByElectromagneticForce
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByFlash (XMI id ID2698)</summary>
     public class SeparatingByFlash
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByPhaseSeparation (XMI id ID2661)</summary>
     public class SeparatingByPhaseSeparation
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByPhysicalProcess (XMI id ID1960)</summary>
     public class SeparatingByPhysicalProcess
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByThermalProcess (XMI id ID2108)</summary>
     public class SeparatingByThermalProcess
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingMechanically (XMI id ID2263)</summary>
     public class SeparatingMechanically
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SplittingEnergy (XMI id ID2781)</summary>
     public class SplittingEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SplittingMaterial (XMI id ID2785)</summary>
     public class SplittingMaterial
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class BlowingDown (XMI id ID1985)</summary>
     public class BlowingDown
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Draining (XMI id ID2143)</summary>
     public class Draining
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class FeedingMaterial (XMI id ID2256)</summary>
     public class FeedingMaterial
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class LimitingFlow (XMI id ID2398)</summary>
     public class LimitingFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class PreventingBackflow (XMI id ID2524)</summary>
     public class PreventingBackflow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit?> ClosingTime { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RegulatingFlow (XMI id ID2611)</summary>
     public class RegulatingFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit?> ClosingTime { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit?> OpeningTime { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> OpeningTime { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RelievingOverpressure (XMI id ID2621)</summary>
     public class RelievingOverpressure
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RelievingVacuum (XMI id ID2622)</summary>
     public class RelievingVacuum
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class RelievingVacuumAndOverpressure (XMI id ID2623)</summary>
     public class RelievingVacuumAndOverpressure
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class ShuttingOffFlow (XMI id ID2752)</summary>
     public class ShuttingOffFlow
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SteeringFlow (XMI id ID1986)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit?> ClosingTime { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit?> OpeningTime { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> OpeningTime { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringElectricalEnergy (XMI id ID2797)</summary>
     public class StoringElectricalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringEnergy (XMI id ID2798)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit?> EnergyDensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit?> MassSpecificEnergy { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> ChargeCurrent { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> DischargeCurrent { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> ChargeCurrent { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> DischargeCurrent { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringThermalEnergy (XMI id ID2846)</summary>
     public class StoringThermalEnergy
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringEnergy (XMI id ID2798)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit?> EnergyDensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit?> MassSpecificEnergy { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringFluids (XMI id ID2827)</summary>
     public class StoringFluids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringMaterial (XMI id ID2828)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringSolids (XMI id ID2835)</summary>
     public class StoringSolids
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringMaterial (XMI id ID2828)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingACPower (XMI id ID2304)</summary>
     public class GeneratingACPower
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingElectricalEnergy (XMI id ID2305)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit?> Frequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingDCPower (XMI id ID2309)</summary>
     public class GeneratingDCPower
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingElectricalEnergy (XMI id ID2305)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingInFuelCell (XMI id ID2316)</summary>
     public class GeneratingInFuelCell
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingElectricalEnergy (XMI id ID2305)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> FuelFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class DrivingByEngine (XMI id ID2144)</summary>
     public class DrivingByEngine
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingMechanicalEnergy (XMI id ID2145)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> ShaftPower { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> FuelFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
         public Dexpi2.Process.Enumerations.EngineDriveMethod? Method { get; set; }
     }
 
@@ -2483,25 +2483,25 @@ namespace Dexpi2.Process.Process
     public class DrivingByMotor
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingMechanicalEnergy (XMI id ID2145)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> ShaftPower { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
         public Dexpi2.Process.Enumerations.MotorDriveMethod? Method { get; set; }
     }
 
@@ -2509,957 +2509,957 @@ namespace Dexpi2.Process.Process
     public class DrivingByTurbine
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingMechanicalEnergy (XMI id ID2145)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> ShaftPower { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Boiling (XMI id ID1987)</summary>
     public class Boiling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingThermalEnergy (XMI id ID1988)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TemperatureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingSteam (XMI id ID2320)</summary>
     public class GeneratingSteam
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingThermalEnergy (XMI id ID1988)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TemperatureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class HeatingElectrical (XMI id ID2322)</summary>
     public class HeatingElectrical
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingThermalEnergy (XMI id ID1988)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TemperatureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> Current { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class HeatingInFurnace (XMI id ID2335)</summary>
     public class HeatingInFurnace
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from SupplyingThermalEnergy (XMI id ID1988)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit?> HeatTransferCoefficient { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit?> HeatTransferResistance { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> SkinTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TemperatureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> Efficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> FuelFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingFluidsInChannel (XMI id ID2976)</summary>
     public class TransportingFluidsInChannel
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingFluids (XMI id ID2963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Length { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Depth { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Width { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Depth { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Width { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingFluidsInHose (XMI id ID2983)</summary>
     public class TransportingFluidsInHose
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingFluids (XMI id ID2963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Length { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingFluidsInPipe (XMI id ID2987)</summary>
     public class TransportingFluidsInPipe
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingFluids (XMI id ID2963)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Length { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit?> VolumeFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingSolidsContinuously (XMI id ID2995)</summary>
     public class TransportingSolidsContinuously
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingSolids (XMI id ID2991)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit?> Velocity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class TransportingSolidsDiscontinuously (XMI id ID3002)</summary>
     public class TransportingSolidsDiscontinuously
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingSolids (XMI id ID2991)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> BatchSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> BatchSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByElectrostaticForce (XMI id ID2686)</summary>
     public class SeparatingByElectrostaticForce
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByElectromagneticForce (XMI id ID2679)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit?> Velocity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByMagneticForce (XMI id ID2707)</summary>
     public class SeparatingByMagneticForce
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByElectromagneticForce (XMI id ID2679)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMagneticFieldIntensityUnit?> FieldIntensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit?> Velocity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMagneticFieldIntensityUnit> FieldIntensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByCentrifugalForce (XMI id ID2660)</summary>
     public class SeparatingByCentrifugalForce
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit?> RotationalFrequency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByCyclonicMotion (XMI id ID2675)</summary>
     public class SeparatingByCyclonicMotion
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByGravity (XMI id ID2699)</summary>
     public class SeparatingByGravity
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit?> Density { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit> Density { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Absorbing (XMI id ID1959)</summary>
     public class Absorbing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Adsorbing (XMI id ID1961)</summary>
     public class Adsorbing
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByContact (XMI id ID2674)</summary>
     public class SeparatingByContact
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByIonExchange (XMI id ID2706)</summary>
     public class SeparatingByIonExchange
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingBySurfaceTension (XMI id ID2722)</summary>
     public class SeparatingBySurfaceTension
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> FrotherFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> GasFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> PulpDensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SurfactantFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypepHUnit?> pH { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FrotherFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> GasFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> PulpDensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SurfactantFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypepHUnit> pH { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Distilling (XMI id ID2107)</summary>
     public class Distilling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> BottomPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> BottomTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> CondenserDuty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Height { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> RefluxRatio { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> TopPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TopTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> BottomPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> BottomTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> CondenserDuty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Drying (XMI id ID2162)</summary>
     public class Drying
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> GasMassFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> SolidsMassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> GasMassFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsMassFlow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Evaporating (XMI id ID2214)</summary>
     public class Evaporating
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit?> Area { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> EvaporationRate { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> EvaporationRate { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Filtering (XMI id ID2262)</summary>
     public class Filtering
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> PermeateFlow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> PermeateFlow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Sieving (XMI id ID2762)</summary>
     public class Sieving
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit?> ParticleSize { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Power { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class Skimming (XMI id ID2774)</summary>
     public class Skimming
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit?> Flow { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringInBattery (XMI id ID2832)</summary>
     public class StoringInBattery
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringEnergy (XMI id ID2798)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit?> EnergyDensity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit?> MassSpecificEnergy { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
         // inherited from StoringElectricalEnergy (XMI id ID2797)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> ChargeCurrent { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit?> DischargeCurrent { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit?> Voltage { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> ChargeCurrent { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> DischargeCurrent { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringInPressureVessel (XMI id ID2833)</summary>
     public class StoringInPressureVessel
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringMaterial (XMI id ID2828)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
         // inherited from StoringFluids (XMI id ID2827)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringInTank (XMI id ID2839)</summary>
     public class StoringInTank
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringMaterial (XMI id ID2828)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
         // inherited from StoringFluids (XMI id ID2827)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StoringInSilo (XMI id ID2834)</summary>
     public class StoringInSilo
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from StoringMaterial (XMI id ID2828)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit?> Capacity { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit?> Volume { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StabilizingDistilling (XMI id ID2789)</summary>
     public class StabilizingDistilling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         // inherited from Distilling (XMI id ID2107)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> BottomPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> BottomTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> CondenserDuty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Height { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> RefluxRatio { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> TopPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TopTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> BottomPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> BottomTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> CondenserDuty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class StrippingDistilling (XMI id ID2866)</summary>
     public class StrippingDistilling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         // inherited from Distilling (XMI id ID2107)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> BottomPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> BottomTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> CondenserDuty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Height { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> RefluxRatio { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> TopPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TopTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> BottomPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> BottomTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> CondenserDuty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class VacuumDistilling (XMI id ID3006)</summary>
     public class VacuumDistilling
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ProcessStep (XMI id ID2200)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> AmbientPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> AmbientTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
         public string? Label { get; set; }
-        public List<Port?> Ports { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> Pressure { get; set; } = new();
-        public List<ProcessStepDetail?> ProcessStepDetails { get; set; } = new();
-        public List<ProcessStep?> SubProcessSteps { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> Temperature { get; set; } = new();
+        public List<Port> Ports { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
+        public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
+        public List<ProcessStep> SubProcessSteps { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from Separating (XMI id ID2650)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> ProductRecovery { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> SeparationEfficiency { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit?> WasteInProduct { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> Duty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         // inherited from Distilling (XMI id ID2107)
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> BottomPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> BottomTemperature { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit?> CondenserDuty { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Diameter { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Height { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit?> Level { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> PressureDifference { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble?> RefluxRatio { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit?> TopPressure { get; set; } = new();
-        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit?> TopTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> BottomPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> BottomTemperature { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> CondenserDuty { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
+        public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
     }
 
 }
@@ -3470,22 +3470,22 @@ namespace Dexpi2.Process
     public class ProcessModel
     {
         // inherited from ConceptualObject (XMI id ID11)
-        public List<Dexpi2.Core.Role?> PerformedRoles { get; set; } = new();
-        public List<Dexpi2.Core.PersistentIdentifier?> PersistentIdentifiers { get; set; } = new();
-        public List<Dexpi2.Core.Note?> ReferencedNotes { get; set; } = new();
+        public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
+        public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
+        public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ConceptualModel (XMI id ID10)
         public Dexpi2.Core.Diagram.MetaData? MetaData { get; set; }
-        public List<Dexpi2.Core.Note?> Notes { get; set; } = new();
-        public List<Dexpi2.Core.Role?> Roles { get; set; } = new();
-        public List<Dexpi2.Process.Process.Composition?> Compositions { get; set; } = new();
-        public List<Dexpi2.Process.Process.InstrumentationSystemActivity?> InstrumentationSystemActivities { get; set; } = new();
-        public List<Dexpi2.Process.Process.ListOfMaterialComponents?> ListsOfMaterialComponents { get; set; } = new();
-        public List<Dexpi2.Process.Process.MaterialComponent?> MaterialComponents { get; set; } = new();
-        public List<Dexpi2.Process.Process.MaterialStateType?> MaterialStateTypes { get; set; } = new();
-        public List<Dexpi2.Process.Process.MaterialState?> MaterialStates { get; set; } = new();
-        public List<Dexpi2.Process.Process.MaterialTemplate?> MaterialTemplates { get; set; } = new();
-        public List<Dexpi2.Process.Process.ProcessConnection?> ProcessConnections { get; set; } = new();
-        public List<Dexpi2.Process.Process.ProcessStep?> ProcessSteps { get; set; } = new();
+        public List<Dexpi2.Core.Note> Notes { get; set; } = new();
+        public List<Dexpi2.Core.Role> Roles { get; set; } = new();
+        public List<Dexpi2.Process.Process.Composition> Compositions { get; set; } = new();
+        public List<Dexpi2.Process.Process.InstrumentationSystemActivity> InstrumentationSystemActivities { get; set; } = new();
+        public List<Dexpi2.Process.Process.ListOfMaterialComponents> ListsOfMaterialComponents { get; set; } = new();
+        public List<Dexpi2.Process.Process.MaterialComponent> MaterialComponents { get; set; } = new();
+        public List<Dexpi2.Process.Process.MaterialStateType> MaterialStateTypes { get; set; } = new();
+        public List<Dexpi2.Process.Process.MaterialState> MaterialStates { get; set; } = new();
+        public List<Dexpi2.Process.Process.MaterialTemplate> MaterialTemplates { get; set; } = new();
+        public List<Dexpi2.Process.Process.ProcessConnection> ProcessConnections { get; set; } = new();
+        public List<Dexpi2.Process.Process.ProcessStep> ProcessSteps { get; set; } = new();
     }
 
 }

@@ -166,7 +166,16 @@ let rec mapType (currentNs: string list) (cppType: string) : string =
     elif cppType.StartsWith("std::optional<") && cppType.EndsWith(">") then
         mapType currentNs (innerOf "std::optional<" cppType) + "?"
     elif cppType.StartsWith("std::vector<") && cppType.EndsWith(">") then
-        "List<" + mapType currentNs (innerOf "std::vector<" cppType) + ">"
+        let inner = innerOf "std::vector<" cppType
+        // A vector element wrapped in shared_ptr is a mandatory member of the
+        // collection. In UML, 0..* multiplicity is expressed by an empty list,
+        // never by a null element, so the element type must not be nullable.
+        let elementType =
+            if inner.StartsWith("std::shared_ptr<") && inner.EndsWith(">") then
+                mapType currentNs (innerOf "std::shared_ptr<" inner)
+            else
+                mapType currentNs inner
+        "List<" + elementType + ">"
     elif cppType.Contains("::") then qualifiedToCs cppType
     else cppType
 
