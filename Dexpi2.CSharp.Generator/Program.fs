@@ -217,15 +217,22 @@ let emitClass (b: StringBuilder) (c: ClassDecl) =
     append (sprintf "    public %sclass %s" abstractMark c.Name)
     append "    {"
     let mutable lastInherited = ""
+    let mutable ownMarked = false
     for m in c.Members do
         let inh = defaultArg m.InheritedFrom ""
         if inh <> lastInherited && inh <> "" then
             append (sprintf "        // inherited from %s" inh)
             lastInherited <- inh
+        elif inh = "" && not ownMarked then
+            append "        // own members"
+            ownMarked <- true
         let csType = mapType c.Ns m.CppType
         let init = defaultInit csType
         let initPart = if init = "" then "" else " = " + init + ";"
         append (sprintf "        public %s %s { get; set; }%s" csType m.Name initPart)
+    if not ownMarked then
+        // no own fields at all: all members inherited, or the class is empty
+        append "        // own members (none)"
     append "    }"
     append ""
 

@@ -173,6 +173,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Process.Enumerations.CompositionDisplay? Display { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit> MassFractions { get; set; } = new();
@@ -187,6 +188,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public bool BooleanValue { get; set; } = false;
         public double DoubleValue { get; set; } = 0.0;
         public int IntegerValue { get; set; } = 0;
@@ -199,6 +201,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -211,6 +214,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public List<InstrumentationActivity> InstrumentationActivities { get; set; } = new();
@@ -224,6 +228,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public List<MaterialComponent> Component { get; set; } = new();
     }
 
@@ -234,6 +239,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
         public string? Label { get; set; }
@@ -246,6 +252,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public string Description { get; set; } = "";
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -260,6 +267,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Composition? Composition { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit> Density { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -278,6 +286,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -294,6 +303,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
@@ -306,6 +316,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -320,6 +331,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> AmbientPressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> AmbientTemperature { get; set; } = new();
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
@@ -340,6 +352,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
@@ -358,6 +371,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ControllingProcessVariable (XMI id ID2080)</summary>
@@ -371,6 +385,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Setpoint { get; set; } = new();
@@ -387,6 +402,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public InformationVariant? InformationValue { get; set; }
     }
 
@@ -401,6 +417,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public ProcessConnection? ConnectionReference { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> MeasuredVariable { get; set; } = new();
@@ -421,6 +438,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
         public string? Label { get; set; }
+        // own members
         public string? ProjectReference { get; set; }
     }
 
@@ -435,6 +453,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string? Identifier { get; set; }
         public string? Label { get; set; }
+        // own members
         public string? ChEBI_identifier { get; set; }
         public string? IUPAC_identifier { get; set; }
     }
@@ -450,6 +469,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class InformationPort (XMI id ID2372)</summary>
@@ -463,6 +483,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class MaterialPort (XMI id ID2409)</summary>
@@ -476,6 +497,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class EnergyFlow (XMI id ID2175)</summary>
@@ -491,6 +513,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public Port? Source { get; set; }
         public Port? Target { get; set; }
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
@@ -507,6 +530,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public Port? Source { get; set; }
         public Port? Target { get; set; }
+        // own members
         public InformationVariant? InformationValue { get; set; }
     }
 
@@ -523,6 +547,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public Port? Source { get; set; }
         public Port? Target { get; set; }
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
         public MaterialState? MaterialStateReference { get; set; }
         public MaterialTemplate? MaterialTemplateReference { get; set; }
@@ -550,6 +575,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> MassFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
@@ -573,6 +599,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> ColdFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
@@ -600,6 +627,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
@@ -624,6 +652,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
@@ -650,6 +679,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
@@ -673,6 +703,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> LiquidFlow { get; set; } = new();
@@ -700,6 +731,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Packaging (XMI id ID2510)</summary>
@@ -721,6 +753,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ReactingChemicals (XMI id ID2592)</summary>
@@ -742,6 +775,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ReducingParticleSize (XMI id ID2098)</summary>
@@ -763,6 +797,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> FeedParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
@@ -788,6 +823,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
@@ -813,6 +849,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
@@ -837,6 +874,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public string? SourceReference { get; set; }
     }
 
@@ -859,6 +897,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public string? SinkReference { get; set; }
     }
 
@@ -881,6 +920,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SteeringFlow (XMI id ID1986) [abstract in DEXPI]</summary>
@@ -902,6 +942,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
     }
@@ -925,6 +966,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
@@ -949,6 +991,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
     }
@@ -972,6 +1015,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
@@ -996,6 +1040,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
@@ -1019,6 +1064,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
@@ -1043,6 +1089,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
@@ -1066,6 +1113,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
@@ -1095,6 +1143,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
@@ -1121,6 +1170,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
@@ -1146,6 +1196,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
@@ -1162,6 +1213,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
     }
@@ -1179,6 +1231,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Height { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger> NumberOfTheoreticalStages { get; set; } = new();
     }
@@ -1196,6 +1249,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public int? Number { get; set; }
     }
 
@@ -1212,6 +1266,7 @@ namespace Dexpi2.Process.Process
         public string Label { get; set; } = "";
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelConsumption { get; set; } = new();
     }
@@ -1227,6 +1282,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Gain { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Offset { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> OutputValue { get; set; } = new();
@@ -1243,6 +1299,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Output1Value { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Output2Value { get; set; } = new();
@@ -1260,6 +1317,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
         public string Label { get; set; } = "";
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Gain { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> InputValue { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> Offset { get; set; } = new();
@@ -1277,6 +1335,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class MechanicalEnergyPort (XMI id ID2507)</summary>
@@ -1290,6 +1349,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ThermalEnergyPort (XMI id ID2933)</summary>
@@ -1303,6 +1363,7 @@ namespace Dexpi2.Process.Process
         public ProcessConnection? ConnectorReference { get; set; }
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Identifier { get; set; } = "";
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ElectricalEnergyFlow (XMI id ID2174)</summary>
@@ -1320,6 +1381,7 @@ namespace Dexpi2.Process.Process
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfInteger> NumberOfPhases { get; set; } = new();
@@ -1341,6 +1403,7 @@ namespace Dexpi2.Process.Process
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMomentOfForceUnit> Torque { get; set; } = new();
     }
@@ -1360,6 +1423,7 @@ namespace Dexpi2.Process.Process
         public Port? Target { get; set; }
         // inherited from EnergyFlow (XMI id ID2175)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
     }
 
@@ -1388,6 +1452,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Pelletizing (XMI id ID2511)</summary>
@@ -1415,6 +1480,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Compressing (XMI id ID2049)</summary>
@@ -1439,6 +1505,7 @@ namespace Dexpi2.Process.Process
         // inherited from GeneratingFlow (XMI id ID2050)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> CompressionRatio { get; set; } = new();
     }
 
@@ -1464,6 +1531,7 @@ namespace Dexpi2.Process.Process
         // inherited from GeneratingFlow (XMI id ID2050)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Head { get; set; } = new();
         public Dexpi2.Process.Enumerations.PumpingMethod? Method { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
@@ -1495,6 +1563,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeForceUnit> PressingForce { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
@@ -1525,6 +1594,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Crystallizing (XMI id ID2099)</summary>
@@ -1553,6 +1623,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
@@ -1582,6 +1653,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Humidifying (XMI id ID2342)</summary>
@@ -1603,6 +1675,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> WaterFlow { get; set; } = new();
     }
@@ -1626,6 +1699,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
@@ -1650,6 +1724,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class RotaryMixing (XMI id ID2643)</summary>
@@ -1671,6 +1746,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
     }
@@ -1694,6 +1770,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Crushing (XMI id ID2097)</summary>
@@ -1720,6 +1797,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Cutting (XMI id ID2106)</summary>
@@ -1746,6 +1824,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Grinding (XMI id ID2321)</summary>
@@ -1772,6 +1851,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Milling (XMI id ID2508)</summary>
@@ -1798,6 +1878,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ProductParticleSize { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Cooling (XMI id ID2095)</summary>
@@ -1824,6 +1905,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit> HeatTransferCoefficient { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit> HeatTransferResistance { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByElectromagneticForce (XMI id ID2679)</summary>
@@ -1849,6 +1931,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
     }
@@ -1876,6 +1959,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByPhaseSeparation (XMI id ID2661)</summary>
@@ -1901,6 +1985,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByPhysicalProcess (XMI id ID1960)</summary>
@@ -1926,6 +2011,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByThermalProcess (XMI id ID2108)</summary>
@@ -1951,6 +2037,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
     }
 
@@ -1977,6 +2064,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SplittingEnergy (XMI id ID2781)</summary>
@@ -1998,6 +2086,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
     }
 
@@ -2020,6 +2109,7 @@ namespace Dexpi2.Process.Process
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
@@ -2045,6 +2135,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Draining (XMI id ID2143)</summary>
@@ -2069,6 +2160,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class FeedingMaterial (XMI id ID2256)</summary>
@@ -2093,6 +2185,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
     }
 
@@ -2118,6 +2211,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
 
@@ -2143,6 +2237,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
     }
@@ -2169,6 +2264,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> OpeningTime { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
@@ -2196,6 +2292,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class RelievingVacuum (XMI id ID2622)</summary>
@@ -2220,6 +2317,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class RelievingVacuumAndOverpressure (XMI id ID2623)</summary>
@@ -2244,6 +2342,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ShuttingOffFlow (XMI id ID2752)</summary>
@@ -2268,6 +2367,7 @@ namespace Dexpi2.Process.Process
         // inherited from SteeringFlow (XMI id ID1986)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> ClosingTime { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit> OpeningTime { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
@@ -2296,6 +2396,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> ChargeCurrent { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> DischargeCurrent { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
@@ -2324,6 +2425,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit> EnergyDensity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit> MassSpecificEnergy { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class StoringFluids (XMI id ID2827)</summary>
@@ -2348,6 +2450,7 @@ namespace Dexpi2.Process.Process
         // inherited from StoringMaterial (XMI id ID2828)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
@@ -2373,6 +2476,7 @@ namespace Dexpi2.Process.Process
         // inherited from StoringMaterial (XMI id ID2828)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingACPower (XMI id ID2304)</summary>
@@ -2398,6 +2502,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit> Frequency { get; set; } = new();
     }
 
@@ -2424,6 +2529,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class GeneratingInFuelCell (XMI id ID2316)</summary>
@@ -2449,6 +2555,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
     }
 
@@ -2475,6 +2582,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
         public Dexpi2.Process.Enumerations.EngineDriveMethod? Method { get; set; }
     }
@@ -2502,6 +2610,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
+        // own members
         public Dexpi2.Process.Enumerations.MotorDriveMethod? Method { get; set; }
     }
 
@@ -2528,6 +2637,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> ShaftPower { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
@@ -2559,6 +2669,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
     }
 
@@ -2590,6 +2701,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class HeatingElectrical (XMI id ID2322)</summary>
@@ -2620,6 +2732,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> Current { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
@@ -2654,6 +2767,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Process.Enumerations.HeatExchangeMethod? Method { get; set; }
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> SkinTemperature { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TemperatureDifference { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> Efficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FuelFlow { get; set; } = new();
     }
@@ -2682,6 +2796,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Depth { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Width { get; set; } = new();
     }
@@ -2710,6 +2825,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
     }
 
@@ -2737,6 +2853,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Length { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit> VolumeFlow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Diameter { get; set; } = new();
     }
 
@@ -2761,6 +2878,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingSolids (XMI id ID2991)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
     }
@@ -2786,6 +2904,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // inherited from TransportingSolids (XMI id ID2991)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> BatchSize { get; set; } = new();
     }
 
@@ -2815,6 +2934,7 @@ namespace Dexpi2.Process.Process
         // inherited from SeparatingByElectromagneticForce (XMI id ID2679)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
     }
@@ -2845,6 +2965,7 @@ namespace Dexpi2.Process.Process
         // inherited from SeparatingByElectromagneticForce (XMI id ID2679)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMagneticFieldIntensityUnit> FieldIntensity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit> RotationalFrequency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit> Velocity { get; set; } = new();
@@ -2873,6 +2994,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
@@ -2902,6 +3024,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
     }
 
@@ -2928,6 +3051,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit> Density { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
     }
@@ -2955,6 +3079,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Adsorbing (XMI id ID1961)</summary>
@@ -2980,6 +3105,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByContact (XMI id ID2674)</summary>
@@ -3005,6 +3131,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingByIonExchange (XMI id ID2706)</summary>
@@ -3030,6 +3157,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SeparatingBySurfaceTension (XMI id ID2722)</summary>
@@ -3055,6 +3183,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> FrotherFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> GasFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
@@ -3089,6 +3218,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> BottomPressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> BottomTemperature { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> CondenserDuty { get; set; } = new();
@@ -3126,6 +3256,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> GasMassFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> SolidsMassFlow { get; set; } = new();
@@ -3156,6 +3287,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
         // inherited from SeparatingByThermalProcess (XMI id ID2108)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Duty { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit> Area { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> EvaporationRate { get; set; } = new();
     }
@@ -3183,6 +3315,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> PermeateFlow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> PressureDifference { get; set; } = new();
@@ -3211,6 +3344,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit> ParticleSize { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit> Power { get; set; } = new();
@@ -3239,6 +3373,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> ProductRecovery { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> SeparationEfficiency { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit> WasteInProduct { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassFlowRateUnit> Flow { get; set; } = new();
     }
 
@@ -3269,6 +3404,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> ChargeCurrent { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit> DischargeCurrent { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit> Voltage { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class StoringInPressureVessel (XMI id ID2833)</summary>
@@ -3295,6 +3431,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
         // inherited from StoringFluids (XMI id ID2827)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class StoringInTank (XMI id ID2839)</summary>
@@ -3321,6 +3458,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
         // inherited from StoringFluids (XMI id ID2827)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class StoringInSilo (XMI id ID2834)</summary>
@@ -3345,6 +3483,7 @@ namespace Dexpi2.Process.Process
         // inherited from StoringMaterial (XMI id ID2828)
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit> Capacity { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit> Volume { get; set; } = new();
+        // own members
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeLengthUnit> Level { get; set; } = new();
     }
 
@@ -3384,6 +3523,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class StrippingDistilling (XMI id ID2866)</summary>
@@ -3422,6 +3562,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
+        // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class VacuumDistilling (XMI id ID3006)</summary>
@@ -3460,6 +3601,7 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Auxiliaries.QualifiedValueOfDouble> RefluxRatio { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> TopPressure { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> TopTemperature { get; set; } = new();
+        // own members (none)
     }
 
 }
@@ -3477,6 +3619,7 @@ namespace Dexpi2.Process
         public Dexpi2.Core.Diagram.MetaData? MetaData { get; set; }
         public List<Dexpi2.Core.Note> Notes { get; set; } = new();
         public List<Dexpi2.Core.Role> Roles { get; set; } = new();
+        // own members
         public List<Dexpi2.Process.Process.Composition> Compositions { get; set; } = new();
         public List<Dexpi2.Process.Process.InstrumentationSystemActivity> InstrumentationSystemActivities { get; set; } = new();
         public List<Dexpi2.Process.Process.ListOfMaterialComponents> ListsOfMaterialComponents { get; set; } = new();

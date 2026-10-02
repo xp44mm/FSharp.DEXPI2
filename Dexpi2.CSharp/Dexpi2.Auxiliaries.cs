@@ -31,6 +31,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -52,6 +53,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -73,6 +75,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -94,6 +97,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -115,6 +119,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public double Value { get; set; } = 0.0;
     }
 
@@ -136,6 +141,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -157,6 +163,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantityVector? Value { get; set; }
     }
 
@@ -178,6 +185,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -199,6 +207,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public int Value { get; set; } = 0;
     }
 
@@ -220,6 +229,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -241,6 +251,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -262,6 +273,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -283,6 +295,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -304,6 +317,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -325,6 +339,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -346,6 +361,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -367,6 +383,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -388,6 +405,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -409,6 +427,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -430,6 +449,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -451,6 +471,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -472,6 +493,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -493,6 +515,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -514,6 +537,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -535,6 +559,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -556,6 +581,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -577,6 +603,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -598,6 +625,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -619,6 +647,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -640,6 +669,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -661,6 +691,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -682,6 +713,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
@@ -703,6 +735,7 @@ namespace Dexpi2.Auxiliaries
         public string? ReferenceDataURI { get; set; }
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
         public string? SourceURI { get; set; }
+        // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
