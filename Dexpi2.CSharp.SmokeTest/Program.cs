@@ -14,10 +14,17 @@ void Check(bool cond, string what)
 }
 
 var asm = typeof(EngineeringModel).Assembly;
-var types = asm.GetTypes();
-// netstandard2.0 会把可空注解用的 NullableAttribute 等编译期类型嵌入程序集
-// （它们基类是 System.Attribute），统计模型时排除。
-var classes = types.Where(t => t.IsClass && !t.IsSubclassOf(typeof(Attribute))).ToArray();
+// 排除生成/编译基础设施，仅统计扁平模型类型：
+//  - netstandard2.0 嵌入的可空注解特性类（Nullable* / RefSafetyRules / Embedded，基类 Attribute）
+//  - IsExternalInit 垫片（netstandard2.0 record 支撑）
+//  - 可区分联合容器（*Union）及其嵌套 Case 记录（不属于扁平模型）
+var types = asm.GetTypes()
+    .Where(t => t.DeclaringType is null
+        && !t.Name.EndsWith("Union")
+        && !t.IsSubclassOf(typeof(Attribute))
+        && t.Name != "IsExternalInit")
+    .ToArray();
+var classes = types.Where(t => t.IsClass).ToArray();
 var enums = types.Where(t => t.IsEnum).ToArray();
 var abstracts = classes.Where(t => t.IsAbstract).ToArray();
 var nonObjectBase = classes.Where(t => t.BaseType != typeof(object)).ToArray();
@@ -74,6 +81,21 @@ Check(qvProp?.PropertyType == typeof(PhysicalQuantity), $"Value property type {q
 
 // Enum sanity.
 Check(typeof(QuantityProvenance).GetEnumNames().Length == 5, "QuantityProvenance member count");
+
+// Discriminated union for TaggedPlantItem: all non-abstract descendants
+// (non-leaf classes included), each case carrying the C# type.
+var unionType = typeof(TaggedPlantItemUnion);
+var unionAll = (System.Collections.IEnumerable)unionType.GetField("All", BindingFlags.Public | BindingFlags.Static)!.GetValue(null)!;
+var cases = unionAll.Cast<object>().ToArray();
+var payloads = cases
+    .Select(c => (Type)c.GetType().GetProperty("Type")!.GetValue(c)!)
+    .ToArray();
+Check(cases.Length == 100, $"TaggedPlantItemUnion case count {cases.Length} != 100");
+Check(payloads.All(t => t.IsClass && !t.IsAbstract), "TaggedPlantItemUnion payloads must be concrete classes");
+Check(payloads.All(t => t.Assembly == asm), "TaggedPlantItemUnion payloads must live in this assembly");
+foreach (var expected in new[] { typeof(CentrifugalPump), typeof(BatchWeigher), typeof(TaggedColumnSection) })
+    Check(payloads.Contains(expected), $"TaggedPlantItemUnion missing case {expected.Name}");
+Console.WriteLine($"TaggedPlantItemUnion cases : {cases.Length}");
 
 if (failures.Count == 0)
 {

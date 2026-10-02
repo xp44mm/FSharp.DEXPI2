@@ -3,6 +3,7 @@
 // Source: dexpi2_plant.hpp (flattened C++ headers, snapshot under Dexpi2.CSharp.Generator/input).
 // Flat hierarchy: no class inherits from anything; every class is self-contained.
 // Abstract DEXPI classes are emitted as C# 'abstract' classes (not directly instantiable).
+// Discriminated unions (Type registries) may follow the target abstract classes.
 // Regenerate with: dotnet run --project Dexpi2.CSharp.Generator
 // </auto-generated>
 
@@ -3144,6 +3145,120 @@ namespace Dexpi2.Plant.Processequipment
         public string? TagNamePrefix { get; set; }
         public string? TagNameSequenceNumber { get; set; }
         public string? TagNameSuffix { get; set; }
+    }
+
+    /// <summary>可区分联合：TaggedPlantItem 的所有非抽象派生类型（含非叶类）。每个案例荷载对应的 C# 类型。</summary>
+    public abstract record TaggedPlantItemUnion
+    {
+        private TaggedPlantItemUnion() { }
+
+        /// <summary>一个联合案例：荷载 C# 类型。</summary>
+        public sealed record Case(Type Type) : TaggedPlantItemUnion;
+
+        /// <summary>全部案例（含非叶类），按 C# 类型全名排序。</summary>
+        public static readonly TaggedPlantItemUnion[] All =
+        {
+            new Case(typeof(Agglomerator)),
+            new Case(typeof(Agitator)),
+            new Case(typeof(AirCoolingSystem)),
+            new Case(typeof(AirEjector)),
+            new Case(typeof(AlternatingCurrentGenerator)),
+            new Case(typeof(AlternatingCurrentMotor)),
+            new Case(typeof(AxialBlower)),
+            new Case(typeof(AxialCompressor)),
+            new Case(typeof(AxialFan)),
+            new Case(typeof(BatchWeigher)),
+            new Case(typeof(Blower)),
+            new Case(typeof(Boiler)),
+            new Case(typeof(Burner)),
+            new Case(typeof(CentrifugalBlower)),
+            new Case(typeof(CentrifugalCompressor)),
+            new Case(typeof(CentrifugalPump)),
+            new Case(typeof(Centrifuge)),
+            new Case(typeof(Chimney)),
+            new Case(typeof(CombustionEngine)),
+            new Case(typeof(Compressor)),
+            new Case(typeof(ContinuousWeigher)),
+            new Case(typeof(ConvectionDryer)),
+            new Case(typeof(Conveyor)),
+            new Case(typeof(CoolingTower)),
+            new Case(typeof(Crusher)),
+            new Case(typeof(DirectCurrentGenerator)),
+            new Case(typeof(DirectCurrentMotor)),
+            new Case(typeof(DryCoolingTower)),
+            new Case(typeof(Dryer)),
+            new Case(typeof(EjectorPump)),
+            new Case(typeof(ElectricGenerator)),
+            new Case(typeof(ElectricHeater)),
+            new Case(typeof(ElectricalSeparator)),
+            new Case(typeof(Extruder)),
+            new Case(typeof(Fan)),
+            new Case(typeof(Feeder)),
+            new Case(typeof(Filter)),
+            new Case(typeof(FilteringCentrifuge)),
+            new Case(typeof(Flare)),
+            new Case(typeof(ForkliftTruck)),
+            new Case(typeof(Furnace)),
+            new Case(typeof(GasFilter)),
+            new Case(typeof(GasTurbine)),
+            new Case(typeof(GravitationalSeparator)),
+            new Case(typeof(Grinder)),
+            new Case(typeof(HeatExchanger)),
+            new Case(typeof(HeatedSurfaceDryer)),
+            new Case(typeof(Heater)),
+            new Case(typeof(Kneader)),
+            new Case(typeof(Lift)),
+            new Case(typeof(LiquidFilter)),
+            new Case(typeof(LoadingUnloadingSystem)),
+            new Case(typeof(MechanicalSeparator)),
+            new Case(typeof(Mill)),
+            new Case(typeof(Mixer)),
+            new Case(typeof(MobileTransportSystem)),
+            new Case(typeof(Motor)),
+            new Case(typeof(PackagingSystem)),
+            new Case(typeof(PlateHeatExchanger)),
+            new Case(typeof(PressureVessel)),
+            new Case(typeof(ProcessColumn)),
+            new Case(typeof(Pump)),
+            new Case(typeof(RadialFan)),
+            new Case(typeof(RailWaggon)),
+            new Case(typeof(ReciprocatingCompressor)),
+            new Case(typeof(ReciprocatingExtruder)),
+            new Case(typeof(ReciprocatingPressureAgglomerator)),
+            new Case(typeof(ReciprocatingPump)),
+            new Case(typeof(RevolvingSieve)),
+            new Case(typeof(RotaryCompressor)),
+            new Case(typeof(RotaryMixer)),
+            new Case(typeof(RotaryPump)),
+            new Case(typeof(RotatingExtruder)),
+            new Case(typeof(RotatingGrowthAgglomerator)),
+            new Case(typeof(RotatingPressureAgglomerator)),
+            new Case(typeof(ScrubbingSeparator)),
+            new Case(typeof(SedimentalCentrifuge)),
+            new Case(typeof(Separator)),
+            new Case(typeof(Ship)),
+            new Case(typeof(Sieve)),
+            new Case(typeof(Silo)),
+            new Case(typeof(SpiralHeatExchanger)),
+            new Case(typeof(SprayCooler)),
+            new Case(typeof(StaticMixer)),
+            new Case(typeof(StationarySieve)),
+            new Case(typeof(StationaryTransportSystem)),
+            new Case(typeof(SteamGenerator)),
+            new Case(typeof(SteamTurbine)),
+            new Case(typeof(TaggedColumnSection)),
+            new Case(typeof(Tank)),
+            new Case(typeof(ThinFilmEvaporator)),
+            new Case(typeof(TransportableContainer)),
+            new Case(typeof(Truck)),
+            new Case(typeof(TubularHeatExchanger)),
+            new Case(typeof(Turbine)),
+            new Case(typeof(Vessel)),
+            new Case(typeof(VibratingSieve)),
+            new Case(typeof(WasteGasEmitter)),
+            new Case(typeof(Weigher)),
+            new Case(typeof(WetCoolingTower)),
+        };
     }
 
     /// <summary>DEXPI 2.0 model class AlternatingCurrentMotorAsComponent (XMI id ID1289)</summary>
@@ -7541,3 +7656,9 @@ namespace Dexpi2.Plant
 
 }
 
+
+namespace System.Runtime.CompilerServices
+{
+    /// <summary>netstandard2.0 缺少的 record init 支撑类型（编译器要求）。</summary>
+    internal static class IsExternalInit { }
+}

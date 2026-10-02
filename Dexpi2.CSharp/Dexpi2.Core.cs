@@ -3,6 +3,7 @@
 // Source: dexpi2_core.hpp (flattened C++ headers, snapshot under Dexpi2.CSharp.Generator/input).
 // Flat hierarchy: no class inherits from anything; every class is self-contained.
 // Abstract DEXPI classes are emitted as C# 'abstract' classes (not directly instantiable).
+// Discriminated unions (Type registries) may follow the target abstract classes.
 // Regenerate with: dotnet run --project Dexpi2.CSharp.Generator
 // </auto-generated>
 
