@@ -11,7 +11,7 @@
     <Compile Include="Plant.fs" />
     <Compile Include="Core.fs" />
     <Compile Include="Plant\ProcessEquipment.fs" />
-    <Compile Include="Plant\TaggedPlantItemUnion.fs" />
+    <Compile Include="Plant\TaggedPlantItem.fs" />
   </ItemGroup>
 
   <ItemGroup>
