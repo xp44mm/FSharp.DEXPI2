@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="ObjectId.fs" />
-    <Compile Include="MinimalXmlModel.fs" />
+    <Compile Include="FSharp.DEXPI2.fs" />
+    <Compile Include="Plant\Piping.fs" />
+    <Compile Include="Plant.fs" />
+    <Compile Include="Core.fs" />
+    <Compile Include="Plant\ProcessEquipment.fs" />
   </ItemGroup>
 
 </Project>

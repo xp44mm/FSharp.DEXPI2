@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="dexpi2::plant::piping::PipingNetworkSegment">
+    <Position X="3.5" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>GQACAABAABAJLAgAAECAAQiABgEAAEApAIAABCCgAMA=</HashCode>
+      <FileName>dexpi2_plant.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

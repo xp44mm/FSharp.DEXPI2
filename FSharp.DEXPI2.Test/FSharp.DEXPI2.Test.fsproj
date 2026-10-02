@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="InPlaceTree.fs" />
     <Compile Include="MinimalTankDischargeTest.fs" />
   </ItemGroup>
 
