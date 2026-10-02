@@ -1,6 +1,6 @@
 ﻿# Dexpi2.CSharp
 
-DEXPI 2.0 信息模型的 **C# 扁平化（零继承）** 落地库，参照 `Dexpi2.Cpp.Flattened`（C++ 扁平化版）1:1 生成。
+DEXPI 2.0 信息模型的 **C# 扁平化（零继承）** 落地库，参照已移除的 `Dexpi2.Cpp.Flattened`（C++ 扁平化版）1:1 生成。
 
 ## DEXPI 是什么
 
@@ -89,7 +89,8 @@ Dexpi2.CSharp/
   Dexpi2.Plant.cs         # 对应 dexpi2_plant.hpp
   Dexpi2.Process.cs       # 对应 dexpi2_process.hpp
 
-Dexpi2.CSharp.Generator/  # F# 生成器（解析 4 个扁平化 hpp，输出上述 .cs）
+Dexpi2.CSharp.Generator/  # F# 生成器（解析 input/ 下 4 个扁平化 hpp，输出上述 .cs）
+  input/                  # 扁平化 C++ 头文件快照（原 Dexpi2.Cpp.Flattened 产物，已随其删除）
 Dexpi2.CSharp.SmokeTest/  # 反射冒烟测试（527/86/89、零继承、成员抽查）
 ```
 
@@ -99,7 +100,8 @@ Dexpi2.CSharp.SmokeTest/  # 反射冒烟测试（527/86/89、零继承、成员�
 dotnet run --project Dexpi2.CSharp.Generator
 ```
 
-生成器从 `Dexpi2.Cpp.Flattened/*.hpp` 读取模型，输出到 `Dexpi2.CSharp/`；
+生成器从 `Dexpi2.CSharp.Generator/input/*.hpp` 读取模型（该快照源自已删除的
+`Dexpi2.Cpp.Flattened` 扁平化产物），输出到 `Dexpi2.CSharp/`；
 所有输出文件为 UTF-8 (BOM) + CRLF。
 
 ## 编译与测试

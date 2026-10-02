@@ -6,6 +6,4 @@
   <Project Path="Dexpi2.CSharp.Generator/Dexpi2.CSharp.Generator.fsproj" />
   <Project Path="Dexpi2.CSharp.SmokeTest/Dexpi2.CSharp.SmokeTest.csproj" />
   <Project Path="Dexpi2.CSharp/Dexpi2.CSharp.csproj" />
-  <Project Path="Dexpi2CppFlatten/Dexpi2CppFlatten.fsproj" />
-  <Project Path="Dexpi2.Cpp.Flattened/Dexpi2.Cpp.Flattened.vcxproj" Id="07786ab5-6bce-4c34-8b93-cfc75fabf2c7" />
 </Solution>
