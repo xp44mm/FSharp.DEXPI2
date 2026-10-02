@@ -1,15 +1,16 @@
 ﻿// Dexpi2CSharpGenerator
 //
-// Reads the flattened C++ headers (input/ snapshot, originally produced by the
-// removed Dexpi2CppFlatten tool) and emits a flat (inheritance-free) C# class
-// library, mirroring the C++ flattening rules:
+// Regenerates the flattened C++ headers on the fly (Dexpi2CppFlatten module in
+// Flatten.fs, restored from git history) from Dexpi2.Cpp/Generated/dexpi2.hpp
+// and emits a flat (inheritance-free) C# class library, mirroring the C++
+// flattening rules:
 //   - no class inherits from anything; every class is self-contained
 //   - abstract DEXPI classes are emitted as C# `abstract` classes
 //   - cross-namespace references are fully qualified; same-namespace plain
 //
-// Usage: Dexpi2CSharpGenerator [inDir] [outDir]
-//   inDir  default: <this project>/input
-//   outDir default: <repoRoot>/Dexpi2.CSharp
+// Usage: Dexpi2CSharpGenerator [inputHpp] [outDir]
+//   inputHpp default: <repoRoot>/Dexpi2.Cpp/Generated/dexpi2.hpp
+//   outDir   default: <repoRoot>/Dexpi2.CSharp
 
 module Dexpi2CSharpGenerator
 
@@ -322,13 +323,20 @@ let main argv =
         let di = DirectoryInfo(__SOURCE_DIRECTORY__)
         di.Parent.FullName
 
-    let inDir =
+    let inputHpp =
         if argv.Length > 0 then argv.[0]
-        else Path.Combine(__SOURCE_DIRECTORY__, "input")
+        else Path.Combine(repoRoot, "Dexpi2.Cpp", "Generated", "dexpi2.hpp")
 
     let outDir =
         if argv.Length > 1 then argv.[1]
         else Path.Combine(repoRoot, "Dexpi2.CSharp")
+
+    // Regenerate the flattened C++ headers from dexpi2.hpp (no input/ snapshot).
+    let flattenDir = Path.Combine(__SOURCE_DIRECTORY__, "obj", "flatten-hpp")
+    if Directory.Exists flattenDir then Directory.Delete(flattenDir, true)
+    let flattenCode = Dexpi2CppFlatten.flattenAll inputHpp flattenDir
+    if flattenCode <> 0 then failwithf "Dexpi2CppFlatten failed with exit code %d" flattenCode
+    let inDir = flattenDir
 
     let headers =
         [ "dexpi2_core.hpp", "Dexpi2.Core.cs"
