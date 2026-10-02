@@ -63,6 +63,7 @@ let private classRe =
           RegexOptions.Singleline)
 let private enumMemberRe = Regex(@"^\s*(\w+)\s*,?\s*(//.*)?\s*$")
 let private inheritedRe = Regex(@"^\s*//\s*inherited from\s+(.+?)\s*$")
+let private ownMembersRe = Regex(@"^\s*//\s*own members\s*$")
 let private memberRe = Regex(@"^\s*(\S+)\s+([A-Za-z_]\w*)\s*(?:=\s*([^;]+))?\s*;\s*$")
 
 /// Parse one flattened hpp file into a declaration list (in source order).
@@ -113,16 +114,19 @@ let parseFile (path: string) : Decl list =
             let im = inheritedRe.Match(l)
             if im.Success then lastInherited <- Some im.Groups.[1].Value
             else
-                let mm = memberRe.Match(l)
-                if mm.Success && not (l.Contains("virtual ~")) && not (l.Contains("() = default")) then
-                    let init =
-                        if mm.Groups.[3].Success then Some (mm.Groups.[3].Value.Trim())
-                        else None
-                    members.Add(
-                        { CppType = mm.Groups.[1].Value
-                          Name = mm.Groups.[2].Value
-                          Init = init
-                          InheritedFrom = lastInherited })
+                let om = ownMembersRe.Match(l)
+                if om.Success then lastInherited <- None
+                else
+                    let mm = memberRe.Match(l)
+                    if mm.Success && not (l.Contains("virtual ~")) && not (l.Contains("() = default")) then
+                        let init =
+                            if mm.Groups.[3].Success then Some (mm.Groups.[3].Value.Trim())
+                            else None
+                        members.Add(
+                            { CppType = mm.Groups.[1].Value
+                              Name = mm.Groups.[2].Value
+                              Init = init
+                              InheritedFrom = lastInherited })
         decls.Add(
             Class
                 { Ns = nsAtLine.[startLine m]
@@ -215,7 +219,7 @@ let emitClass (b: StringBuilder) (c: ClassDecl) =
     let mutable lastInherited = ""
     for m in c.Members do
         let inh = defaultArg m.InheritedFrom ""
-        if inh <> lastInherited then
+        if inh <> lastInherited && inh <> "" then
             append (sprintf "        // inherited from %s" inh)
             lastInherited <- inh
         let csType = mapType c.Ns m.CppType

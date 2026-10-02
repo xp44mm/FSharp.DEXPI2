@@ -285,6 +285,15 @@ let emitClass (m: Model) (c: ClassDecl) : string list =
             [ "        // inherited from " + src.CppName + " (XMI id " + src.XmiId + ")" ]
             @ List.map (fun mem -> "        " + qualifyMember m.TypeNs src.NsPath c.NsPath mem + ";") mems)
 
+    // Separate the class's own fields from inherited ones so the flat header
+    // keeps the ownership boundary visible (the parser resets the inherited
+    // source at this marker).
+    let ownMarkLines =
+        if not inheritedLines.IsEmpty && not c.Members.IsEmpty then
+            [ "        // own members" ]
+        else
+            []
+
     let ownLines = List.map (fun mem -> "        " + mem + ";") own
 
     let ctorLines =
@@ -300,6 +309,7 @@ let emitClass (m: Model) (c: ClassDecl) : string list =
       "    public:"
       "        virtual ~" + c.CppName + "() = default;" ]
     @ inheritedLines
+    @ ownMarkLines
     @ ownLines
     @ [ "" ]
     @ ctorLines
