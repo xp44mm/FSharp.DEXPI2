@@ -15,7 +15,9 @@ void Check(bool cond, string what)
 
 var asm = typeof(EngineeringModel).Assembly;
 var types = asm.GetTypes();
-var classes = types.Where(t => t.IsClass).ToArray();
+// netstandard2.0 会把可空注解用的 NullableAttribute 等编译期类型嵌入程序集
+// （它们基类是 System.Attribute），统计模型时排除。
+var classes = types.Where(t => t.IsClass && !t.IsSubclassOf(typeof(Attribute))).ToArray();
 var enums = types.Where(t => t.IsEnum).ToArray();
 var abstracts = classes.Where(t => t.IsAbstract).ToArray();
 var nonObjectBase = classes.Where(t => t.BaseType != typeof(object)).ToArray();
