@@ -11,6 +11,11 @@
     <Compile Include="Plant.fs" />
     <Compile Include="Core.fs" />
     <Compile Include="Plant\ProcessEquipment.fs" />
+    <Compile Include="Plant\TaggedPlantItemUnion.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dexpi2.CSharp\Dexpi2.CSharp.csproj" />
   </ItemGroup>
 
 </Project>

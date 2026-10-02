@@ -86,42 +86,13 @@ Dexpi2.CSharp/
   Dexpi2.CSharp.csproj    # netstandard2.0, Nullable enable, LangVersion latest
   Dexpi2.Core.cs          # 对应 dexpi2_core.hpp
   Dexpi2.Auxiliaries.cs   # 对应 dexpi2_auxiliaries.hpp
-  Dexpi2.Plant.cs         # 对应 dexpi2_plant.hpp（含可区分联合 TaggedPlantItemUnion）
+  Dexpi2.Plant.cs         # 对应 dexpi2_plant.hpp
   Dexpi2.Process.cs       # 对应 dexpi2_process.hpp
 
 Dexpi2.CSharp.Generator/  # F# 生成器（解析 input/ 下 4 个扁平化 hpp，输出上述 .cs）
   input/                  # 扁平化 C++ 头文件快照（原 Dexpi2.Cpp.Flattened 产物，已随其删除）
-Dexpi2.CSharp.SmokeTest/  # 反射冒烟测试（527/86/89、零继承、成员抽查、联合断言）
+Dexpi2.CSharp.SmokeTest/  # 反射冒烟测试（527/86/89、零继承、成员抽查）
 ```
-
-## 可区分联合（零继承下的“派生关系”恢复）
-
-扁平化把继承关系摊平了，`TaggedPlantItem` 等抽象类不再携带“谁派生自它”。
-生成器从各类的 `[flattened; bases inlined: ...]` 注释重建继承 DAG，并在目标抽象类
-之后生成一个**封闭可区分联合**（C# 惯用法：抽象 record + 嵌套 Case）：
-
-```csharp
-// Dexpi2.Plant.cs —— 位于 public abstract class TaggedPlantItem 之后
-public abstract record TaggedPlantItemUnion
-{
-    private TaggedPlantItemUnion() { }
-    public sealed record CentrifugalPumpCase(Type Type) : TaggedPlantItemUnion;   // 每派生类一个独立案例
-    public sealed record BatchWeigherCase(Type Type) : TaggedPlantItemUnion;
-    // ... 其余案例 ...
-    public static readonly TaggedPlantItemUnion[] All =
-        { new CentrifugalPumpCase(typeof(CentrifugalPump)), ... };
-}
-```
-
-- 收集**全部非抽象派生类型**（传递闭包，含非叶类）；抽象后代（如 `ProcessEquipment`）不进入；
-- **每个派生类一个独立 sealed record 案例**（`<类名>Case`），案例荷载对应的 C# `System.Type`，
-  可用 `is`/`switch` 对 `TaggedPlantItemUnion` 做穷尽匹配，或遍历 `All` 做类型注册/序列化映射；
-- 当前 `TaggedPlantItemUnion` 共 **100 个案例**（DEXPI 2.0 中 `TaggedPlantItem`
-  直系子类仅 `ProcessEquipment`（抽象）与 `TaggedColumnSection`，其余均为
-  `ProcessEquipment` 的具体子类）；
-- 联合本身是生成器能力：`dotnet run --project Dexpi2.CSharp.Generator -- --union 类名`
-  可为其他抽象类追加联合；netstandard2.0 下自动附带 `IsExternalInit` 垫片（每程序集一次）。
-
 
 ## 重新生成
 
@@ -141,5 +112,4 @@ dotnet run --project Dexpi2.CSharp.SmokeTest -c Release
 ```
 
 冒烟测试断言：527 个类、86 个抽象类、89 个枚举；**所有类的基类均为
-`object`（零继承）**；抽查 `ProcessModel` 等类的内联成员与默认值；
-`TaggedPlantItemUnion` 恰好 100 个案例且荷载均为具体类。
+`object`（零继承）**；抽查 `ProcessModel` 等类的内联成员与默认值。
