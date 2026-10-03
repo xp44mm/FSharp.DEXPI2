@@ -241,8 +241,8 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
-        public string? Identifier { get; set; }
-        public string? Label { get; set; }
+        public string Identifier { get; set; } = "";
+        public string Label { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class MaterialState (XMI id ID2414)</summary>
@@ -337,7 +337,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -436,10 +436,10 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from MaterialComponent (XMI id ID2104)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
-        public string? Identifier { get; set; }
-        public string? Label { get; set; }
+        public string Identifier { get; set; } = "";
+        public string Label { get; set; } = "";
         // own members
-        public string? ProjectReference { get; set; }
+        public string ProjectReference { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class PureMaterialComponent (XMI id ID2589)</summary>
@@ -451,11 +451,11 @@ namespace Dexpi2.Process.Process
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from MaterialComponent (XMI id ID2104)
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
-        public string? Identifier { get; set; }
-        public string? Label { get; set; }
+        public string Identifier { get; set; } = "";
+        public string Label { get; set; } = "";
         // own members
-        public string? ChEBI_identifier { get; set; }
-        public string? IUPAC_identifier { get; set; }
+        public string ChEBI_identifier { get; set; } = "";
+        public string IUPAC_identifier { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class EnergyPort (XMI id ID2198)</summary>
@@ -569,7 +569,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -593,7 +593,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -621,7 +621,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -646,7 +646,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -673,7 +673,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -697,7 +697,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -725,7 +725,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -747,7 +747,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -769,7 +769,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -791,7 +791,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -817,7 +817,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -843,7 +843,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -868,14 +868,14 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // own members
-        public string? SourceReference { get; set; }
+        public string SourceReference { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class Source (XMI id ID2778)</summary>
@@ -891,14 +891,14 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
         public List<ProcessStep> SubProcessSteps { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit> Temperature { get; set; } = new();
         // own members
-        public string? SinkReference { get; set; }
+        public string SinkReference { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class Splitting (XMI id ID2780) [abstract in DEXPI]</summary>
@@ -914,7 +914,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -936,7 +936,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -960,7 +960,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -985,7 +985,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1009,7 +1009,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1034,7 +1034,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1058,7 +1058,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1083,7 +1083,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1107,7 +1107,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1137,7 +1137,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1164,7 +1164,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1190,7 +1190,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1440,7 +1440,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1468,7 +1468,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1496,7 +1496,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1522,7 +1522,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1550,7 +1550,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1581,7 +1581,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1610,7 +1610,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1640,7 +1640,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1669,7 +1669,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1693,7 +1693,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1718,7 +1718,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1740,7 +1740,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1764,7 +1764,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1786,7 +1786,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1813,7 +1813,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1840,7 +1840,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1867,7 +1867,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1894,7 +1894,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1921,7 +1921,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1949,7 +1949,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -1975,7 +1975,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2001,7 +2001,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2027,7 +2027,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2054,7 +2054,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2080,7 +2080,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2103,7 +2103,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2126,7 +2126,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2151,7 +2151,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2176,7 +2176,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2202,7 +2202,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2228,7 +2228,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2255,7 +2255,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2283,7 +2283,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2308,7 +2308,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2333,7 +2333,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2358,7 +2358,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2386,7 +2386,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2415,7 +2415,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2441,7 +2441,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2467,7 +2467,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2492,7 +2492,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2519,7 +2519,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2545,7 +2545,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2572,7 +2572,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2600,7 +2600,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2627,7 +2627,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2654,7 +2654,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2686,7 +2686,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2717,7 +2717,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2752,7 +2752,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2785,7 +2785,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2814,7 +2814,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2842,7 +2842,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2870,7 +2870,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2896,7 +2896,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2921,7 +2921,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2952,7 +2952,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -2984,7 +2984,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3014,7 +3014,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3041,7 +3041,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3069,7 +3069,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3095,7 +3095,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3121,7 +3121,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3147,7 +3147,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3173,7 +3173,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3206,7 +3206,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3244,7 +3244,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3275,7 +3275,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3305,7 +3305,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3334,7 +3334,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3363,7 +3363,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3390,7 +3390,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3420,7 +3420,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3447,7 +3447,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3474,7 +3474,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3500,7 +3500,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3539,7 +3539,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();
@@ -3578,7 +3578,7 @@ namespace Dexpi2.Process.Process
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public Dexpi2.Process.Enumerations.ProcessStepHierarchyLevel? HierarchyLevel { get; set; }
         public string Identifier { get; set; } = "";
-        public string? Label { get; set; }
+        public string Label { get; set; } = "";
         public List<Port> Ports { get; set; } = new();
         public List<Dexpi2.Auxiliaries.QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit> Pressure { get; set; } = new();
         public List<ProcessStepDetail> ProcessStepDetails { get; set; } = new();

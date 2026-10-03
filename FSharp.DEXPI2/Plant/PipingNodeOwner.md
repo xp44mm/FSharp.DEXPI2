@@ -1,15 +1,19 @@
-﻿# PipingNetworkSegmentItem 继承树（非抽象子类）
+﻿# PipingNodeOwner 继承树（非抽象子类）
 
-DEXPI 2.0 模型类 **PipingNetworkSegmentItem**（XMI id ID995，`dexpi2::plant::piping`，**抽象**）的全部派生类型。
+DEXPI 2.0 模型类 **PipingNodeOwner**（XMI id ID996，`dexpi2::plant::piping`，**抽象**）的全部派生类型。
 
-- 传递后代：**61 个**
-- 其中抽象：**2 个**（PipeOffPageConnector、PipingComponent，不属“非抽象”）
-- **非抽象子类：59 个**（含非叶类），全部位于 `Dexpi2.Plant.Piping`
+- 传递后代：**65 个**
+- 其中抽象：**2 个**（`PipeOffPageConnector`、`PipingComponent`，不属"非抽象"）
+- **非抽象子类：63 个**（含非叶类），分布在 `Dexpi2.Plant.Piping` 命名空间
 
 ## 继承树
 
 ```
-PipingNetworkSegmentItem (ID995) [抽象]
+PipingNodeOwner (ID996) [抽象]
+├── Nozzle (ID1224)
+│   ├── AccessNozzle (ID1223)
+│   ├── InstrumentNozzle (ID1576)
+│   └── ProcessNozzle (ID1685)
 ├── PipeOffPageConnector (ID958) [抽象]
 │   ├── FlowInPipeOffPageConnector (ID957)
 │   └── FlowOutPipeOffPageConnector (ID962)
@@ -75,13 +79,21 @@ PipingNetworkSegmentItem (ID995) [抽象]
 
 ## 要点
 
-- 59 个非抽象子类中，**非叶类也包含在内**：`CheckValve`、`InlineMeasuringElement`、
-  `OperatedValve`、`PipeFitting`、`SafetyValveOrFitting`、`PropertyBreak` 等中间类本身
-  也可实例化；
-- 分支统计：`PipeOffPageConnector` 支 2、`CheckValve` 支 3、`InlineMeasuringElement`
-  支 10、`OperatedValve` 支 12、`PipeFitting` 支 25、`SafetyValveOrFitting` 支 6、
-  `PropertyBreak` 1，合计 59。
+- **4 个直接子类**：`Nozzle`、`PipeOffPageConnector`[抽象]、`PipingComponent`[抽象]、`PropertyBreak`；
+- **分支规模**：
+  - `PipingComponent` 支 57 个（最大的一支：阀门 11 + 管件 24 + 测量元件 9 + 安全阀 5 + 止回阀 3 + PipingComponent 自身）；
+  - `Nozzle` 支 4 个（Nozzle 自身 + Access/Instrument/Process 三个专用接管口）；
+  - `PipeOffPageConnector` 支 3 个（抽象基类 + 进/出两个方向）；
+  - `PropertyBreak` 支 1 个（叶类，无后代）；
+- 抽象后代 2 个（`PipeOffPageConnector`、`PipingComponent`），不进入"非抽象子类"集合；
+- 继承成员：`Nodes`（UML 0..* 聚合 `PipingNode`），所有 65 个后代展平后均携带该成员
+  （C# 中为 `List<PipingNode>`，元素非空）；
+- `PipingNode` 本身**不**继承自 PipingNodeOwner——它是被聚合的"连接点"，
+  公称压力等属性由持有它的 Nozzle/Valve 决定，不自带；
+- 与 `NozzleOwner` 的关系：`Nozzle` 同时是两者的后代——
+  `NozzleOwner` 给 Nozzle 带来 `Nozzles` 列表（罐/设备拥有哪些接管口），
+  `PipingNodeOwner` 给 Nozzle 带来 `Nodes` 列表（接管口在管道拓扑里的节点）。
 
 ## 数据来源
 
-`Dexpi2.Cpp/Generated/dexpi2.hpp` 的多继承。
+`Dexpi2.Cpp/Generated/dexpi2.hpp`的多继承。

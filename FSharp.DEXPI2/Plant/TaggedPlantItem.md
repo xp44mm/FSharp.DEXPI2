@@ -125,6 +125,4 @@ TaggedPlantItem (ID1163) [抽象]
 
 ## 数据来源
 
-`Dexpi2.CSharp.Generator/input/*.hpp` 中 `[flattened; bases inlined: ...]`
-直系基类注释的传递闭包（与原始 `Dexpi2.Cpp/Generated/dexpi2.hpp` 的多继承声明一致）。
-XMI id 逐类取自同一批头文件的类注释。
+`Dexpi2.Cpp/Generated/dexpi2.hpp` 的多继承。

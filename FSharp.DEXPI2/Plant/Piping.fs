@@ -3,46 +3,91 @@
 open FSharp.DEXPI2
 
 type PipingNode = {
-    Id: ObjectId
-    NominalDiameterNumericalValueRepresentation: int
+    //NominalDiameterNumericalValueRepresentation: string
+    //NominalDiameterRepresentation: string
+    NominalDiameterStandard: string
+    //NominalDiameterTypeRepresentation: string
 }
 
 type OperatedValve = {
-    Id: ObjectId
     PipingComponentNumber: string
+
     NominalDiameterNumericalValueRepresentation: int
     PN: int
     Nodes: list<PipingNode>
 }
 
 type PipeOffPageConnector = {
-    Id: ObjectId
-    TagName: string
+    Nodes: list<PipingNode>
+
+    //ConnectorReference: PipeOffPageConnectorReference
+    //PipeConnectorDescription: string
+    PipeConnectorNumber: string
 }
 
-type SegmentItem =
-    | ValveItem of OperatedValve
-    | OffPageConnectorItem of PipeOffPageConnector
+type PipingNetworkSegmentItem =
+    | PipeOffPageConnector of PipeOffPageConnector
+    | OperatedValve of OperatedValve
+
+type PipingSourceItem =
+    | PipeOffPageConnector of PipeOffPageConnector
+    | OperatedValve of OperatedValve
+
+type PipingTargetItem =
+    | PipeOffPageConnector of PipeOffPageConnector
+    | OperatedValve of OperatedValve
 
 type PipingConnection = {
-    Id: ObjectId
-    SourceItem: ObjectId
-    TargetItem: ObjectId
+    SourceItem: PipingSourceItem
+    SourceNode: PipingNode
+    TargetItem: PipingTargetItem
+    TargetNode: PipingNode
 }
 
 type PipingNetworkSegment = {
-    Id: ObjectId
+    //ColorCode: string
+    //FlowDirection: string
+    FluidCode: string
+    //HeatTracingType: string
+    //HeatTracingTypeRepresentation: string
+    //InsulationType: string
+    //JacketedPipe: string
+    //NominalDiameterNumericalValueRepresentation: string
+    //NominalDiameterRepresentation: string
+    NominalDiameterStandard: string
+    //NominalDiameterTypeRepresentation: string
+    //OnHold: string
+    //PipingClassCode: string
+    //PressureTestCircuitNumber: string
+    //PrimarySecondaryPipingNetworkSegment: string
     SegmentNumber: string
-    NominalDiameterNumericalValueRepresentation: int
-    Items: list<SegmentItem>
+    //Siphon: string
+    //Slope: string
+
+    SourceItem: PipingSourceItem
+    SourceNode: PipingNode
+    TargetItem: PipingTargetItem
+    TargetNode: PipingNode
+
+    Items: list<PipingNetworkSegmentItem>
     Connections: list<PipingConnection>
 }
 
 type PipingNetworkSystem = {
-    Id: ObjectId
-    LineNumber: string
     FluidCode: string
-    PipingClassCode: string
+    //HeatTracingType: string
+    //HeatTracingTypeRepresentation: string
+    //InsulationType: string
+    //JacketLineNumber: string
+    //JacketedLineNumber: string
+    //JacketedPipe: string
+    LineNumber: string
+    //NominalDiameterNumericalValueRepresentation: string
+    //NominalDiameterRepresentation: string
+    NominalDiameterStandard: string
+    //NominalDiameterTypeRepresentation: string
+    //OnHold: string
+    //PipingClassCode: string
     PipingNetworkSystemGroupNumber: string
     Segments: list<PipingNetworkSegment>
 }

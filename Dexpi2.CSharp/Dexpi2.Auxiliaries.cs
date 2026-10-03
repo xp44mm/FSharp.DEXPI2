@@ -21,16 +21,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -43,16 +43,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -65,16 +65,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -87,16 +87,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -109,16 +109,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public double Value { get; set; } = 0.0;
     }
@@ -131,16 +131,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -153,16 +153,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantityVector? Value { get; set; }
     }
@@ -175,16 +175,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -197,16 +197,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public int Value { get; set; } = 0;
     }
@@ -219,16 +219,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -241,16 +241,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -263,16 +263,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -285,16 +285,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -307,16 +307,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -329,16 +329,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -351,16 +351,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -373,16 +373,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -395,16 +395,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -417,16 +417,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -439,16 +439,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -461,16 +461,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -483,16 +483,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -505,16 +505,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -527,16 +527,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -549,16 +549,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -571,16 +571,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -593,16 +593,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -615,16 +615,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -637,16 +637,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -659,16 +659,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -681,16 +681,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -703,16 +703,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
@@ -725,16 +725,16 @@ namespace Dexpi2.Auxiliaries
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from QualifiedValue (XMI id ID464)
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         // own members
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }

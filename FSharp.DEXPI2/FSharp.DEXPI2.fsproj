@@ -1,20 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="FSharp.DEXPI2.fs" />
-    <Compile Include="Plant\ProcessEquipment.fs" />
-    <Compile Include="Plant\Piping.fs" />
-    <Compile Include="Plant.fs" />
-    <Compile Include="Core.fs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Dexpi2.CSharp\Dexpi2.CSharp.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Include="FSharp.DEXPI2.fs" />
+        <Compile Include="Plant\Piping.fs" />
+        <Compile Include="Plant\ProcessEquipment.fs" />
+        <Compile Include="Plant.fs" />
+        <Compile Include="Core.fs" />
+    </ItemGroup>
 
 </Project>

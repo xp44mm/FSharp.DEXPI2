@@ -164,7 +164,7 @@ let rec mapType (currentNs: string list) (cppType: string) : string =
     if cppType = "std::string" then "string"
     elif cppType = "std::vector<std::string>" then "List<string>"
     elif cppType = "std::vector<double>" then "List<double>"
-    elif cppType = "std::optional<std::string>" then "string?"
+    elif cppType = "std::optional<std::string>" then "string"
     elif cppType = "std::optional<int>" then "int?"
     elif cppType.StartsWith("std::shared_ptr<") && cppType.EndsWith(">") then
         mapType currentNs (innerOf "std::shared_ptr<" cppType) + "?"

@@ -199,39 +199,39 @@ namespace Dexpi2.Core.Diagram
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public string? ApprovalDateRepresentation { get; set; }
+        public string ApprovalDateRepresentation { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? ApprovalDescription { get; set; }
-        public string? ApproverName { get; set; }
-        public string? ArchiveNumber { get; set; }
-        public string? BlockName { get; set; }
-        public string? BlockNumber { get; set; }
-        public string? CheckerName { get; set; }
+        public string ApproverName { get; set; } = "";
+        public string ArchiveNumber { get; set; } = "";
+        public string BlockName { get; set; } = "";
+        public string BlockNumber { get; set; } = "";
+        public string CheckerName { get; set; } = "";
         public ConfidentialityClassification? Confidentiality { get; set; }
-        public string? CreationDateRepresentation { get; set; }
-        public string? CreatorName { get; set; }
-        public string? DesignerName { get; set; }
-        public string? DrafterName { get; set; }
-        public string? DrawingName { get; set; }
-        public string? DrawingNumber { get; set; }
+        public string CreationDateRepresentation { get; set; } = "";
+        public string CreatorName { get; set; } = "";
+        public string DesignerName { get; set; } = "";
+        public string DrafterName { get; set; } = "";
+        public string DrawingName { get; set; } = "";
+        public string DrawingNumber { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? DrawingSubTitle { get; set; }
-        public string? FileName { get; set; }
-        public string? LastModificationDateRepresentation { get; set; }
-        public string? LocationName { get; set; }
-        public string? ProcessCellIdentificationCode { get; set; }
-        public string? ProcessCellName { get; set; }
-        public string? ProjectName { get; set; }
-        public string? ProjectNumber { get; set; }
-        public string? ProjectRangeNumber { get; set; }
-        public string? ReplacedDrawing { get; set; }
-        public string? ResponsibleDepartmentName { get; set; }
-        public string? RevisionNumber { get; set; }
-        public string? SheetFormat { get; set; }
-        public string? SheetNumber { get; set; }
-        public string? SubProjectName { get; set; }
-        public string? SubProjectNumber { get; set; }
+        public string FileName { get; set; } = "";
+        public string LastModificationDateRepresentation { get; set; } = "";
+        public string LocationName { get; set; } = "";
+        public string ProcessCellIdentificationCode { get; set; } = "";
+        public string ProcessCellName { get; set; } = "";
+        public string ProjectName { get; set; } = "";
+        public string ProjectNumber { get; set; } = "";
+        public string ProjectRangeNumber { get; set; } = "";
+        public string ReplacedDrawing { get; set; } = "";
+        public string ResponsibleDepartmentName { get; set; } = "";
+        public string RevisionNumber { get; set; } = "";
+        public string SheetFormat { get; set; } = "";
+        public string SheetNumber { get; set; } = "";
+        public string SubProjectName { get; set; } = "";
+        public string SubProjectNumber { get; set; } = "";
         public int? TotalNumberOfSheets { get; set; }
-        public string? UnitIdentificationCode { get; set; }
-        public string? UnitName { get; set; }
+        public string UnitIdentificationCode { get; set; } = "";
+        public string UnitName { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class GraphicalPrimitive (XMI id ID87) [abstract in DEXPI]</summary>
@@ -833,7 +833,7 @@ namespace Dexpi2.Core
         // own members
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string Name { get; set; } = "";
-        public string? Uri { get; set; }
+        public string Uri { get; set; } = "";
     }
 
     /// <summary>DEXPI 2.0 model class ConceptualModel (XMI id ID10) [abstract in DEXPI]</summary>
@@ -857,9 +857,9 @@ namespace Dexpi2.Core
         public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Note> ReferencedNotes { get; set; } = new();
         // own members
-        public string? LocalNoteIdentifier { get; set; }
-        public string? NoteClassification { get; set; }
-        public string? NoteRegistrationNumber { get; set; }
+        public string LocalNoteIdentifier { get; set; } = "";
+        public string NoteClassification { get; set; } = "";
+        public string NoteRegistrationNumber { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? NoteText { get; set; }
     }
 
@@ -871,16 +871,16 @@ namespace Dexpi2.Core
         public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Note> ReferencedNotes { get; set; } = new();
         // own members
-        public string? Case { get; set; }
-        public string? CaseUID { get; set; }
+        public string Case { get; set; } = "";
+        public string CaseUID { get; set; } = "";
         public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
         public string DisplayText { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
-        public string? ProvenanceURI { get; set; }
+        public string ProvenanceURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
-        public string? ReferenceDataURI { get; set; }
+        public string ReferenceDataURI { get; set; } = "";
         public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
-        public string? SourceURI { get; set; }
+        public string SourceURI { get; set; } = "";
         public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
     }
 
