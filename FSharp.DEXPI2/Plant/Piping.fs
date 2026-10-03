@@ -10,19 +10,25 @@ type PipingNode = {
 }
 
 type OperatedValve = {
+    //own members（与 C# own 分区字段一一对应）
+    //InsulationThickness: string
+    //InsulationType: string
+    //NumberOfPorts: string
+    //Operation: string
+    //PipingClassCode: string
+    PipingComponentName: string
     PipingComponentNumber: string
 
-    NominalDiameterNumericalValueRepresentation: int
-    PN: int
+    //inherited from PipingNodeOwner
     Nodes: list<PipingNode>
 }
 
 type PipeOffPageConnector = {
-    Nodes: list<PipingNode>
-
     //ConnectorReference: PipeOffPageConnectorReference
     //PipeConnectorDescription: string
     PipeConnectorNumber: string
+    Nodes: list<PipingNode>
+
 }
 
 type PipingNetworkSegmentItem =

@@ -9,8 +9,6 @@
 using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace Dexpi2.Core.Datatypes
 {
     /// <summary>DEXPI 2.0 enumeration QuantityProvenance (XMI id ID38)</summary>
@@ -143,7 +141,7 @@ namespace Dexpi2.Core.Diagram
     public abstract class NodePosition
     {
         // own members
-        public Point? Position { get; set; }
+        public Point Position { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Point (XMI id ID89)</summary>
@@ -175,7 +173,7 @@ namespace Dexpi2.Core.Diagram
     public class Stroke
     {
         // own members
-        public Color? Color { get; set; }
+        public Color Color { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class TextTemplate (XMI id ID234)</summary>
@@ -200,20 +198,20 @@ namespace Dexpi2.Core.Diagram
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
         public string ApprovalDateRepresentation { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? ApprovalDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString ApprovalDescription { get; set; } = null!;
         public string ApproverName { get; set; } = "";
         public string ArchiveNumber { get; set; } = "";
         public string BlockName { get; set; } = "";
         public string BlockNumber { get; set; } = "";
         public string CheckerName { get; set; } = "";
-        public ConfidentialityClassification? Confidentiality { get; set; }
+        public ConfidentialityClassification Confidentiality { get; set; } = default;
         public string CreationDateRepresentation { get; set; } = "";
         public string CreatorName { get; set; } = "";
         public string DesignerName { get; set; } = "";
         public string DrafterName { get; set; } = "";
         public string DrawingName { get; set; } = "";
         public string DrawingNumber { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? DrawingSubTitle { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString DrawingSubTitle { get; set; } = null!;
         public string FileName { get; set; } = "";
         public string LastModificationDateRepresentation { get; set; } = "";
         public string LocationName { get; set; } = "";
@@ -229,7 +227,7 @@ namespace Dexpi2.Core.Diagram
         public string SheetNumber { get; set; } = "";
         public string SubProjectName { get; set; } = "";
         public string SubProjectNumber { get; set; } = "";
-        public int? TotalNumberOfSheets { get; set; }
+        public int TotalNumberOfSheets { get; set; } = 0;
         public string UnitIdentificationCode { get; set; } = "";
         public string UnitName { get; set; } = "";
     }
@@ -237,33 +235,37 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class GraphicalPrimitive (XMI id ID87) [abstract in DEXPI]</summary>
     public abstract class GraphicalPrimitive
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ShapeUsage (XMI id ID212)</summary>
     public class ShapeUsage
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
         // own members
         public bool IsMirrored { get; set; } = false;
-        public Point? Position { get; set; }
+        public Point Position { get; set; } = null!;
         public double Rotation { get; set; } = 0.0;
         public double ScaleX { get; set; } = 0.0;
         public double ScaleY { get; set; } = 0.0;
-        public Shape? Shape { get; set; }
+        public Shape Shape { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RepresentationGroup (XMI id ID111)</summary>
     public class RepresentationGroup
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // own members
         public List<GraphicsGroup> Groups { get; set; } = new();
         public List<NodePosition> NodePositions { get; set; } = new();
-        public Dexpi2.Core.ConceptualObject? Represents { get; set; }
+        public Dexpi2.Core.ConceptualObject Represents { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RepresentationTypeGroup (XMI id ID78) [abstract in DEXPI]</summary>
     public abstract class RepresentationTypeGroup
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // own members
         public List<GraphicalElement> Elements { get; set; } = new();
     }
@@ -271,14 +273,16 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class AttributeRepresentation (XMI id ID66)</summary>
     public class AttributeRepresentation
     {
+        // inherited from TextTemplateFragment (XMI id ID67) (none)
         // own members
         public string AttributeName { get; set; } = "";
-        public Dexpi2.Core.ConceptualObject? Object { get; set; }
+        public Dexpi2.Core.ConceptualObject Object { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class LiteralText (XMI id ID141)</summary>
     public class LiteralText
     {
+        // inherited from TextTemplateFragment (XMI id ID67) (none)
         // own members
         public string Text { get; set; } = "";
     }
@@ -286,62 +290,75 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class ConnectorLine (XMI id ID86)</summary>
     public class ConnectorLine
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members
         public List<Point> InnerPoints { get; set; } = new();
-        public NodePosition? Source { get; set; }
-        public Stroke? Stroke { get; set; }
-        public NodePosition? Target { get; set; }
+        public NodePosition Source { get; set; } = null!;
+        public Stroke Stroke { get; set; } = null!;
+        public NodePosition Target { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Ellipse (XMI id ID118)</summary>
     public class Ellipse
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members
-        public Point? Center { get; set; }
+        public Point Center { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class EllipseArc (XMI id ID126)</summary>
     public class EllipseArc
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members
-        public Point? Center { get; set; }
+        public Point Center { get; set; } = null!;
         public double EndAngle { get; set; } = 0.0;
         public double HorizontalSemiAxis { get; set; } = 0.0;
         public double Rotation { get; set; } = 0.0;
         public double StartAngle { get; set; } = 0.0;
-        public Stroke? Stroke { get; set; }
+        public Stroke Stroke { get; set; } = null!;
         public double VerticalSemiAxis { get; set; } = 0.0;
     }
 
     /// <summary>DEXPI 2.0 model class PolyLine (XMI id ID182)</summary>
     public class PolyLine
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members
         public List<Point> Points { get; set; } = new();
-        public Stroke? Stroke { get; set; }
+        public Stroke Stroke { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Polygon (XMI id ID185)</summary>
     public class Polygon
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Text (XMI id ID225)</summary>
     public class Text
     {
+        // inherited from GraphicalElement (XMI id ID137) (none)
+        // inherited from GraphicalPrimitive (XMI id ID87) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class Diagram (XMI id ID110)</summary>
     public class Diagram
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationGroup (XMI id ID111)
         public List<GraphicsGroup> Groups { get; set; } = new();
         public List<NodePosition> NodePositions { get; set; } = new();
-        public Dexpi2.Core.ConceptualObject? Represents { get; set; }
+        public Dexpi2.Core.ConceptualObject Represents { get; set; } = null!;
         // own members
-        public Color? BackgroundColor { get; set; }
+        public Color BackgroundColor { get; set; } = null!;
         public double MaxX { get; set; } = 0.0;
         public double MaxY { get; set; } = 0.0;
         public double MinX { get; set; } = 0.0;
@@ -352,6 +369,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class Border (XMI id ID77)</summary>
     public class Border
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
         // own members (none)
@@ -360,6 +378,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class Label (XMI id ID140)</summary>
     public class Label
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
         // own members (none)
@@ -368,6 +387,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class Static (XMI id ID221)</summary>
     public class Static
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
         // own members (none)
@@ -376,6 +396,7 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class Symbol (XMI id ID100)</summary>
     public class Symbol
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
         // own members (none)
@@ -384,32 +405,40 @@ namespace Dexpi2.Core.Diagram
     /// <summary>DEXPI 2.0 model class CustomSymbol (XMI id ID99)</summary>
     public class CustomSymbol
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
+        // inherited from Symbol (XMI id ID100) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class InsulationSymbol (XMI id ID139)</summary>
     public class InsulationSymbol
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
+        // inherited from Symbol (XMI id ID100) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PipeFlowArrow (XMI id ID178)</summary>
     public class PipeFlowArrow
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
+        // inherited from Symbol (XMI id ID100) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PipeSlopeSymbol (XMI id ID179)</summary>
     public class PipeSlopeSymbol
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<GraphicalElement> Elements { get; set; } = new();
+        // inherited from Symbol (XMI id ID100) (none)
         // own members (none)
     }
 
@@ -763,7 +792,7 @@ namespace Dexpi2.Core.Physicalquantities
     public class PhysicalQuantity
     {
         // own members
-        public PhysicalQuantityUnit? Unit { get; set; }
+        public PhysicalQuantityUnit Unit { get; set; } = null!;
         public double Value { get; set; } = 0.0;
     }
 
@@ -777,19 +806,21 @@ namespace Dexpi2.Core.Physicalquantities
     public class PhysicalQuantityVector
     {
         // own members
-        public PhysicalQuantityUnit? Unit { get; set; }
+        public PhysicalQuantityUnit Unit { get; set; } = null!;
         public List<double> Values { get; set; } = new();
     }
 
     /// <summary>DEXPI 2.0 model class FrequencyUnit (XMI id ID295) [abstract in DEXPI]</summary>
     public abstract class FrequencyUnit
     {
+        // inherited from PhysicalQuantityUnit (XMI id ID273) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PressureUnit (XMI id ID400) [abstract in DEXPI]</summary>
     public abstract class PressureUnit
     {
+        // inherited from PhysicalQuantityUnit (XMI id ID273) (none)
         // own members (none)
     }
 
@@ -810,8 +841,8 @@ namespace Dexpi2.Core
     public class EngineeringModel
     {
         // own members
-        public ConceptualModel? ConceptualModel { get; set; }
-        public Dexpi2.Core.Diagram.Diagram? Diagram { get; set; }
+        public ConceptualModel ConceptualModel { get; set; } = null!;
+        public Dexpi2.Core.Diagram.Diagram Diagram { get; set; } = null!;
         public string ExportDateTime { get; set; } = "";
         public string OriginatingSystemName { get; set; } = "";
         public string OriginatingSystemVendorName { get; set; } = "";
@@ -831,7 +862,7 @@ namespace Dexpi2.Core
     public class Role
     {
         // own members
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string Name { get; set; } = "";
         public string Uri { get; set; } = "";
     }
@@ -844,7 +875,7 @@ namespace Dexpi2.Core
         public List<PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Diagram.MetaData? MetaData { get; set; }
+        public Dexpi2.Core.Diagram.MetaData MetaData { get; set; } = null!;
         public List<Note> Notes { get; set; } = new();
         public List<Role> Roles { get; set; } = new();
     }
@@ -860,7 +891,7 @@ namespace Dexpi2.Core
         public string LocalNoteIdentifier { get; set; } = "";
         public string NoteClassification { get; set; } = "";
         public string NoteRegistrationNumber { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? NoteText { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString NoteText { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValue (XMI id ID464)</summary>
@@ -873,15 +904,15 @@ namespace Dexpi2.Core
         // own members
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
 }

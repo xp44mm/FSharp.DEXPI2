@@ -9,8 +9,6 @@
 using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace Dexpi2.Plant.Enumerations
 {
     /// <summary>DEXPI 2.0 enumeration ChamberFunctionClassification (XMI id ID544)</summary>
@@ -359,7 +357,7 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
         public string DeviceTypeName { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.FailActionClassification? FailAction { get; set; }
+        public Dexpi2.Plant.Enumerations.FailActionClassification FailAction { get; set; } = default;
         public string FailActionRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
     }
@@ -395,7 +393,7 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
         public string SubTagName { get; set; } = "";
-        public Dexpi2.Plant.Piping.OperatedValve? Valve { get; set; }
+        public Dexpi2.Plant.Piping.OperatedValve Valve { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Positioner (XMI id ID785)</summary>
@@ -418,7 +416,7 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Plant.Piping.Sensorwell? Sensorwell { get; set; }
+        public Dexpi2.Plant.Piping.Sensorwell Sensorwell { get; set; } = null!;
         public string SubTagName { get; set; } = "";
     }
 
@@ -430,12 +428,12 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Plant.Enumerations.PortStatusClassification? PortStatus { get; set; }
-        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification? SignalConveyingType { get; set; }
+        public Dexpi2.Plant.Enumerations.PortStatusClassification PortStatus { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification SignalConveyingType { get; set; } = default;
         public string SignalPointNumber { get; set; } = "";
         public string SignalProcessControlFunctions { get; set; } = "";
-        public SignalConveyingFunctionSource? Source { get; set; }
-        public SignalConveyingFunctionTarget? Target { get; set; }
+        public SignalConveyingFunctionSource Source { get; set; } = null!;
+        public SignalConveyingFunctionTarget Target { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SignalOffPageConnector (XMI id ID797) [abstract in DEXPI]</summary>
@@ -446,8 +444,8 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public SignalOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? SignalConnectorDescription { get; set; }
+        public SignalOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString SignalConnectorDescription { get; set; } = null!;
         public string SignalConnectorNumber { get; set; } = "";
     }
 
@@ -483,7 +481,7 @@ namespace Dexpi2.Plant.Instrumentation
         // inherited from MeasuringElement (XMI id ID800)
         public string SubTagName { get; set; } = "";
         // own members
-        public Dexpi2.Plant.Piping.InlineMeasuringElement? InlineMeasuringElement { get; set; }
+        public Dexpi2.Plant.Piping.InlineMeasuringElement InlineMeasuringElement { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class OfflineMeasuringElement (XMI id ID827)</summary>
@@ -498,18 +496,18 @@ namespace Dexpi2.Plant.Instrumentation
         // own members
         public string ConnectionNominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string ConnectionNominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? ConnectionNominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification ConnectionNominalDiameterStandard { get; set; } = default;
         public string ConnectionNominalDiameterTypeRepresentation { get; set; } = "";
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string LocationNominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string LocationNominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? LocationNominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification LocationNominalDiameterStandard { get; set; } = default;
         public string LocationNominalDiameterTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class MeasuringLineFunction (XMI id ID812)</summary>
@@ -520,12 +518,12 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from SignalConveyingFunction (XMI id ID813)
-        public Dexpi2.Plant.Enumerations.PortStatusClassification? PortStatus { get; set; }
-        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification? SignalConveyingType { get; set; }
+        public Dexpi2.Plant.Enumerations.PortStatusClassification PortStatus { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification SignalConveyingType { get; set; } = default;
         public string SignalPointNumber { get; set; } = "";
         public string SignalProcessControlFunctions { get; set; } = "";
-        public SignalConveyingFunctionSource? Source { get; set; }
-        public SignalConveyingFunctionTarget? Target { get; set; }
+        public SignalConveyingFunctionSource Source { get; set; } = null!;
+        public SignalConveyingFunctionTarget Target { get; set; } = null!;
         // own members (none)
     }
 
@@ -537,12 +535,12 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from SignalConveyingFunction (XMI id ID813)
-        public Dexpi2.Plant.Enumerations.PortStatusClassification? PortStatus { get; set; }
-        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification? SignalConveyingType { get; set; }
+        public Dexpi2.Plant.Enumerations.PortStatusClassification PortStatus { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.SignalConveyingTypeClassification SignalConveyingType { get; set; } = default;
         public string SignalPointNumber { get; set; } = "";
         public string SignalProcessControlFunctions { get; set; } = "";
-        public SignalConveyingFunctionSource? Source { get; set; }
-        public SignalConveyingFunctionTarget? Target { get; set; }
+        public SignalConveyingFunctionSource Source { get; set; } = null!;
+        public SignalConveyingFunctionTarget Target { get; set; } = null!;
         // own members (none)
     }
 
@@ -554,9 +552,10 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from SignalOffPageConnector (XMI id ID797)
-        public SignalOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? SignalConnectorDescription { get; set; }
+        public SignalOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString SignalConnectorDescription { get; set; } = null!;
         public string SignalConnectorNumber { get; set; } = "";
+        // inherited from SignalConveyingFunctionSource (XMI id ID765) (none)
         // own members (none)
     }
 
@@ -568,9 +567,10 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from SignalOffPageConnector (XMI id ID797)
-        public SignalOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? SignalConnectorDescription { get; set; }
+        public SignalOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString SignalConnectorDescription { get; set; } = null!;
         public string SignalConnectorNumber { get; set; } = "";
+        // inherited from SignalConveyingFunctionTarget (XMI id ID747) (none)
         // own members (none)
     }
 
@@ -581,8 +581,9 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalOffPageConnectorReference (XMI id ID913) (none)
         // own members
-        public SignalOffPageConnector? ReferencedConnector { get; set; }
+        public SignalOffPageConnector ReferencedConnector { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SignalOffPageConnectorReferenceByNumber (XMI id ID922)</summary>
@@ -592,6 +593,7 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalOffPageConnectorReference (XMI id ID913) (none)
         // own members
         public string ReferencedConnectorNumber { get; set; } = "";
         public string ReferencedDrawingNumber { get; set; } = "";
@@ -604,18 +606,19 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalConveyingFunctionTarget (XMI id ID747) (none)
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string ActuatingElectricalFunctionNumber { get; set; } = "";
-        public ActuatingElectricalLocation? ActuatingElectricalLocation { get; set; }
-        public ActuatingElectricalSystem? Systems { get; set; }
+        public ActuatingElectricalLocation ActuatingElectricalLocation { get; set; } = null!;
+        public ActuatingElectricalSystem Systems { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ActuatingElectricalSystem (XMI id ID755)</summary>
@@ -626,16 +629,16 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string ActuatingElectricalSystemNumber { get; set; } = "";
-        public ElectronicFrequencyConverter? ElectronicFrequencyConverter { get; set; }
+        public ElectronicFrequencyConverter ElectronicFrequencyConverter { get; set; } = null!;
         public string TypicalInformation { get; set; } = "";
     }
 
@@ -646,18 +649,20 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalConveyingFunctionSource (XMI id ID765) (none)
+        // inherited from SignalConveyingFunctionTarget (XMI id ID747) (none)
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string ActuatingFunctionNumber { get; set; } = "";
-        public Dexpi2.Plant.Piping.PipingNetworkSegment? ActuatingLocation { get; set; }
-        public ActuatingSystem? Systems { get; set; }
+        public Dexpi2.Plant.Piping.PipingNetworkSegment ActuatingLocation { get; set; } = null!;
+        public ActuatingSystem Systems { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ActuatingSystem (XMI id ID772)</summary>
@@ -668,18 +673,18 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string ActuatingSystemNumber { get; set; } = "";
-        public ControlledActuator? ControlledActuator { get; set; }
-        public OperatedValveReference? OperatedValveReference { get; set; }
-        public Positioner? Positioner { get; set; }
+        public ControlledActuator ControlledActuator { get; set; } = null!;
+        public OperatedValveReference OperatedValveReference { get; set; } = null!;
+        public Positioner Positioner { get; set; } = null!;
         public string TypicalInformation { get; set; } = "";
     }
 
@@ -691,13 +696,13 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string InstrumentationLoopFunctionNumber { get; set; } = "";
         public List<ProcessInstrumentationFunction> ProcessInstrumentationFunctions { get; set; } = new();
@@ -711,18 +716,18 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
-        public MeasuringElement? MeasuringElement { get; set; }
+        public MeasuringElement MeasuringElement { get; set; } = null!;
         public string MeasuringSystemNumber { get; set; } = "";
-        public SensorwellReference? SensorwellReference { get; set; }
-        public Transmitter? Transmitter { get; set; }
+        public SensorwellReference SensorwellReference { get; set; } = null!;
+        public Transmitter Transmitter { get; set; } = null!;
         public string TypicalInformation { get; set; } = "";
     }
 
@@ -733,28 +738,30 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalConveyingFunctionSource (XMI id ID765) (none)
+        // inherited from SignalConveyingFunctionTarget (XMI id ID747) (none)
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public List<ActuatingElectricalFunction> ActuatingElectricalFunctions { get; set; } = new();
         public List<ActuatingFunction> ActuatingFunctions { get; set; } = new();
         public string DeviceInformation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.GmpRelevanceClassification? GmpRelevance { get; set; }
-        public Dexpi2.Plant.Enumerations.GuaranteedSupplyFunctionClassification? GuaranteedSupplyFunction { get; set; }
-        public Dexpi2.Plant.Enumerations.LocationClassification? Location { get; set; }
+        public Dexpi2.Plant.Enumerations.GmpRelevanceClassification GmpRelevance { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.GuaranteedSupplyFunctionClassification GuaranteedSupplyFunction { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.LocationClassification Location { get; set; } = default;
         public string PanelIdentificationCode { get; set; } = "";
         public string ProcessInstrumentationFunctionCategory { get; set; } = "";
         public string ProcessInstrumentationFunctionModifier { get; set; } = "";
         public string ProcessInstrumentationFunctionNumber { get; set; } = "";
         public string ProcessInstrumentationFunctions { get; set; } = "";
         public List<ProcessSignalGeneratingFunction> ProcessSignalGeneratingFunctions { get; set; } = new();
-        public Dexpi2.Plant.Enumerations.QualityRelevanceClassification? QualityRelevance { get; set; }
+        public Dexpi2.Plant.Enumerations.QualityRelevanceClassification QualityRelevance { get; set; } = default;
         public string SafetyRelevanceClass { get; set; } = "";
         public List<SignalOffPageConnector> SignalConnectors { get; set; } = new();
         public List<SignalConveyingFunction> SignalConveyingFunctions { get; set; } = new();
@@ -770,19 +777,20 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalConveyingFunctionSource (XMI id ID765) (none)
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string ProcessSignalGeneratingFunctionNumber { get; set; } = "";
-        public SensingLocation? SensingLocation { get; set; }
+        public SensingLocation SensingLocation { get; set; } = null!;
         public string SensorType { get; set; } = "";
-        public MeasuringSystem? Systems { get; set; }
+        public MeasuringSystem Systems { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class FlowDetector (XMI id ID794)</summary>
@@ -793,18 +801,18 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from MeasuringSystem (XMI id ID795)
-        public MeasuringElement? MeasuringElement { get; set; }
+        public MeasuringElement MeasuringElement { get; set; } = null!;
         public string MeasuringSystemNumber { get; set; } = "";
-        public SensorwellReference? SensorwellReference { get; set; }
-        public Transmitter? Transmitter { get; set; }
+        public SensorwellReference SensorwellReference { get; set; } = null!;
+        public Transmitter Transmitter { get; set; } = null!;
         public string TypicalInformation { get; set; } = "";
         // own members (none)
     }
@@ -816,28 +824,30 @@ namespace Dexpi2.Plant.Instrumentation
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SignalConveyingFunctionSource (XMI id ID765) (none)
+        // inherited from SignalConveyingFunctionTarget (XMI id ID747) (none)
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from ProcessInstrumentationFunction (XMI id ID808)
         public List<ActuatingElectricalFunction> ActuatingElectricalFunctions { get; set; } = new();
         public List<ActuatingFunction> ActuatingFunctions { get; set; } = new();
         public string DeviceInformation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.GmpRelevanceClassification? GmpRelevance { get; set; }
-        public Dexpi2.Plant.Enumerations.GuaranteedSupplyFunctionClassification? GuaranteedSupplyFunction { get; set; }
-        public Dexpi2.Plant.Enumerations.LocationClassification? Location { get; set; }
+        public Dexpi2.Plant.Enumerations.GmpRelevanceClassification GmpRelevance { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.GuaranteedSupplyFunctionClassification GuaranteedSupplyFunction { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.LocationClassification Location { get; set; } = default;
         public string PanelIdentificationCode { get; set; } = "";
         public string ProcessInstrumentationFunctionCategory { get; set; } = "";
         public string ProcessInstrumentationFunctionModifier { get; set; } = "";
         public string ProcessInstrumentationFunctionNumber { get; set; } = "";
         public string ProcessInstrumentationFunctions { get; set; } = "";
         public List<ProcessSignalGeneratingFunction> ProcessSignalGeneratingFunctions { get; set; } = new();
-        public Dexpi2.Plant.Enumerations.QualityRelevanceClassification? QualityRelevance { get; set; }
+        public Dexpi2.Plant.Enumerations.QualityRelevanceClassification QualityRelevance { get; set; } = default;
         public string SafetyRelevanceClass { get; set; } = "";
         public List<SignalOffPageConnector> SignalConnectors { get; set; } = new();
         public List<SignalConveyingFunction> SignalConveyingFunctions { get; set; } = new();
@@ -855,10 +865,10 @@ namespace Dexpi2.Plant.Piping
     public abstract class PipingConnection
     {
         // own members
-        public PipingSourceItem? SourceItem { get; set; }
-        public PipingNode? SourceNode { get; set; }
-        public PipingTargetItem? TargetItem { get; set; }
-        public PipingNode? TargetNode { get; set; }
+        public PipingSourceItem SourceItem { get; set; } = null!;
+        public PipingNode SourceNode { get; set; } = null!;
+        public PipingTargetItem TargetItem { get; set; } = null!;
+        public PipingNode TargetNode { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PipingNetworkSegmentItem (XMI id ID995) [abstract in DEXPI]</summary>
@@ -906,7 +916,7 @@ namespace Dexpi2.Plant.Piping
         // own members
         public string NominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string NominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? NominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification NominalDiameterStandard { get; set; } = default;
         public string NominalDiameterTypeRepresentation { get; set; } = "";
     }
 
@@ -917,45 +927,47 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ActuatingElectricalLocation (XMI id ID751) (none)
+        // inherited from SensingLocation (XMI id ID889) (none)
         // own members
         public string ColorCode { get; set; } = "";
         public List<PipingConnection> Connections { get; set; } = new();
-        public Dexpi2.Plant.Enumerations.PipingNetworkSegmentFlowClassification? FlowDirection { get; set; }
+        public Dexpi2.Plant.Enumerations.PipingNetworkSegmentFlowClassification FlowDirection { get; set; } = default;
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Inclination { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Inclination { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public List<PipingNetworkSegmentItem> Items { get; set; } = new();
-        public Dexpi2.Plant.Enumerations.JacketedPipeClassification? JacketedPipe { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
+        public Dexpi2.Plant.Enumerations.JacketedPipeClassification JacketedPipe { get; set; } = default;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
         public string NominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string NominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? NominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification NominalDiameterStandard { get; set; } = default;
         public string NominalDiameterTypeRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? OperatingTemperature { get; set; }
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity OperatingTemperature { get; set; } = null!;
         public string PipingClassCode { get; set; } = "";
         public string PressureTestCircuitNumber { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.PrimarySecondaryPipingNetworkSegmentClassification? PrimarySecondaryPipingNetworkSegment { get; set; }
+        public Dexpi2.Plant.Enumerations.PrimarySecondaryPipingNetworkSegmentClassification PrimarySecondaryPipingNetworkSegment { get; set; } = default;
         public string SegmentNumber { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.SiphonClassification? Siphon { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingNetworkSegmentSlopeClassification? Slope { get; set; }
-        public PipingSourceItem? SourceItem { get; set; }
-        public PipingNode? SourceNode { get; set; }
-        public PipingTargetItem? TargetItem { get; set; }
-        public PipingNode? TargetNode { get; set; }
+        public Dexpi2.Plant.Enumerations.SiphonClassification Siphon { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingNetworkSegmentSlopeClassification Slope { get; set; } = default;
+        public PipingSourceItem SourceItem { get; set; } = null!;
+        public PipingNode SourceNode { get; set; } = null!;
+        public PipingTargetItem TargetItem { get; set; } = null!;
+        public PipingNode TargetNode { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class DirectPipingConnection (XMI id ID948)</summary>
     public class DirectPipingConnection
     {
         // inherited from PipingConnection (XMI id ID949)
-        public PipingSourceItem? SourceItem { get; set; }
-        public PipingNode? SourceNode { get; set; }
-        public PipingTargetItem? TargetItem { get; set; }
-        public PipingNode? TargetNode { get; set; }
+        public PipingSourceItem SourceItem { get; set; } = null!;
+        public PipingNode SourceNode { get; set; } = null!;
+        public PipingTargetItem TargetItem { get; set; } = null!;
+        public PipingNode TargetNode { get; set; } = null!;
         // own members (none)
     }
 
@@ -967,10 +979,10 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PipingConnection (XMI id ID949)
-        public PipingSourceItem? SourceItem { get; set; }
-        public PipingNode? SourceNode { get; set; }
-        public PipingTargetItem? TargetItem { get; set; }
-        public PipingNode? TargetNode { get; set; }
+        public PipingSourceItem SourceItem { get; set; } = null!;
+        public PipingNode SourceNode { get; set; } = null!;
+        public PipingTargetItem TargetItem { get; set; } = null!;
+        public PipingNode TargetNode { get; set; } = null!;
         // own members (none)
     }
 
@@ -981,11 +993,12 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
         // own members
-        public PipeOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? PipeConnectorDescription { get; set; }
+        public PipeOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString PipeConnectorDescription { get; set; } = null!;
         public string PipeConnectorNumber { get; set; } = "";
     }
 
@@ -996,15 +1009,19 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // own members
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
     }
 
@@ -1015,13 +1032,16 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // own members
-        public Dexpi2.Plant.Enumerations.CompositionBreakClassification? CompositionBreak { get; set; }
-        public Dexpi2.Plant.Enumerations.InsulationBreakClassification? InsulationBreak { get; set; }
-        public Dexpi2.Plant.Enumerations.NominalDiameterBreakClassification? NominalDiameterBreak { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassBreakClassification? PipingClassBreak { get; set; }
+        public Dexpi2.Plant.Enumerations.CompositionBreakClassification CompositionBreak { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.InsulationBreakClassification InsulationBreak { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.NominalDiameterBreakClassification NominalDiameterBreak { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassBreakClassification PipingClassBreak { get; set; } = default;
     }
 
     /// <summary>DEXPI 2.0 model class PipeOffPageConnectorObjectReference (XMI id ID1003)</summary>
@@ -1031,8 +1051,9 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipeOffPageConnectorReference (XMI id ID998) (none)
         // own members
-        public PipeOffPageConnector? ReferencedConnector { get; set; }
+        public PipeOffPageConnector ReferencedConnector { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PipeOffPageConnectorReferenceByNumber (XMI id ID1007)</summary>
@@ -1042,6 +1063,7 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipeOffPageConnectorReference (XMI id ID998) (none)
         // own members
         public string ReferencedConnectorNumber { get; set; } = "";
         public string ReferencedDrawingNumber { get; set; } = "";
@@ -1054,12 +1076,14 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
         // inherited from PipeOffPageConnector (XMI id ID958)
-        public PipeOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? PipeConnectorDescription { get; set; }
+        public PipeOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString PipeConnectorDescription { get; set; } = null!;
         public string PipeConnectorNumber { get; set; } = "";
+        // inherited from PipingSourceItem (XMI id ID959) (none)
         // own members (none)
     }
 
@@ -1070,12 +1094,14 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
         // inherited from PipeOffPageConnector (XMI id ID958)
-        public PipeOffPageConnectorReference? ConnectorReference { get; set; }
-        public Dexpi2.Core.Datatypes.MultiLanguageString? PipeConnectorDescription { get; set; }
+        public PipeOffPageConnectorReference ConnectorReference { get; set; } = null!;
+        public Dexpi2.Core.Datatypes.MultiLanguageString PipeConnectorDescription { get; set; } = null!;
         public string PipeConnectorNumber { get; set; } = "";
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // own members (none)
     }
 
@@ -1086,18 +1112,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1111,18 +1141,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1135,21 +1169,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1162,18 +1200,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1187,23 +1229,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // own members
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PipingNetworkSystem (XMI id ID1074)</summary>
@@ -1214,29 +1260,29 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string JacketLineNumber { get; set; } = "";
         public string JacketedLineNumber { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.JacketedPipeClassification? JacketedPipe { get; set; }
+        public Dexpi2.Plant.Enumerations.JacketedPipeClassification JacketedPipe { get; set; } = default;
         public string LineNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
         public string NominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string NominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? NominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification NominalDiameterStandard { get; set; } = default;
         public string NominalDiameterTypeRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingNetworkSystemGroupNumber { get; set; } = "";
         public List<PipingNetworkSegment> Segments { get; set; } = new();
@@ -1249,18 +1295,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from CheckValve (XMI id ID938)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1275,18 +1325,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from CheckValve (XMI id ID938)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1301,18 +1355,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1326,18 +1384,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1351,18 +1413,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1376,18 +1442,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1401,18 +1471,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1426,18 +1500,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1451,18 +1529,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1476,18 +1558,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1501,18 +1587,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from InlineMeasuringElement (XMI id ID802)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1526,21 +1616,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1554,21 +1648,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1582,21 +1680,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1610,21 +1712,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1638,21 +1744,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1666,21 +1776,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1694,21 +1808,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1722,21 +1840,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1750,21 +1872,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1778,21 +1904,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1806,21 +1936,25 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from OperatedValve (XMI id ID851)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification? NumberOfPorts { get; set; }
-        public Dexpi2.Plant.Enumerations.OperationClassification? Operation { get; set; }
+        public Dexpi2.Plant.Enumerations.NumberOfPortsClassification NumberOfPorts { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.OperationClassification Operation { get; set; } = default;
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
@@ -1834,18 +1968,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1860,18 +1998,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1886,18 +2028,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1912,18 +2058,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1938,18 +2088,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1964,18 +2118,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -1990,18 +2148,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2016,18 +2178,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2042,18 +2208,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2068,18 +2238,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2094,18 +2268,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2120,18 +2298,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2146,18 +2328,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2172,18 +2358,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2198,18 +2388,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2224,18 +2418,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2250,18 +2448,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2276,18 +2478,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2302,18 +2508,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2321,7 +2531,7 @@ namespace Dexpi2.Plant.Piping
         // own members
         public string LocationNominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string LocationNominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? LocationNominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification LocationNominalDiameterStandard { get; set; } = default;
         public string LocationNominalDiameterTypeRepresentation { get; set; } = "";
         public string SensorwellTypeRepresentation { get; set; } = "";
     }
@@ -2333,18 +2543,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2359,18 +2573,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2385,18 +2603,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2411,18 +2633,22 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
@@ -2437,22 +2663,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from PipeFitting (XMI id ID934)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsulationThickness { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsulationThickness { get; set; } = null!;
         public string InsulationType { get; set; } = "";
         public string PipingClassCode { get; set; } = "";
         public string PipingComponentName { get; set; } = "";
         public string PipingComponentNumber { get; set; } = "";
+        // inherited from Vent (XMI id ID1136) (none)
         // own members (none)
     }
 
@@ -2463,23 +2694,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from SafetyValveOrFitting (XMI id ID936)
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
         // own members (none)
     }
 
@@ -2490,27 +2725,31 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from SafetyValveOrFitting (XMI id ID936)
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
         // own members
-        public Dexpi2.Plant.Enumerations.DetonationProofArtefactClassification? DetonationProofArtefact { get; set; }
-        public Dexpi2.Plant.Enumerations.ExplosionProofArtefactClassification? ExplosionProofArtefact { get; set; }
-        public Dexpi2.Plant.Enumerations.FireResistantArtefactClassification? FireResistantArtefact { get; set; }
+        public Dexpi2.Plant.Enumerations.DetonationProofArtefactClassification DetonationProofArtefact { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.ExplosionProofArtefactClassification ExplosionProofArtefact { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.FireResistantArtefactClassification FireResistantArtefact { get; set; } = default;
     }
 
     /// <summary>DEXPI 2.0 model class RuptureDisc (XMI id ID1110)</summary>
@@ -2520,23 +2759,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from SafetyValveOrFitting (XMI id ID936)
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
         // own members (none)
     }
 
@@ -2547,23 +2790,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from SafetyValveOrFitting (XMI id ID936)
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
         // own members (none)
     }
 
@@ -2574,23 +2821,27 @@ namespace Dexpi2.Plant.Piping
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
+        // inherited from PipingNetworkSegmentItem (XMI id ID995) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from PipingComponent (XMI id ID939)
         public string FluidCode { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification? HeatTracingType { get; set; }
+        public Dexpi2.Plant.Enumerations.HeatTracingTypeClassification HeatTracingType { get; set; } = default;
         public string HeatTracingTypeRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitHeatTracingTemperature { get; set; }
-        public Dexpi2.Plant.Enumerations.OnHoldClassification? OnHold { get; set; }
-        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification? PipingClassArtefact { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitHeatTracingTemperature { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.OnHoldClassification OnHold { get; set; } = default;
+        public Dexpi2.Plant.Enumerations.PipingClassArtefactClassification PipingClassArtefact { get; set; } = default;
         public string PressureTestCircuitNumber { get; set; } = "";
         // inherited from SafetyValveOrFitting (XMI id ID936)
         public string FlowInPipingClassCode { get; set; } = "";
         public string FlowOutPipingClassCode { get; set; } = "";
         public string LocationRegistrationNumber { get; set; } = "";
         public string PositionNumber { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureHigh { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? SetPressureLow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureHigh { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity SetPressureLow { get; set; } = null!;
         // own members (none)
     }
 
@@ -2608,7 +2859,7 @@ namespace Dexpi2.Plant.Plantstructure
     public abstract class PlantAreaLocatedStructure
     {
         // own members
-        public PlantArea? PlantArea { get; set; }
+        public PlantArea PlantArea { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PlantSectionParentStructure (XMI id ID1169) [abstract in DEXPI]</summary>
@@ -2621,14 +2872,14 @@ namespace Dexpi2.Plant.Plantstructure
     public abstract class PlantSystemLocatedStructure
     {
         // own members
-        public PlantSystem? PlantSystem { get; set; }
+        public PlantSystem PlantSystem { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PlantTrainLocatedStructure (XMI id ID1203) [abstract in DEXPI]</summary>
     public abstract class PlantTrainLocatedStructure
     {
         // own members
-        public PlantTrain? PlantTrain { get; set; }
+        public PlantTrain PlantTrain { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ProcessPlantParentStructure (XMI id ID1170) [abstract in DEXPI]</summary>
@@ -2657,22 +2908,27 @@ namespace Dexpi2.Plant.Plantstructure
     public abstract class TechnicalItem
     {
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public PlantArea? PlantArea { get; set; }
+        public PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public PlantSystem? PlantSystem { get; set; }
+        public PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public PlantTrain? PlantTrain { get; set; }
+        public PlantTrain PlantTrain { get; set; } = null!;
         // own members
-        public TechnicalItemParentStructure? ParentStructure { get; set; }
+        public TechnicalItemParentStructure ParentStructure { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Enterprise (XMI id ID1167)</summary>
     public class Enterprise
     {
+        // inherited from IndustrialComplexParentStructure (XMI id ID1168) (none)
+        // inherited from PlantSectionParentStructure (XMI id ID1169) (none)
         // inherited from ConceptualObject (XMI id ID11)
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
+        // inherited from ProcessPlantParentStructure (XMI id ID1170) (none)
+        // inherited from TechnicalItemParentStructure (XMI id ID1171) (none)
         // own members
         public string EnterpriseIdentificationCode { get; set; } = "";
         public string EnterpriseName { get; set; } = "";
@@ -2682,15 +2938,18 @@ namespace Dexpi2.Plant.Plantstructure
     public class IndustrialComplex
     {
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public PlantArea? PlantArea { get; set; }
+        public PlantArea PlantArea { get; set; } = null!;
+        // inherited from PlantSectionParentStructure (XMI id ID1169) (none)
         // inherited from ConceptualObject (XMI id ID11)
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
+        // inherited from TechnicalItemParentStructure (XMI id ID1171) (none)
         // own members
         public string IndustrialComplexIdentificationCode { get; set; } = "";
         public string IndustrialComplexName { get; set; } = "";
-        public IndustrialComplexParentStructure? ParentStructure { get; set; }
+        public IndustrialComplexParentStructure ParentStructure { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PlantArea (XMI id ID1181)</summary>
@@ -2700,6 +2959,7 @@ namespace Dexpi2.Plant.Plantstructure
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
         // own members
         public string PlantAreaIdentificationCode { get; set; } = "";
         public string PlantAreaName { get; set; } = "";
@@ -2709,13 +2969,15 @@ namespace Dexpi2.Plant.Plantstructure
     public class PlantSection
     {
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public PlantArea? PlantArea { get; set; }
+        public PlantArea PlantArea { get; set; } = null!;
         // inherited from ConceptualObject (XMI id ID11)
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
+        // inherited from TechnicalItemParentStructure (XMI id ID1171) (none)
         // own members
-        public PlantSectionParentStructure? ParentStructure { get; set; }
+        public PlantSectionParentStructure ParentStructure { get; set; } = null!;
         public string PlantSectionIdentificationCode { get; set; } = "";
         public string PlantSectionName { get; set; } = "";
     }
@@ -2727,6 +2989,7 @@ namespace Dexpi2.Plant.Plantstructure
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
         // own members
         public string PlantSystemIdentificationCode { get; set; } = "";
         public string PlantSystemName { get; set; } = "";
@@ -2739,6 +3002,7 @@ namespace Dexpi2.Plant.Plantstructure
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
         // own members
         public string PlantTrainIdentificationCode { get; set; } = "";
         public string PlantTrainName { get; set; } = "";
@@ -2748,13 +3012,16 @@ namespace Dexpi2.Plant.Plantstructure
     public class ProcessPlant
     {
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public PlantArea? PlantArea { get; set; }
+        public PlantArea PlantArea { get; set; } = null!;
+        // inherited from PlantSectionParentStructure (XMI id ID1169) (none)
         // inherited from ConceptualObject (XMI id ID11)
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
+        // inherited from TechnicalItemParentStructure (XMI id ID1171) (none)
         // own members
-        public ProcessPlantParentStructure? ParentStructure { get; set; }
+        public ProcessPlantParentStructure ParentStructure { get; set; } = null!;
         public string ProcessPlantIdentificationCode { get; set; } = "";
         public string ProcessPlantName { get; set; } = "";
     }
@@ -2762,12 +3029,17 @@ namespace Dexpi2.Plant.Plantstructure
     /// <summary>DEXPI 2.0 model class Site (XMI id ID1213)</summary>
     public class Site
     {
+        // inherited from IndustrialComplexParentStructure (XMI id ID1168) (none)
+        // inherited from PlantSectionParentStructure (XMI id ID1169) (none)
         // inherited from ConceptualObject (XMI id ID11)
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from PlantStructureItem (XMI id ID1156) (none)
+        // inherited from ProcessPlantParentStructure (XMI id ID1170) (none)
+        // inherited from TechnicalItemParentStructure (XMI id ID1171) (none)
         // own members
-        public Enterprise? ParentStructure { get; set; }
+        public Enterprise ParentStructure { get; set; } = null!;
         public string SiteIdentificationCode { get; set; } = "";
         public string SiteName { get; set; } = "";
     }
@@ -2804,9 +3076,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LengthToMountingFlange { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LengthToMountingFlange { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string RotorType { get; set; } = "";
     }
@@ -2819,7 +3091,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string StageIdentifier { get; set; } = "";
     }
@@ -2832,21 +3104,21 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Datatypes.MultiLanguageString? ChamberDescription { get; set; }
-        public Dexpi2.Plant.Enumerations.ChamberFunctionClassification? ChamberFunction { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString ChamberDescription { get; set; } = null!;
+        public Dexpi2.Plant.Enumerations.ChamberFunctionClassification ChamberFunction { get; set; } = default;
         public string ChamberFunctionRepresentation { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Height { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsideDiameter { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Length { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignTemperature { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Height { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsideDiameter { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Length { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignTemperature { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalDiameter { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalDiameter { get; set; } = null!;
         public string NominalDiameterTypeRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Width { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Width { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ColumnInternalsArrangement (XMI id ID1376) [abstract in DEXPI]</summary>
@@ -2867,9 +3139,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Height { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsideDiameter { get; set; }
-        public ColumnInternalsArrangement? Internals { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Height { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsideDiameter { get; set; } = null!;
+        public ColumnInternalsArrangement Internals { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class CoolingTowerRotor (XMI id ID1412)</summary>
@@ -2880,8 +3152,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
     }
 
@@ -2906,10 +3178,10 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string StageIdentifier { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? VolumePerStroke { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity VolumePerStroke { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class DryingChamber (XMI id ID1452)</summary>
@@ -2920,8 +3192,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string SubTagName { get; set; } = "";
     }
@@ -2934,15 +3206,15 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? FilterArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitAllowableSolidsConcentration { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitPermeableParticleDiameter { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity FilterArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitAllowableSolidsConcentration { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitPermeableParticleDiameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
-        public int? NumberOfFilterElements { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableSolidsConcentration { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitPermeableParticleDiameter { get; set; }
+        public int NumberOfFilterElements { get; set; } = 0;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableSolidsConcentration { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitPermeableParticleDiameter { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class FilteringCentrifugeDrum (XMI id ID1511)</summary>
@@ -2953,8 +3225,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
     }
 
@@ -2966,10 +3238,10 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletRotationalFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletRotationalFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletRotationalFrequency { get; set; } = null!;
         public string SubTagName { get; set; } = "";
     }
 
@@ -2994,7 +3266,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
     }
 
@@ -3006,8 +3278,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string StageIdentifier { get; set; } = "";
     }
@@ -3020,9 +3292,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
-        public int? NumberOfMixingElements { get; set; }
+        public int NumberOfMixingElements { get; set; } = 0;
     }
 
     /// <summary>DEXPI 2.0 model class PelletizerDisc (XMI id ID1645)</summary>
@@ -3033,7 +3305,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
     }
 
@@ -3045,7 +3317,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
         public string StageIdentifier { get; set; } = "";
     }
@@ -3058,8 +3330,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Diameter { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Diameter { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
     }
 
@@ -3071,12 +3343,12 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? ScreeningArea { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity ScreeningArea { get; set; } = null!;
         public string StageIdentifier { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitPermeableParticleDiameter { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitPermeableParticleDiameter { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SprayNozzle (XMI id ID1676)</summary>
@@ -3087,8 +3359,8 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         public string SubTagName { get; set; } = "";
     }
 
@@ -3100,13 +3372,13 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // own members
-        public Chamber? Chamber { get; set; }
-        public int? NumberOfTubes { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? TubeLength { get; set; }
+        public Chamber Chamber { get; set; } = null!;
+        public int NumberOfTubes { get; set; } = 0;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity TubeLength { get; set; } = null!;
         public string TubeMaterialOfConstructionCode { get; set; } = "";
         public string TubeNominalDiameterNumericalValueRepresentation { get; set; } = "";
         public string TubeNominalDiameterRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification? TubeNominalDiameterStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalDiameterStandardClassification TubeNominalDiameterStandard { get; set; } = default;
         public string TubeNominalDiameterTypeRepresentation { get; set; } = "";
     }
 
@@ -3127,8 +3399,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from SensingLocation (XMI id ID889) (none)
         // own members
-        public Dexpi2.Plant.Instrumentation.MeasuringElement? MountedObject { get; set; }
+        public Dexpi2.Plant.Instrumentation.MeasuringElement MountedObject { get; set; } = null!;
         public string SubTagName { get; set; } = "";
     }
 
@@ -3139,13 +3412,17 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ActuatingElectricalLocation (XMI id ID751) (none)
+        // inherited from SensingLocation (XMI id ID889) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<Dexpi2.Plant.Piping.PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // own members
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string NominalPressureNumericalValueRepresentation { get; set; } = "";
         public string NominalPressureRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification? NominalPressureStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification NominalPressureStandard { get; set; } = default;
         public string NominalPressureTypeRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
     }
@@ -3157,9 +3434,10 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         public string SubTagName { get; set; } = "";
     }
 
@@ -3170,8 +3448,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // own members
-        public TransmissionDriver? Driver { get; set; }
+        public TransmissionDriver Driver { get; set; } = null!;
         public List<GearBox> GearBoxes { get; set; } = new();
         public string SubTagName { get; set; } = "";
     }
@@ -3183,10 +3462,11 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ColumnInternalsArrangement (XMI id ID1376) (none)
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Height { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Height { get; set; } = null!;
         public string MaterialOfConstructionCode { get; set; } = "";
-        public int? NumberOfPackings { get; set; }
+        public int NumberOfPackings { get; set; } = 0;
         public string PackingType { get; set; } = "";
     }
 
@@ -3197,9 +3477,10 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ColumnInternalsArrangement (XMI id ID1376) (none)
         // own members
         public string MaterialOfConstructionCode { get; set; } = "";
-        public int? NumberOfTrays { get; set; }
+        public int NumberOfTrays { get; set; } = 0;
         public string TrayType { get; set; } = "";
     }
 
@@ -3211,9 +3492,9 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ColumnSection (XMI id ID1382)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Height { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsideDiameter { get; set; }
-        public ColumnInternalsArrangement? Internals { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Height { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsideDiameter { get; set; } = null!;
+        public ColumnInternalsArrangement Internals { get; set; } = null!;
         // own members
         public string SubTagName { get; set; } = "";
     }
@@ -3225,6 +3506,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from Vent (XMI id ID1136) (none)
         // own members (none)
     }
 
@@ -3235,13 +3517,17 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ActuatingElectricalLocation (XMI id ID751) (none)
+        // inherited from SensingLocation (XMI id ID889) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<Dexpi2.Plant.Piping.PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from Nozzle (XMI id ID1224)
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string NominalPressureNumericalValueRepresentation { get; set; } = "";
         public string NominalPressureRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification? NominalPressureStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification NominalPressureStandard { get; set; } = default;
         public string NominalPressureTypeRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
         // own members (none)
@@ -3254,13 +3540,17 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ActuatingElectricalLocation (XMI id ID751) (none)
+        // inherited from SensingLocation (XMI id ID889) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<Dexpi2.Plant.Piping.PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from Nozzle (XMI id ID1224)
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string NominalPressureNumericalValueRepresentation { get; set; } = "";
         public string NominalPressureRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification? NominalPressureStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification NominalPressureStandard { get; set; } = default;
         public string NominalPressureTypeRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
         // own members (none)
@@ -3273,13 +3563,17 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from ActuatingElectricalLocation (XMI id ID751) (none)
+        // inherited from SensingLocation (XMI id ID889) (none)
         // inherited from PipingNodeOwner (XMI id ID996)
         public List<Dexpi2.Plant.Piping.PipingNode> Nodes { get; set; } = new();
+        // inherited from PipingSourceItem (XMI id ID959) (none)
+        // inherited from PipingTargetItem (XMI id ID963) (none)
         // inherited from Nozzle (XMI id ID1224)
-        public Chamber? Chamber { get; set; }
+        public Chamber Chamber { get; set; } = null!;
         public string NominalPressureNumericalValueRepresentation { get; set; } = "";
         public string NominalPressureRepresentation { get; set; } = "";
-        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification? NominalPressureStandard { get; set; }
+        public Dexpi2.Plant.Enumerations.NominalPressureStandardClassification NominalPressureStandard { get; set; } = default;
         public string NominalPressureTypeRepresentation { get; set; } = "";
         public string SubTagName { get; set; } = "";
         // own members (none)
@@ -3293,13 +3587,13 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // own members
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
@@ -3314,13 +3608,14 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from MotorAsComponent (XMI id ID1290)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         public string SubTagName { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? AlternatingCurrentFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity AlternatingCurrentFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalVoltage { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class CombustionEngineAsComponent (XMI id ID1394)</summary>
@@ -3330,9 +3625,10 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from MotorAsComponent (XMI id ID1290)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         public string SubTagName { get; set; } = "";
         // own members
         public string FuelType { get; set; } = "";
@@ -3345,12 +3641,13 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.Role> PerformedRoles { get; set; } = new();
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from MotorAsComponent (XMI id ID1290)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         public string SubTagName { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalVoltage { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ProcessEquipment (XMI id ID1226) [abstract in DEXPI]</summary>
@@ -3365,22 +3662,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // own members
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -3396,17 +3694,17 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ColumnSection (XMI id ID1382)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Height { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? InsideDiameter { get; set; }
-        public ColumnInternalsArrangement? Internals { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Height { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity InsideDiameter { get; set; } = null!;
+        public ColumnInternalsArrangement Internals { get; set; } = null!;
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
@@ -3427,34 +3725,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignLiquidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSolidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignLiquidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSolidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Agitator (XMI id ID1245)</summary>
@@ -3469,31 +3768,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public AgitatorRotor? Rotor { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public AgitatorRotor Rotor { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Blower (XMI id ID1294)</summary>
@@ -3508,32 +3808,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Burner (XMI id ID1332)</summary>
@@ -3548,29 +3849,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Centrifuge (XMI id ID1351)</summary>
@@ -3585,31 +3887,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Compressor (XMI id ID1270)</summary>
@@ -3624,30 +3927,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class CoolingTower (XMI id ID1409)</summary>
@@ -3662,30 +3966,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Dryer (XMI id ID1401)</summary>
@@ -3700,32 +4005,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ElectricGenerator (XMI id ID1277)</summary>
@@ -3740,32 +4046,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletRotationalFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletRotationalFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletVoltage { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Extruder (XMI id ID1483)</summary>
@@ -3780,31 +4087,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Fan (XMI id ID1305)</summary>
@@ -3819,32 +4127,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Feeder (XMI id ID1491)</summary>
@@ -3859,32 +4168,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignParticleSize { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignParticleSize { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Filter (XMI id ID1496)</summary>
@@ -3899,22 +4209,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -3935,32 +4246,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Heater (XMI id ID1327)</summary>
@@ -3975,33 +4287,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Mill (XMI id ID1419)</summary>
@@ -4016,34 +4329,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignOutputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignInputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignOutputParticleSize { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignOutputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignInputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignOutputParticleSize { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Mixer (XMI id ID1578)</summary>
@@ -4058,22 +4372,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -4095,30 +4410,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Motor (XMI id ID1283)</summary>
@@ -4133,30 +4449,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PackagingSystem (XMI id ID1640)</summary>
@@ -4171,31 +4488,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityPackagingUnits { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityPackagingUnits { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         public string PackagingSystemType { get; set; } = "";
     }
 
@@ -4211,22 +4529,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -4234,7 +4553,7 @@ namespace Dexpi2.Plant.Processequipment
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
         public List<SubTaggedColumnSection> ColumnSections { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalCapacityVolume { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalCapacityVolume { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Pump (XMI id ID1345)</summary>
@@ -4249,31 +4568,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPressureHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPressureHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Separator (XMI id ID1480)</summary>
@@ -4288,31 +4608,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Sieve (XMI id ID1720)</summary>
@@ -4327,29 +4648,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
         public List<SieveElement> SieveElements { get; set; } = new();
     }
 
@@ -4365,29 +4687,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Turbine (XMI id ID1534)</summary>
@@ -4402,30 +4725,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalFrequency { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Vessel (XMI id ID1653)</summary>
@@ -4440,31 +4764,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Agitator? Agitator { get; set; }
+        public Agitator Agitator { get; set; } = null!;
         public List<TaggedColumnSection> ColumnSections { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalCapacityVolume { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalCapacityVolume { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class WasteGasEmitter (XMI id ID1375)</summary>
@@ -4479,29 +4804,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Weigher (XMI id ID1310)</summary>
@@ -4516,30 +4842,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ReciprocatingPressureAgglomerator (XMI id ID1704)</summary>
@@ -4554,38 +4881,39 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Agglomerator (XMI id ID1225)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignLiquidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSolidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignLiquidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSolidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<Displacer> Displacers { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignPressingForce { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignPressingForce { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignPressingForce { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignPressingForce { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RotatingGrowthAgglomerator (XMI id ID1744)</summary>
@@ -4600,36 +4928,37 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Agglomerator (XMI id ID1225)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignLiquidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSolidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignLiquidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSolidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public PelletizerDisc? PelletizerDisc { get; set; }
+        public PelletizerDisc PelletizerDisc { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RotatingPressureAgglomerator (XMI id ID1748)</summary>
@@ -4644,38 +4973,39 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Agglomerator (XMI id ID1225)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignLiquidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSolidFeedMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignLiquidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSolidFeedMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<BriquettingRoller> BriquettingRollers { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignPressingForce { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignPressingForce { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignPressingForce { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignPressingForce { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class AxialBlower (XMI id ID1293)</summary>
@@ -4690,32 +5020,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Blower (XMI id ID1294)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<Impeller> Impellers { get; set; } = new();
     }
@@ -4732,32 +5063,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Blower (XMI id ID1294)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<Impeller> Impellers { get; set; } = new();
     }
@@ -4774,34 +5106,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Centrifuge (XMI id ID1351)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public FilteringCentrifugeDrum? FilteringCentrifugeDrum { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? MinimumParticleSize { get; set; }
+        public FilteringCentrifugeDrum FilteringCentrifugeDrum { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity MinimumParticleSize { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SedimentalCentrifuge (XMI id ID1758)</summary>
@@ -4816,34 +5149,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Centrifuge (XMI id ID1351)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public SedimentalCentrifugeDrum? SedimentalCentrifugeDrum { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public SedimentalCentrifugeDrum SedimentalCentrifugeDrum { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class AirEjector (XMI id ID1269)</summary>
@@ -4858,32 +5192,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Compressor (XMI id ID1270)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMotiveFluid { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMotiveFluid { get; set; } = null!;
         public List<Impeller> Impellers { get; set; } = new();
     }
 
@@ -4899,33 +5234,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Compressor (XMI id ID1270)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Impeller> Impellers { get; set; } = new();
     }
 
@@ -4941,33 +5277,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Compressor (XMI id ID1270)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Impeller> Impellers { get; set; } = new();
     }
 
@@ -4983,33 +5320,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Compressor (XMI id ID1270)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Displacer> Displacers { get; set; } = new();
     }
 
@@ -5025,33 +5363,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Compressor (XMI id ID1270)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Displacer> Displacers { get; set; } = new();
     }
 
@@ -5067,34 +5406,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from CoolingTower (XMI id ID1409)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public CoolingTowerRotor? CoolingTowerRotor { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public CoolingTowerRotor CoolingTowerRotor { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SprayCooler (XMI id ID1788)</summary>
@@ -5109,32 +5449,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from CoolingTower (XMI id ID1409)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSprayFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSprayFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class WetCoolingTower (XMI id ID1856)</summary>
@@ -5149,35 +5490,36 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from CoolingTower (XMI id ID1409)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public CoolingTowerRotor? CoolingTowerRotor { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignSprayFlowRate { get; set; }
+        public CoolingTowerRotor CoolingTowerRotor { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignSprayFlowRate { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ConvectionDryer (XMI id ID1400)</summary>
@@ -5192,34 +5534,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Dryer (XMI id ID1401)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? AirConsumption { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity AirConsumption { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class HeatedSurfaceDryer (XMI id ID1563)</summary>
@@ -5234,34 +5577,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Dryer (XMI id ID1401)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? HeatedSurfaceArea { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity HeatedSurfaceArea { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class AlternatingCurrentGenerator (XMI id ID1276)</summary>
@@ -5276,34 +5620,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from ElectricGenerator (XMI id ID1277)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletRotationalFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletRotationalFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletVoltage { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? AlternatingCurrentFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity AlternatingCurrentFrequency { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class DirectCurrentGenerator (XMI id ID1427)</summary>
@@ -5318,32 +5663,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from ElectricGenerator (XMI id ID1277)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletRotationalFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletRotationalFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletVoltage { get; set; } = null!;
         // own members (none)
     }
 
@@ -5359,31 +5705,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Extruder (XMI id ID1483)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         // own members
         public List<Displacer> Displacers { get; set; } = new();
     }
@@ -5400,31 +5747,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Extruder (XMI id ID1483)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         // own members
         public List<Screw> Screws { get; set; } = new();
     }
@@ -5441,32 +5789,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Fan (XMI id ID1305)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<Impeller> Impellers { get; set; } = new();
     }
@@ -5483,32 +5832,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Fan (XMI id ID1305)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignDifferentialPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignDifferentialPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
         public List<Impeller> Impellers { get; set; } = new();
     }
@@ -5525,33 +5875,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
+        // inherited from Filter (XMI id ID1496) (none)
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public FilterUnit? FilterUnit { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public FilterUnit FilterUnit { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class LiquidFilter (XMI id ID1586)</summary>
@@ -5566,33 +5918,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
+        // inherited from Filter (XMI id ID1496) (none)
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public FilterUnit? FilterUnit { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public FilterUnit FilterUnit { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class AirCoolingSystem (XMI id ID1260)</summary>
@@ -5607,37 +5961,38 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from HeatExchanger (XMI id ID1261)
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public HeatExchangerRotor? Rotor { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public HeatExchangerRotor Rotor { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PlateHeatExchanger (XMI id ID1648)</summary>
@@ -5652,36 +6007,37 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from HeatExchanger (XMI id ID1261)
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
         // own members
-        public int? NumberOfPlates { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? PlateHeight { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? PlateWidth { get; set; }
+        public int NumberOfPlates { get; set; } = 0;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity PlateHeight { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity PlateWidth { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class SpiralHeatExchanger (XMI id ID1787)</summary>
@@ -5696,32 +6052,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from HeatExchanger (XMI id ID1261)
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
         // own members (none)
     }
 
@@ -5737,37 +6094,38 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from HeatExchanger (XMI id ID1261)
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public HeatExchangerRotor? Rotor { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public HeatExchangerRotor Rotor { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class TubularHeatExchanger (XMI id ID1837)</summary>
@@ -5782,35 +6140,36 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from HeatExchanger (XMI id ID1261)
-        public Agitator? Agitator { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
+        public Agitator Agitator { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
         // own members
         public string TemaStandardType { get; set; } = "";
-        public TubeBundle? TubeBundle { get; set; }
+        public TubeBundle TubeBundle { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Boiler (XMI id ID1326)</summary>
@@ -5825,33 +6184,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Heater (XMI id ID1327)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members (none)
     }
 
@@ -5867,38 +6227,39 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Heater (XMI id ID1327)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferArea { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatTransferCoefficient { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public TubeBundle? TubeBundle { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferArea { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatTransferCoefficient { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public TubeBundle TubeBundle { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Furnace (XMI id ID1524)</summary>
@@ -5913,33 +6274,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Heater (XMI id ID1327)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members (none)
     }
 
@@ -5955,33 +6317,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Heater (XMI id ID1327)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignHeatFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletPressure { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignOutletTemperature { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignHeatFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletPressure { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignOutletTemperature { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members (none)
     }
 
@@ -5997,34 +6360,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Mill (XMI id ID1419)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignOutputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignInputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignOutputParticleSize { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignOutputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignInputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignOutputParticleSize { get; set; } = null!;
         // own members
         public List<CrusherElement> CrusherElements { get; set; } = new();
     }
@@ -6041,34 +6405,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Mill (XMI id ID1419)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? LowerLimitDesignOutputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignInputParticleSize { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignOutputParticleSize { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity LowerLimitDesignOutputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignInputParticleSize { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignOutputParticleSize { get; set; } = null!;
         // own members
         public List<GrindingElement> GrindingElements { get; set; } = new();
     }
@@ -6085,22 +6450,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -6109,9 +6475,9 @@ namespace Dexpi2.Plant.Processequipment
         // inherited from Mixer (XMI id ID1578)
         public List<MixingElementAssembly> MixingElementAssemblies { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RotaryMixer (XMI id ID1729)</summary>
@@ -6126,22 +6492,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -6150,9 +6517,9 @@ namespace Dexpi2.Plant.Processequipment
         // inherited from Mixer (XMI id ID1578)
         public List<MixingElementAssembly> MixingElementAssemblies { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class StaticMixer (XMI id ID1795)</summary>
@@ -6167,22 +6534,23 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
@@ -6191,7 +6559,7 @@ namespace Dexpi2.Plant.Processequipment
         // inherited from Mixer (XMI id ID1578)
         public List<MixingElementAssembly> MixingElementAssemblies { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ForkliftTruck (XMI id ID1521)</summary>
@@ -6206,32 +6574,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from MobileTransportSystem (XMI id ID1522)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDischargeHead { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDischargeHead { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class RailWaggon (XMI id ID1693)</summary>
@@ -6246,30 +6615,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from MobileTransportSystem (XMI id ID1522)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
         // own members (none)
     }
 
@@ -6285,30 +6655,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from MobileTransportSystem (XMI id ID1522)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
         // own members (none)
     }
 
@@ -6324,30 +6695,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from MobileTransportSystem (XMI id ID1522)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
         // own members (none)
     }
 
@@ -6363,30 +6735,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from MobileTransportSystem (XMI id ID1522)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
         // own members (none)
     }
 
@@ -6402,33 +6775,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Motor (XMI id ID1283)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? AlternatingCurrentFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity AlternatingCurrentFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalVoltage { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class CombustionEngine (XMI id ID1392)</summary>
@@ -6443,30 +6817,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Motor (XMI id ID1283)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         // own members
         public string FuelType { get; set; } = "";
     }
@@ -6483,32 +6858,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Motor (XMI id ID1283)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalRotationalFrequency { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalVoltage { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalVoltage { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class CentrifugalPump (XMI id ID1344)</summary>
@@ -6523,34 +6899,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Pump (XMI id ID1345)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPressureHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPressureHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Impeller> Impellers { get; set; } = new();
     }
 
@@ -6566,33 +6943,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Pump (XMI id ID1345)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPressureHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPressureHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMotiveFluid { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMotiveFluid { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ReciprocatingPump (XMI id ID1713)</summary>
@@ -6607,34 +6985,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Pump (XMI id ID1345)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPressureHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPressureHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Displacer> Displacers { get; set; } = new();
     }
 
@@ -6650,34 +7029,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Pump (XMI id ID1345)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPressureHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DifferentialPressure { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPressureHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DifferentialPressure { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
         public List<Displacer> Displacers { get; set; } = new();
     }
 
@@ -6693,33 +7073,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Separator (XMI id ID1480)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class GravitationalSeparator (XMI id ID1542)</summary>
@@ -6734,34 +7115,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Separator (XMI id ID1480)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class MechanicalSeparator (XMI id ID1598)</summary>
@@ -6776,33 +7158,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Separator (XMI id ID1480)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ScrubbingSeparator (XMI id ID1757)</summary>
@@ -6817,31 +7200,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Separator (XMI id ID1480)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Efficiency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitAllowableDesignPressureDrop { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Efficiency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitAllowableDesignPressureDrop { get; set; } = null!;
         // own members (none)
     }
 
@@ -6857,33 +7241,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Sieve (XMI id ID1720)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
         public List<SieveElement> SieveElements { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalFrequency { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignShaftPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalFrequency { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignShaftPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class StationarySieve (XMI id ID1797)</summary>
@@ -6898,29 +7283,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Sieve (XMI id ID1720)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
         public List<SieveElement> SieveElements { get; set; } = new();
         // own members (none)
     }
@@ -6937,32 +7323,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Sieve (XMI id ID1720)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
         public List<SieveElement> SieveElements { get; set; } = new();
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Conveyor (XMI id ID1403)</summary>
@@ -6977,34 +7364,35 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from StationaryTransportSystem (XMI id ID1404)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? ConveyingDistance { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity ConveyingDistance { get; set; } = null!;
         public string ConveyorType { get; set; } = "";
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalSpeed { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalSpeed { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Lift (XMI id ID1582)</summary>
@@ -7019,33 +7407,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from StationaryTransportSystem (XMI id ID1404)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DischargeHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitVolumeCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DischargeHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitVolumeCapacity { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class LoadingUnloadingSystem (XMI id ID1594)</summary>
@@ -7060,33 +7449,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from StationaryTransportSystem (XMI id ID1404)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitConveyingDistance { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDischargeHead { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitLoadCapacity { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitConveyingDistance { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDischargeHead { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitLoadCapacity { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class GasTurbine (XMI id ID1533)</summary>
@@ -7101,30 +7491,31 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Turbine (XMI id ID1534)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalFrequency { get; set; } = null!;
         // own members
         public string FuelType { get; set; } = "";
     }
@@ -7141,33 +7532,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Turbine (XMI id ID1534)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignRotationalFrequency { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignRotationalFrequency { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletMassFlow { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignInletVolumeFlow { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletMassFlow { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignInletVolumeFlow { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PressureVessel (XMI id ID1652)</summary>
@@ -7182,33 +7574,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Vessel (XMI id ID1653)
-        public Agitator? Agitator { get; set; }
+        public Agitator Agitator { get; set; } = null!;
         public List<TaggedColumnSection> ColumnSections { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalCapacityVolume { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalCapacityVolume { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? CylinderLength { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity CylinderLength { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Silo (XMI id ID1786)</summary>
@@ -7223,31 +7616,32 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Vessel (XMI id ID1653)
-        public Agitator? Agitator { get; set; }
+        public Agitator Agitator { get; set; } = null!;
         public List<TaggedColumnSection> ColumnSections { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalCapacityVolume { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalCapacityVolume { get; set; } = null!;
         // own members (none)
     }
 
@@ -7263,33 +7657,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Vessel (XMI id ID1653)
-        public Agitator? Agitator { get; set; }
+        public Agitator Agitator { get; set; } = null!;
         public List<TaggedColumnSection> ColumnSections { get; set; } = new();
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? NominalCapacityVolume { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity NominalCapacityVolume { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? CylinderLength { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity CylinderLength { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class Chimney (XMI id ID1374)</summary>
@@ -7304,29 +7699,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from WasteGasEmitter (XMI id ID1375)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members (none)
     }
 
@@ -7342,29 +7738,30 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from WasteGasEmitter (XMI id ID1375)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignVolumeFlowRate { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignVolumeFlowRate { get; set; } = null!;
         // own members (none)
     }
 
@@ -7380,33 +7777,34 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Weigher (XMI id ID1310)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignCapacityWeighingQuantities { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? UpperLimitDesignLoad { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignCapacityWeighingQuantities { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity UpperLimitDesignLoad { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class ContinuousWeigher (XMI id ID1398)</summary>
@@ -7421,32 +7819,33 @@ namespace Dexpi2.Plant.Processequipment
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from PlantAreaLocatedStructure (XMI id ID1175)
-        public Dexpi2.Plant.Plantstructure.PlantArea? PlantArea { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantArea PlantArea { get; set; } = null!;
         // inherited from PlantSystemLocatedStructure (XMI id ID1196)
-        public Dexpi2.Plant.Plantstructure.PlantSystem? PlantSystem { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantSystem PlantSystem { get; set; } = null!;
         // inherited from PlantTrainLocatedStructure (XMI id ID1203)
-        public Dexpi2.Plant.Plantstructure.PlantTrain? PlantTrain { get; set; }
+        public Dexpi2.Plant.Plantstructure.PlantTrain PlantTrain { get; set; } = null!;
         // inherited from TechnicalItem (XMI id ID748)
-        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure? ParentStructure { get; set; }
+        public Dexpi2.Plant.Plantstructure.TechnicalItemParentStructure ParentStructure { get; set; } = null!;
         // inherited from TaggedPlantItem (XMI id ID1163)
         public string TagName { get; set; } = "";
         public string TagNamePrefix { get; set; } = "";
         public string TagNameSequenceNumber { get; set; } = "";
         public string TagNameSuffix { get; set; } = "";
+        // inherited from TransmissionDriver (XMI id ID1619) (none)
         // inherited from ProcessEquipment (XMI id ID1226)
-        public TransmissionSystem? DrivingTransmissionSystem { get; set; }
+        public TransmissionSystem DrivingTransmissionSystem { get; set; } = null!;
         public List<DryingChamber> DryingChambers { get; set; } = new();
-        public Dexpi2.Core.Datatypes.MultiLanguageString? EquipmentDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString EquipmentDescription { get; set; } = null!;
         public List<MotorAsComponent> Motors { get; set; } = new();
         public List<Mount> Mounts { get; set; } = new();
         public List<SprayNozzle> SprayNozzles { get; set; } = new();
         public List<TransmissionSystem> TransmissionSystems { get; set; } = new();
         public List<EquipmentVent> Vents { get; set; } = new();
         // inherited from Weigher (XMI id ID1310)
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignMassFlowRate { get; set; }
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? DesignPower { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignMassFlowRate { get; set; } = null!;
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity DesignPower { get; set; } = null!;
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? BeltWidth { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity BeltWidth { get; set; } = null!;
     }
 
 }
@@ -7457,7 +7856,7 @@ namespace Dexpi2.Plant.Diagram
     public class InstrumentationNodePosition
     {
         // inherited from NodePosition (XMI id ID91)
-        public Dexpi2.Core.Diagram.Point? Position { get; set; }
+        public Dexpi2.Core.Diagram.Point Position { get; set; } = null!;
         // own members (none)
     }
 
@@ -7465,9 +7864,9 @@ namespace Dexpi2.Plant.Diagram
     public class PipingNodePosition
     {
         // inherited from NodePosition (XMI id ID91)
-        public Dexpi2.Core.Diagram.Point? Position { get; set; }
+        public Dexpi2.Core.Diagram.Point Position { get; set; } = null!;
         // own members
-        public Dexpi2.Plant.Piping.PipingNode? Node { get; set; }
+        public Dexpi2.Plant.Piping.PipingNode Node { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class PlantMetaData (XMI id ID510)</summary>
@@ -7479,20 +7878,20 @@ namespace Dexpi2.Plant.Diagram
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from MetaData (XMI id ID13)
         public string ApprovalDateRepresentation { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? ApprovalDescription { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString ApprovalDescription { get; set; } = null!;
         public string ApproverName { get; set; } = "";
         public string ArchiveNumber { get; set; } = "";
         public string BlockName { get; set; } = "";
         public string BlockNumber { get; set; } = "";
         public string CheckerName { get; set; } = "";
-        public Dexpi2.Core.Diagram.ConfidentialityClassification? Confidentiality { get; set; }
+        public Dexpi2.Core.Diagram.ConfidentialityClassification Confidentiality { get; set; } = default;
         public string CreationDateRepresentation { get; set; } = "";
         public string CreatorName { get; set; } = "";
         public string DesignerName { get; set; } = "";
         public string DrafterName { get; set; } = "";
         public string DrawingName { get; set; } = "";
         public string DrawingNumber { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? DrawingSubTitle { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString DrawingSubTitle { get; set; } = null!;
         public string FileName { get; set; } = "";
         public string LastModificationDateRepresentation { get; set; } = "";
         public string LocationName { get; set; } = "";
@@ -7508,7 +7907,7 @@ namespace Dexpi2.Plant.Diagram
         public string SheetNumber { get; set; } = "";
         public string SubProjectName { get; set; } = "";
         public string SubProjectNumber { get; set; } = "";
-        public int? TotalNumberOfSheets { get; set; }
+        public int TotalNumberOfSheets { get; set; } = 0;
         public string UnitIdentificationCode { get; set; } = "";
         public string UnitName { get; set; } = "";
         // own members
@@ -7533,288 +7932,360 @@ namespace Dexpi2.Plant.Diagram
     /// <summary>DEXPI 2.0 model class ActuatingElectricalSystemNumberLabel (XMI id ID484)</summary>
     public class ActuatingElectricalSystemNumberLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ActuatingSystemNumberLabel (XMI id ID485)</summary>
     public class ActuatingSystemNumberLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class CustomLabel (XMI id ID486)</summary>
     public class CustomLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class DeviceInformationLabel (XMI id ID487)</summary>
     public class DeviceInformationLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class EquipmentBarLabel (XMI id ID488)</summary>
     public class EquipmentBarLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class EquipmentTagNameLabel (XMI id ID489)</summary>
     public class EquipmentTagNameLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class FailActionLabel (XMI id ID490)</summary>
     public class FailActionLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class FittingLabel (XMI id ID491)</summary>
     public class FittingLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class InsulationBreakLabel (XMI id ID493)</summary>
     public class InsulationBreakLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class InsulationLabel (XMI id ID494)</summary>
     public class InsulationLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class MPRelevanceLabel (XMI id ID495)</summary>
     public class MPRelevanceLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class MeasuringSystemNumberLabel (XMI id ID496)</summary>
     public class MeasuringSystemNumberLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class NoteIdentifierLabel (XMI id ID497)</summary>
     public class NoteIdentifierLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class NoteTextLabel (XMI id ID498)</summary>
     public class NoteTextLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class NozzleStandardLabel (XMI id ID499)</summary>
     public class NozzleStandardLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class OffPageConnectorDescriptionLabel (XMI id ID500)</summary>
     public class OffPageConnectorDescriptionLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class OffPageConnectorNumberLabel (XMI id ID501)</summary>
     public class OffPageConnectorNumberLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PipingClassBreakLabel (XMI id ID502)</summary>
     public class PipingClassBreakLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PipingNetworkSegmentLabel (XMI id ID503)</summary>
     public class PipingNetworkSegmentLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class PipingNetworkSystemLabel (XMI id ID504)</summary>
     public class PipingNetworkSystemLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ProcessInstrumentationFunctionLabel (XMI id ID527)</summary>
     public class ProcessInstrumentationFunctionLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class QualityRelevanceLabel (XMI id ID528)</summary>
     public class QualityRelevanceLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ReducerLabel (XMI id ID529)</summary>
     public class ReducerLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ReferencedPIDNumberLabel (XMI id ID530)</summary>
     public class ReferencedPIDNumberLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SafetyRelevanceLabel (XMI id ID531)</summary>
     public class SafetyRelevanceLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SafetyValveOrFittingLabel (XMI id ID532)</summary>
     public class SafetyValveOrFittingLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalConveyingFunctionLabel (XMI id ID533)</summary>
     public class SignalConveyingFunctionLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalHighHighHighLabel (XMI id ID534)</summary>
     public class SignalHighHighHighLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalHighHighLabel (XMI id ID535)</summary>
     public class SignalHighHighLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalHighLabel (XMI id ID536)</summary>
     public class SignalHighLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalLowLabel (XMI id ID537)</summary>
     public class SignalLowLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalLowLowLabel (XMI id ID538)</summary>
     public class SignalLowLowLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class SignalLowLowLowLabel (XMI id ID539)</summary>
     public class SignalLowLowLowLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class TypicalInformationLabel (XMI id ID540)</summary>
     public class TypicalInformationLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class ValveLabel (XMI id ID541)</summary>
     public class ValveLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
     /// <summary>DEXPI 2.0 model class VendorNameLabel (XMI id ID542)</summary>
     public class VendorNameLabel
     {
+        // inherited from GraphicsGroup (XMI id ID138) (none)
         // inherited from RepresentationTypeGroup (XMI id ID78)
         public List<Dexpi2.Core.Diagram.GraphicalElement> Elements { get; set; } = new();
+        // inherited from Label (XMI id ID140) (none)
         // own members (none)
     }
 
@@ -7830,7 +8301,7 @@ namespace Dexpi2.Plant
         public List<Dexpi2.Core.PersistentIdentifier> PersistentIdentifiers { get; set; } = new();
         public List<Dexpi2.Core.Note> ReferencedNotes { get; set; } = new();
         // inherited from ConceptualModel (XMI id ID10)
-        public Dexpi2.Core.Diagram.MetaData? MetaData { get; set; }
+        public Dexpi2.Core.Diagram.MetaData MetaData { get; set; } = null!;
         public List<Dexpi2.Core.Note> Notes { get; set; } = new();
         public List<Dexpi2.Core.Role> Roles { get; set; } = new();
         // own members

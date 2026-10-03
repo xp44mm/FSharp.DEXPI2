@@ -15,6 +15,7 @@
 module Dexpi2CSharpGenerator
 
 open System
+open System.Collections.Generic
 open System.IO
 open System.Text
 open System.Text.RegularExpressions
@@ -35,13 +36,20 @@ type Member =
       Init: string option
       InheritedFrom: string option }
 
+/// One partition of a flat class body: an inherited-from comment (possibly
+/// "(none)" for a base with no own fields) or the own-members region.
+type Section =
+    { Comment: string option
+      Members: Member list }
+
 type ClassDecl =
     { Ns: string list
       Name: string
       XmiId: string
       Doc: string
       Abstract: bool
-      Members: Member list }
+      Members: Member list
+      Sections: Section list }
 
 type Decl =
     | Enum of EnumDecl
@@ -50,6 +58,18 @@ type Decl =
 // ---------------------------------------------------------------------------
 // Parsing
 // ---------------------------------------------------------------------------
+
+let capitalize (s: string) =
+    if s.Length = 0 then s else string (Char.ToUpperInvariant s.[0]) + s.Substring(1)
+
+/// C# namespace for a (C++) namespace path: "dexpi2.Plant" -> "Dexpi2.Plant".
+let csNamespace (path: string list) =
+    let segments = path |> List.filter (fun s -> s <> "dexpi2") |> List.map capitalize
+    if segments.IsEmpty then "Dexpi2" else "Dexpi2." + String.Join(".", segments)
+
+/// Full C# names of all enums, so property initializers can tell enums (value
+/// types, "= default;" is fine) apart from reference types ("= null!;").
+let enumFullNames: HashSet<string> = HashSet<string>()
 
 let private nsRe = Regex(@"^namespace\s+(\w+)\s*\{\s*$")
 let private nsCloseRe = Regex(@"^\}\s*//\s*namespace\s+(\w+)\s*$")
@@ -98,35 +118,54 @@ let parseFile (path: string) : Decl list =
                 let mm = enumMemberRe.Match(l)
                 if mm.Success then Some mm.Groups.[1].Value else None)
             |> Array.toList
+        let ns = nsAtLine.[startLine m]
+        let name = m.Groups.["name"].Value
+        enumFullNames.Add(csNamespace ns + "." + name) |> ignore
         decls.Add(
             Enum
-                { Ns = nsAtLine.[startLine m]
-                  Name = m.Groups.["name"].Value
+                { Ns = ns
+                  Name = name
                   XmiId = m.Groups.["xmi"].Value
                   Members = members })
 
     for m in classRe.Matches(textN) do
         let body = m.Groups.["body"].Value
         let abstract_ = m.Groups.["rest"].Value.Contains("[abstract in DEXPI]")
-        let members = ResizeArray<Member>()
-        let mutable lastInherited: string option = None
+        let sections = ResizeArray<Section>()
+        let mutable cur: Section option = None
+        let flush () =
+            match cur with
+            | Some s ->
+                sections.Add(s)
+                cur <- None
+            | None -> ()
         for l in body.Split('\n') do
             let im = inheritedRe.Match(l)
-            if im.Success then lastInherited <- Some im.Groups.[1].Value
+            if im.Success then
+                flush ()
+                // the captured text keeps any trailing "(none)" marker verbatim
+                cur <- Some { Comment = Some(im.Groups.[1].Value.Trim()); Members = [] }
             else
                 let om = ownMembersRe.Match(l)
-                if om.Success then lastInherited <- None
+                if om.Success then
+                    flush ()
+                    cur <- Some { Comment = None; Members = [] }
                 else
                     let mm = memberRe.Match(l)
                     if mm.Success && not (l.Contains("virtual ~")) && not (l.Contains("() = default")) then
                         let init =
-                            if mm.Groups.[3].Success then Some (mm.Groups.[3].Value.Trim())
+                            if mm.Groups.[3].Success then Some(mm.Groups.[3].Value.Trim())
                             else None
-                        members.Add(
+                        let mem =
                             { CppType = mm.Groups.[1].Value
                               Name = mm.Groups.[2].Value
                               Init = init
-                              InheritedFrom = lastInherited })
+                              InheritedFrom = None }
+                        match cur with
+                        | Some s -> cur <- Some { s with Members = s.Members @ [ mem ] }
+                        | None -> cur <- Some { Comment = None; Members = [ mem ] }
+        flush ()
+        let members = sections |> Seq.collect (fun s -> s.Members) |> Seq.toList
         decls.Add(
             Class
                 { Ns = nsAtLine.[startLine m]
@@ -134,20 +173,14 @@ let parseFile (path: string) : Decl list =
                   XmiId = m.Groups.["xmi"].Value
                   Doc = m.Groups.["doc"].Value
                   Abstract = abstract_
-                  Members = List.ofSeq members })
+                  Members = members
+                  Sections = List.ofSeq sections })
 
     List.ofSeq decls
 
 // ---------------------------------------------------------------------------
 // C# type mapping
 // ---------------------------------------------------------------------------
-
-let capitalize (s: string) =
-    if s.Length = 0 then s else string (Char.ToUpperInvariant s.[0]) + s.Substring(1)
-
-let csNamespace (path: string list) =
-    let segments = path |> List.filter (fun s -> s <> "dexpi2") |> List.map capitalize
-    if segments.IsEmpty then "Dexpi2" else "Dexpi2." + String.Join(".", segments)
 
 /// Translate a C++ type token to C# (nullable annotations enabled).
 let rec mapType (currentNs: string list) (cppType: string) : string =
@@ -165,11 +198,13 @@ let rec mapType (currentNs: string list) (cppType: string) : string =
     elif cppType = "std::vector<std::string>" then "List<string>"
     elif cppType = "std::vector<double>" then "List<double>"
     elif cppType = "std::optional<std::string>" then "string"
-    elif cppType = "std::optional<int>" then "int?"
+    elif cppType = "std::optional<int>" then "int"
     elif cppType.StartsWith("std::shared_ptr<") && cppType.EndsWith(">") then
-        mapType currentNs (innerOf "std::shared_ptr<" cppType) + "?"
+        // nullable shell is meaningless in the flat model; the field still
+        // defaults to null via "= default;" (UML 0..1 semantics preserved)
+        mapType currentNs (innerOf "std::shared_ptr<" cppType)
     elif cppType.StartsWith("std::optional<") && cppType.EndsWith(">") then
-        mapType currentNs (innerOf "std::optional<" cppType) + "?"
+        mapType currentNs (innerOf "std::optional<" cppType)
     elif cppType.StartsWith("std::vector<") && cppType.EndsWith(">") then
         let inner = innerOf "std::vector<" cppType
         // A vector element wrapped in shared_ptr is a mandatory member of the
@@ -184,15 +219,23 @@ let rec mapType (currentNs: string list) (cppType: string) : string =
     elif cppType.Contains("::") then qualifiedToCs cppType
     else cppType
 
+/// True when the C# type name refers to a known DEXPI enumeration.
+/// Handles both cross-namespace fully qualified names and same-namespace
+/// short names as produced by mapType.
+let isEnumType (currentNs: string list) (csType: string) =
+    if csType.Contains "." then enumFullNames.Contains csType
+    else enumFullNames.Contains (csNamespace currentNs + "." + csType)
+
 /// Default initializer for the C# property, mirroring the C++ member defaults.
+/// Nullable shells are removed; reference types default to null via "= null!;",
+/// keeping the UML 0..1 optional semantics without a "?" annotation.
 let defaultInit (csType: string) : string =
     if csType = "string" then "\"\""
     elif csType = "int" then "0"
     elif csType = "double" then "0.0"
     elif csType = "bool" then "false"
     elif csType.StartsWith("List<") then "new()"
-    elif csType.EndsWith("?") then "" // nullable: no initializer (null default)
-    else "default" // enum
+    else "null!" // reference type
 
 // ---------------------------------------------------------------------------
 // Emission
@@ -216,21 +259,20 @@ let emitClass (b: StringBuilder) (c: ClassDecl) =
     append (sprintf "    /// <summary>DEXPI 2.0 model class %s (XMI id %s)%s%s</summary>" c.Name c.XmiId absDoc docExtra)
     append (sprintf "    public %sclass %s" abstractMark c.Name)
     append "    {"
-    let mutable lastInherited = ""
-    let mutable ownMarked = false
-    for m in c.Members do
-        let inh = defaultArg m.InheritedFrom ""
-        if inh <> lastInherited && inh <> "" then
-            append (sprintf "        // inherited from %s" inh)
-            lastInherited <- inh
-        elif inh = "" && not ownMarked then
-            append "        // own members"
-            ownMarked <- true
-        let csType = mapType c.Ns m.CppType
-        let init = defaultInit csType
-        let initPart = if init = "" then "" else " = " + init + ";"
-        append (sprintf "        public %s %s { get; set; }%s" csType m.Name initPart)
-    if not ownMarked then
+    let mutable ownSeen = false
+    for sec in c.Sections do
+        match sec.Comment with
+        | Some cmt -> append (sprintf "        // inherited from %s" cmt)
+        | None ->
+            if not sec.Members.IsEmpty then
+                append "        // own members"
+                ownSeen <- true
+        for m in sec.Members do
+            let csType = mapType c.Ns m.CppType
+            let init = if isEnumType c.Ns csType then "default" else defaultInit csType
+            let initPart = if init = "" then "" else " = " + init + ";"
+            append (sprintf "        public %s %s { get; set; }%s" csType m.Name initPart)
+    if not ownSeen then
         // no own fields at all: all members inherited, or the class is empty
         append "        // own members (none)"
     append "    }"
@@ -249,8 +291,8 @@ let emitFile (b: StringBuilder) (sourceHeader: string) (decls: Decl list) =
     append "using System;"
     append "using System.Collections.Generic;"
     append ""
-    append "#nullable enable"
-    append ""
+    // nullable context is enabled project-wide via <Nullable>enable</Nullable>
+    // in Dexpi2.CSharp.csproj, so no per-file "#nullable enable" directive
     let groups = decls |> List.groupBy (fun d -> match d with Enum e -> e.Ns | Class c -> c.Ns)
     for (ns, ds) in groups do
         append (sprintf "namespace %s" (csNamespace ns))

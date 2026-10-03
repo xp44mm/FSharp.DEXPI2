@@ -229,19 +229,35 @@ let flattenClass (m: Model) (c: ClassDecl) : (ClassDecl * string list) list * st
         let own = [ for mem in cls.Members do yield (cls, mem) ]
         fromBases @ own
 
+    // Every ancestor base class in depth-first, de-duplicated order -- including
+    // EMPTY bases (no own fields) -- so that each base still gets a partition
+    // comment (with "(none)") in the flattened derived class.
+    // Post-order traversal: a base always precedes its subclasses, so the
+    // partition comments run from the most distant base down to the direct
+    // base(s), i.e. base -> derived.
+    let visitedBases = HashSet<string>()
+    let rec baseClasses (name: string) : ClassDecl list =
+        let cls = m.ClassesByName.[name]
+        [ for b in cls.Bases do
+            if visitedBases.Add(b) then
+                let bcls = m.ClassesByName.[b]
+                yield! baseClasses b
+                yield bcls ]
+
+    let bases = baseClasses c.CppName
     let all = collect c.CppName
     let seenNames = HashSet<string>()
     let groups = ResizeArray<ClassDecl * string list>()
     let groupIndex = Dictionary<string, int>()
+    for src in bases do
+        groupIndex.[src.CppName] <- groups.Count
+        groups.Add(src, [])
     let mutable dedupedSameType = 0
     for (src, mem) in all do
         if src.CppName <> c.CppName then
             if seenNames.Add(memberNameOf mem) then
-                match groupIndex.TryGetValue(src.CppName) with
-                | true, i -> groups.[i] <- (src, (snd groups.[i]) @ [ mem ])
-                | false, _ ->
-                    groupIndex.[src.CppName] <- groups.Count
-                    groups.Add(src, [ mem ])
+                let i = groupIndex.[src.CppName]
+                groups.[i] <- (src, (snd groups.[i]) @ [ mem ])
             else
                 dedupedSameType <- dedupedSameType + 1
 
@@ -282,7 +298,8 @@ let emitClass (m: Model) (c: ClassDecl) : string list =
     let inheritedLines =
         groups
         |> List.collect (fun (src, mems) ->
-            [ "        // inherited from " + src.CppName + " (XMI id " + src.XmiId + ")" ]
+            let noneMark = if src.Members.IsEmpty then " (none)" else ""
+            [ "        // inherited from " + src.CppName + " (XMI id " + src.XmiId + ")" + noneMark ]
             @ List.map (fun mem -> "        " + qualifyMember m.TypeNs src.NsPath c.NsPath mem + ";") mems)
 
     // Separate the class's own fields from inherited ones so the flat header

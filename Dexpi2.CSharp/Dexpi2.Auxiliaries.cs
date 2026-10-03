@@ -9,8 +9,6 @@
 using System;
 using System.Collections.Generic;
 
-#nullable enable
-
 namespace Dexpi2.Auxiliaries
 {
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeForceUnit (XMI id ID1966) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=ForceUnit))</summary>
@@ -23,16 +21,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeRotationalFrequencyUnit (XMI id ID1971) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=RotationalFrequencyUnit))</summary>
@@ -45,16 +43,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypePowerUnit (XMI id ID1981) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=PowerUnit))</summary>
@@ -67,16 +65,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypePercentageUnit (XMI id ID1990) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=PercentageUnit))</summary>
@@ -89,16 +87,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfDouble (XMI id ID1998) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | Double)</summary>
@@ -111,13 +109,13 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
         public double Value { get; set; } = 0.0;
@@ -133,16 +131,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantityVectorwithUnitTypePercentageUnit (XMI id ID2034) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantityVector with UnitType=PercentageUnit))</summary>
@@ -155,16 +153,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantityVector? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantityVector Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeMoleFlowRateUnit (XMI id ID2042) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=MoleFlowRateUnit))</summary>
@@ -177,16 +175,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfInteger (XMI id ID2056) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | Integer)</summary>
@@ -199,13 +197,13 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
         public int Value { get; set; } = 0;
@@ -221,16 +219,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypePressureAbsoluteUnit (XMI id ID2110) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=PressureAbsoluteUnit))</summary>
@@ -243,16 +241,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeTemperatureUnit (XMI id ID2115) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=TemperatureUnit))</summary>
@@ -265,16 +263,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeAreaUnit (XMI id ID2164) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=AreaUnit))</summary>
@@ -287,16 +285,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeElectricCurrentUnit (XMI id ID2180) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=ElectricCurrentUnit))</summary>
@@ -309,16 +307,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeElectricalFrequencyUnit (XMI id ID2185) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=ElectricalFrequencyUnit))</summary>
@@ -331,16 +329,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeVoltageUnit (XMI id ID2193) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=VoltageUnit))</summary>
@@ -353,16 +351,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeFlowRateUnit (XMI id ID2205) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=VolumeFlowRateUnit))</summary>
@@ -375,16 +373,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferCoefficientUnit (XMI id ID2232) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=HeatTransferCoefficientUnit))</summary>
@@ -397,16 +395,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeHeatTransferResistanceUnit (XMI id ID2240) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=HeatTransferResistanceUnit))</summary>
@@ -419,16 +417,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeMassUnit (XMI id ID2258) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=MassUnit))</summary>
@@ -441,16 +439,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeParticleSizeUnit (XMI id ID2268) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=ParticleSizeUnit))</summary>
@@ -463,16 +461,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeDensityUnit (XMI id ID2432) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=DensityUnit))</summary>
@@ -485,16 +483,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeMassSpecificEnergyUnit (XMI id ID2446) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=MassSpecificEnergyUnit))</summary>
@@ -507,16 +505,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeDynamicViscosityUnit (XMI id ID2454) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=DynamicViscosityUnit))</summary>
@@ -529,16 +527,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantity (XMI id ID2482) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | PhysicalQuantity)</summary>
@@ -551,16 +549,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeMomentOfForceUnit (XMI id ID2503) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=MomentOfForceUnit))</summary>
@@ -573,16 +571,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeTimeIntervalUnit (XMI id ID2529) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=TimeIntervalUnit))</summary>
@@ -595,16 +593,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeVolumeUnit (XMI id ID2595) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=VolumeUnit))</summary>
@@ -617,16 +615,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeVelocityUnit (XMI id ID2694) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=VelocityUnit))</summary>
@@ -639,16 +637,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeMagneticFieldIntensityUnit (XMI id ID2712) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=MagneticFieldIntensityUnit))</summary>
@@ -661,16 +659,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypepHUnit (XMI id ID2745) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=pHUnit))</summary>
@@ -683,16 +681,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyUnit (XMI id ID2812) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=EnergyUnit))</summary>
@@ -705,16 +703,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
     /// <summary>DEXPI 2.0 model class QualifiedValueOfPhysicalQuantitywithUnitTypeEnergyDensityUnit (XMI id ID2820) [abstract in DEXPI]; source comment: QualifiedValue with Type=(Undefined | (PhysicalQuantity with UnitType=EnergyDensityUnit))</summary>
@@ -727,16 +725,16 @@ namespace Dexpi2.Auxiliaries
         // inherited from QualifiedValue (XMI id ID464)
         public string Case { get; set; } = "";
         public string CaseUID { get; set; } = "";
-        public Dexpi2.Core.Datatypes.MultiLanguageString? Description { get; set; }
+        public Dexpi2.Core.Datatypes.MultiLanguageString Description { get; set; } = null!;
         public string DisplayText { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityProvenance? Provenance { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityProvenance Provenance { get; set; } = default;
         public string ProvenanceURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.QuantityRange? Range { get; set; }
+        public Dexpi2.Core.Datatypes.QuantityRange Range { get; set; } = default;
         public string ReferenceDataURI { get; set; } = "";
-        public Dexpi2.Core.Datatypes.Scope? Scope { get; set; }
+        public Dexpi2.Core.Datatypes.Scope Scope { get; set; } = default;
         public string SourceURI { get; set; } = "";
         // own members
-        public Dexpi2.Core.Physicalquantities.PhysicalQuantity? Value { get; set; }
+        public Dexpi2.Core.Physicalquantities.PhysicalQuantity Value { get; set; } = null!;
     }
 
 }
