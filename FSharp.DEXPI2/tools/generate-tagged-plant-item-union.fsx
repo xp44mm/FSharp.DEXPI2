@@ -93,7 +93,11 @@ for c in allClasses do
                 l
         l.Add c
 
-let target = "TaggedPlantItem"
+// 目标抽象类名（argv 覆盖，默认 TaggedPlantItem）
+let target =
+    if fsi.CommandLineArgs.Length > 1 then fsi.CommandLineArgs.[1]
+    else "TaggedPlantItem"
+
 let targetDecl = classByName.[target]
 let targetCsNs = csNamespace targetDecl.Ns
 
