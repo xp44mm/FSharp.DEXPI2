@@ -7,8 +7,11 @@
 
     <ItemGroup>
         <Compile Include="FSharp.DEXPI2.fs" />
+        <Compile Include="Plant\PipingNode.fs" />
+        <Compile Include="Plant\Nozzle.fs" />
         <Compile Include="Plant\Piping.fs" />
-        <Compile Include="Plant\ProcessEquipment.fs" />
+        <Compile Include="Plant\Equipment.fs" />
+        <Compile Include="Plant\TaggedPlantItem.fs" />
         <Compile Include="Plant.fs" />
         <Compile Include="Core.fs" />
     </ItemGroup>

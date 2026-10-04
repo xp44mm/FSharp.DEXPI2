@@ -1,13 +1,7 @@
 ﻿namespace FSharp.DEXPI2.Plant.Piping
 
 open FSharp.DEXPI2
-
-type PipingNode = {
-    //NominalDiameterNumericalValueRepresentation: string
-    //NominalDiameterRepresentation: string
-    NominalDiameterStandard: string
-    //NominalDiameterTypeRepresentation: string
-}
+open FSharp.DEXPI2.Plant.ProcessEquipment
 
 type OperatedValve = {
     //own members（与 C# own 分区字段一一对应）
@@ -31,23 +25,43 @@ type PipeOffPageConnector = {
 
 }
 
+type PipeReducer = {
+    //own members（none）
+    //inherited from PipeFitting（与 C# inherited 分区字段一一对应）
+    //InsulationThickness: string
+    //InsulationType: string
+    //PipingClassCode: string
+    PipingComponentName: string
+    PipingComponentNumber: string
+
+    //inherited from PipingNodeOwner
+    Nodes: list<PipingNode>
+}
+
 type PipingNetworkSegmentItem =
     | PipeOffPageConnector of PipeOffPageConnector
     | OperatedValve of OperatedValve
+    | PipeReducer of PipeReducer
 
 type PipingSourceItem =
+    | Nozzle of Nozzle
     | PipeOffPageConnector of PipeOffPageConnector
     | OperatedValve of OperatedValve
+    | PipeReducer of PipeReducer
 
 type PipingTargetItem =
+    | Nozzle of Nozzle
     | PipeOffPageConnector of PipeOffPageConnector
     | OperatedValve of OperatedValve
+    | PipeReducer of PipeReducer
 
 type PipingConnection = {
     SourceItem: PipingSourceItem
     SourceNode: PipingNode
     TargetItem: PipingTargetItem
     TargetNode: PipingNode
+
+    IsDirectPipingConnection: bool
 }
 
 type PipingNetworkSegment = {
