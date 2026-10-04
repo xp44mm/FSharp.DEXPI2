@@ -51,6 +51,25 @@ type PipeTee = {
     Nodes: list<PipingNode>
 }
 
+type Sensorwell = {
+    //own members（与 C# own 分区字段一一对应）
+    //LocationNominalDiameterNumericalValueRepresentation: string
+    //LocationNominalDiameterRepresentation: string
+    //LocationNominalDiameterStandard: NominalDiameterStandardClassification
+    //LocationNominalDiameterTypeRepresentation: string
+    SensorwellTypeRepresentation: string
+
+    //inherited from PipeFitting（与 C# inherited 分区字段一一对应）
+    //InsulationThickness: string
+    //InsulationType: string
+    //PipingClassCode: string
+    //PipingComponentName: string
+    PipingComponentNumber: string
+
+    //inherited from PipingNodeOwner
+    Nodes: list<PipingNode>
+}
+
 type CheckValve = {
     //own members
     //InsulationThickness: PhysicalQuantity
@@ -67,6 +86,7 @@ type PipingNetworkSegmentItem =
     | PipeOffPageConnector of PipeOffPageConnector
     | PipeReducer of PipeReducer
     | PipeTee of PipeTee
+    | Sensorwell of Sensorwell
     | OperatedValve of OperatedValve
     | CheckValve of CheckValve
 
@@ -75,6 +95,7 @@ type PipingSourceItem =
     | PipeOffPageConnector of PipeOffPageConnector
     | PipeReducer of PipeReducer
     | PipeTee of PipeTee
+    | Sensorwell of Sensorwell
     | OperatedValve of OperatedValve
     | CheckValve of CheckValve
 
@@ -83,6 +104,7 @@ type PipingTargetItem =
     | PipeOffPageConnector of PipeOffPageConnector
     | PipeReducer of PipeReducer
     | PipeTee of PipeTee
+    | Sensorwell of Sensorwell
     | OperatedValve of OperatedValve
     | CheckValve of CheckValve
 
