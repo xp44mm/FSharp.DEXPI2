@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Compile Include="InPlaceTree.fs" />
+    <Compile Include="PumpTree.fs" />
     <Compile Include="MinimalTankDischargeTest.fs" />
   </ItemGroup>
 

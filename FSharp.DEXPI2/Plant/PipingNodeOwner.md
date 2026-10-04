@@ -76,9 +76,7 @@ PipingNodeOwner (ID996) [抽象]
 │       └── SpringLoadedGlobeSafetyValve (ID1128)
 └── PropertyBreak (ID1104)
 ```
-
 ## 要点
-
 - **4 个直接子类**：`Nozzle`、`PipeOffPageConnector`[抽象]、`PipingComponent`[抽象]、`PropertyBreak`；
 - **分支规模**：
   - `PipingComponent` 支 57 个（最大的一支：阀门 11 + 管件 24 + 测量元件 9 + 安全阀 5 + 止回阀 3 + PipingComponent 自身）；
@@ -93,7 +91,6 @@ PipingNodeOwner (ID996) [抽象]
 - 与 `NozzleOwner` 的关系：`Nozzle` 同时是两者的后代——
   `NozzleOwner` 给 Nozzle 带来 `Nozzles` 列表（罐/设备拥有哪些接管口），
   `PipingNodeOwner` 给 Nozzle 带来 `Nodes` 列表（接管口在管道拓扑里的节点）。
-
 ## 数据来源
 
 `Dexpi2.Cpp/Generated/dexpi2.hpp`的多继承。

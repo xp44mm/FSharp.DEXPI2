@@ -10,7 +10,7 @@ type OperatedValve = {
     //NumberOfPorts: string
     //Operation: string
     //PipingClassCode: string
-    PipingComponentName: string
+    //PipingComponentName: string
     PipingComponentNumber: string
 
     //inherited from PipingNodeOwner
@@ -31,7 +31,32 @@ type PipeReducer = {
     //InsulationThickness: string
     //InsulationType: string
     //PipingClassCode: string
-    PipingComponentName: string
+    //PipingComponentName: string
+    PipingComponentNumber: string
+
+    //inherited from PipingNodeOwner
+    Nodes: list<PipingNode>
+}
+
+type PipeTee = {
+    //own members（none）
+    //inherited from PipeFitting（与 C# inherited 分区字段一一对应）
+    //InsulationThickness: string
+    //InsulationType: string
+    //PipingClassCode: string
+    //PipingComponentName: string
+    PipingComponentNumber: string
+
+    //inherited from PipingNodeOwner
+    Nodes: list<PipingNode>
+}
+
+type CheckValve = {
+    //own members
+    //InsulationThickness: PhysicalQuantity
+    //InsulationType: string
+    //PipingClassCode: string
+    //PipingComponentName: string
     PipingComponentNumber: string
 
     //inherited from PipingNodeOwner
@@ -40,20 +65,26 @@ type PipeReducer = {
 
 type PipingNetworkSegmentItem =
     | PipeOffPageConnector of PipeOffPageConnector
-    | OperatedValve of OperatedValve
     | PipeReducer of PipeReducer
+    | PipeTee of PipeTee
+    | OperatedValve of OperatedValve
+    | CheckValve of CheckValve
 
 type PipingSourceItem =
     | Nozzle of Nozzle
     | PipeOffPageConnector of PipeOffPageConnector
-    | OperatedValve of OperatedValve
     | PipeReducer of PipeReducer
+    | PipeTee of PipeTee
+    | OperatedValve of OperatedValve
+    | CheckValve of CheckValve
 
 type PipingTargetItem =
     | Nozzle of Nozzle
     | PipeOffPageConnector of PipeOffPageConnector
-    | OperatedValve of OperatedValve
     | PipeReducer of PipeReducer
+    | PipeTee of PipeTee
+    | OperatedValve of OperatedValve
+    | CheckValve of CheckValve
 
 type PipingConnection = {
     SourceItem: PipingSourceItem
@@ -67,7 +98,7 @@ type PipingConnection = {
 type PipingNetworkSegment = {
     //ColorCode: string
     //FlowDirection: string
-    FluidCode: string
+    //FluidCode: string
     //HeatTracingType: string
     //HeatTracingTypeRepresentation: string
     //InsulationType: string
@@ -94,7 +125,7 @@ type PipingNetworkSegment = {
 }
 
 type PipingNetworkSystem = {
-    FluidCode: string
+    //FluidCode: string
     //HeatTracingType: string
     //HeatTracingTypeRepresentation: string
     //InsulationType: string
@@ -104,10 +135,10 @@ type PipingNetworkSystem = {
     LineNumber: string
     //NominalDiameterNumericalValueRepresentation: string
     //NominalDiameterRepresentation: string
-    NominalDiameterStandard: string
+    //NominalDiameterStandard: string
     //NominalDiameterTypeRepresentation: string
     //OnHold: string
     //PipingClassCode: string
-    PipingNetworkSystemGroupNumber: string
+    //PipingNetworkSystemGroupNumber: string
     Segments: list<PipingNetworkSegment>
 }
