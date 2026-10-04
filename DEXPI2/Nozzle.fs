@@ -1,4 +1,4 @@
-﻿namespace FSharp.DEXPI2
+﻿namespace DEXPI2
 
 type Nozzle =
     {

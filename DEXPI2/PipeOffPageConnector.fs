@@ -1,11 +1,5 @@
-﻿namespace FSharp.DEXPI2
-
-open FSharp.DEXPI2.Plant.Piping
+﻿namespace DEXPI2
 
 type PipeOffPageConnector = {
-    //ConnectorReference: PipeOffPageConnectorReference
-    //PipeConnectorDescription: string
     PipeConnectorNumber: string
-    Nodes: list<PipingNode>
-
 }
