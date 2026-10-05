@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="PipingNodeOwner.fs" />
     <Compile Include="ProcessEquipment.fs" />
+    <Compile Include="PipingNodeOwner.fs" />
+    <Compile Include="PipingNetworkSegment.fs" />
+    <Compile Include="PipingNetworkSystem.fs" />
+    <Compile Include="PlantModel.fs" />
   </ItemGroup>
 
 </Project>

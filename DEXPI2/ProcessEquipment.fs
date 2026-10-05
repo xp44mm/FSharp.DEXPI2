@@ -3,130 +3,131 @@
 /// <summary>DEXPI 2.0 模型类 ProcessEquipment（XMI id ID1226）的可区分联合：全部具体派生类型（含非叶类）</summary>
 type ProcessEquipment =
     // Agglomerator 支
-    | Agglomerator of TagName: string
-    | ReciprocatingPressureAgglomerator of TagName: string
-    | RotatingGrowthAgglomerator of TagName: string
-    | RotatingPressureAgglomerator of TagName: string
+    | Agglomerator of tag:string * nozzles: string list
+    | ReciprocatingPressureAgglomerator of tag:string * nozzles: string list
+    | RotatingGrowthAgglomerator of tag:string * nozzles: string list
+    | RotatingPressureAgglomerator of tag:string * nozzles: string list
     // Agitator 支（叶类）
-    | Agitator of TagName: string
+    | Agitator of tag:string * nozzles: string list
     // Blower 支
-    | Blower of TagName: string
-    | AxialBlower of TagName: string
-    | CentrifugalBlower of TagName: string
+    | Blower of tag:string * nozzles: string list
+    | AxialBlower of tag:string * nozzles: string list
+    | CentrifugalBlower of tag:string * nozzles: string list
     // Burner 支（叶类）
-    | Burner of TagName: string
+    | Burner of tag:string * nozzles: string list
     // Centrifuge 支
-    | Centrifuge of TagName: string
-    | FilteringCentrifuge of TagName: string
-    | SedimentalCentrifuge of TagName: string
+    | Centrifuge of tag:string * nozzles: string list
+    | FilteringCentrifuge of tag:string * nozzles: string list
+    | SedimentalCentrifuge of tag:string * nozzles: string list
     // Compressor 支
-    | Compressor of TagName: string
-    | AirEjector of TagName: string
-    | AxialCompressor of TagName: string
-    | CentrifugalCompressor of TagName: string
-    | ReciprocatingCompressor of TagName: string
-    | RotaryCompressor of TagName: string
+    | Compressor of tag:string * nozzles: string list
+    | AirEjector of tag:string * nozzles: string list
+    | AxialCompressor of tag:string * nozzles: string list
+    | CentrifugalCompressor of tag:string * nozzles: string list
+    | ReciprocatingCompressor of tag:string * nozzles: string list
+    | RotaryCompressor of tag:string * nozzles: string list
     // CoolingTower 支
-    | CoolingTower of TagName: string
-    | DryCoolingTower of TagName: string
-    | SprayCooler of TagName: string
-    | WetCoolingTower of TagName: string
+    | CoolingTower of tag:string * nozzles: string list
+    | DryCoolingTower of tag:string * nozzles: string list
+    | SprayCooler of tag:string * nozzles: string list
+    | WetCoolingTower of tag:string * nozzles: string list
     // Dryer 支
-    | Dryer of TagName: string
-    | ConvectionDryer of TagName: string
-    | HeatedSurfaceDryer of TagName: string
+    | Dryer of tag:string * nozzles: string list
+    | ConvectionDryer of tag:string * nozzles: string list
+    | HeatedSurfaceDryer of tag:string * nozzles: string list
     // ElectricGenerator 支
-    | ElectricGenerator of TagName: string
-    | AlternatingCurrentGenerator of TagName: string
-    | DirectCurrentGenerator of TagName: string
+    | ElectricGenerator of tag:string * nozzles: string list
+    | AlternatingCurrentGenerator of tag:string * nozzles: string list
+    | DirectCurrentGenerator of tag:string * nozzles: string list
     // Extruder 支
-    | Extruder of TagName: string
-    | ReciprocatingExtruder of TagName: string
-    | RotatingExtruder of TagName: string
+    | Extruder of tag:string * nozzles: string list
+    | ReciprocatingExtruder of tag:string * nozzles: string list
+    | RotatingExtruder of tag:string * nozzles: string list
     // Fan 支
-    | Fan of TagName: string
-    | AxialFan of TagName: string
-    | RadialFan of TagName: string
+    | Fan of tag:string * nozzles: string list
+    | AxialFan of tag:string * nozzles: string list
+    | RadialFan of tag:string * nozzles: string list
     // Feeder 支（叶类）
-    | Feeder of TagName: string
+    | Feeder of tag:string * nozzles: string list
     // Filter 支
-    | Filter of TagName: string
-    | GasFilter of TagName: string
-    | LiquidFilter of TagName: string
+    | Filter of tag:string * nozzles: string list
+    | GasFilter of tag:string * nozzles: string list
+    | LiquidFilter of tag:string * nozzles: string list
     // Heater 支
-    | Heater of TagName: string
-    | Boiler of TagName: string
-    | ElectricHeater of TagName: string
-    | Furnace of TagName: string
-    | SteamGenerator of TagName: string
+    | Heater of tag:string * nozzles: string list
+    | Boiler of tag:string * nozzles: string list
+    | ElectricHeater of tag:string * nozzles: string list
+    | Furnace of tag:string * nozzles: string list
+    | SteamGenerator of tag:string * nozzles: string list
     // HeatExchanger 支
-    | HeatExchanger of TagName: string
-    | AirCoolingSystem of TagName: string
-    | PlateHeatExchanger of TagName: string
-    | SpiralHeatExchanger of TagName: string
-    | ThinFilmEvaporator of TagName: string
-    | TubularHeatExchanger of TagName: string
+    | HeatExchanger of tag:string * nozzles: string list
+    | AirCoolingSystem of tag:string * nozzles: string list
+    | PlateHeatExchanger of tag:string * nozzles: string list
+    | SpiralHeatExchanger of tag:string * nozzles: string list
+    | ThinFilmEvaporator of tag:string * nozzles: string list
+    | TubularHeatExchanger of tag:string * nozzles: string list
     // Mill 支
-    | Mill of TagName: string
-    | Crusher of TagName: string
-    | Grinder of TagName: string
+    | Mill of tag:string * nozzles: string list
+    | Crusher of tag:string * nozzles: string list
+    | Grinder of tag:string * nozzles: string list
     // Mixer 支
-    | Mixer of TagName: string
-    | Kneader of TagName: string
-    | RotaryMixer of TagName: string
-    | StaticMixer of TagName: string
+    | Mixer of tag:string * nozzles: string list
+    | Kneader of tag:string * nozzles: string list
+    | RotaryMixer of tag:string * nozzles: string list
+    | StaticMixer of tag:string * nozzles: string list
     // MobileTransportSystem 支
-    | MobileTransportSystem of TagName: string
-    | ForkliftTruck of TagName: string
-    | RailWaggon of TagName: string
-    | Ship of TagName: string
-    | TransportableContainer of TagName: string
-    | Truck of TagName: string
+    | MobileTransportSystem of tag:string * nozzles: string list
+    | ForkliftTruck of tag:string * nozzles: string list
+    | RailWaggon of tag:string * nozzles: string list
+    | Ship of tag:string * nozzles: string list
+    | TransportableContainer of tag:string * nozzles: string list
+    | Truck of tag:string * nozzles: string list
     // Motor 支
-    | Motor of TagName: string
-    | AlternatingCurrentMotor of TagName: string
-    | CombustionEngine of TagName: string
-    | DirectCurrentMotor of TagName: string
+    | Motor of tag:string * nozzles: string list
+    | AlternatingCurrentMotor of tag:string * nozzles: string list
+    | CombustionEngine of tag:string * nozzles: string list
+    | DirectCurrentMotor of tag:string * nozzles: string list
     // PackagingSystem 支（叶类）
-    | PackagingSystem of TagName: string
+    | PackagingSystem of tag:string * nozzles: string list
     // ProcessColumn 支（叶类）
-    | ProcessColumn of TagName: string
+    | ProcessColumn of tag:string * nozzles: string list
     // Pump 支
-    | Pump of TagName: string
-    | CentrifugalPump of TagName: string
-    | EjectorPump of TagName: string
-    | ReciprocatingPump of TagName: string
-    | RotaryPump of TagName: string
+    | Pump of tag:string * nozzles: string list
+    | CentrifugalPump of tag:string * nozzles: string list
+    | EjectorPump of tag:string * nozzles: string list
+    | ReciprocatingPump of tag:string * nozzles: string list
+    | RotaryPump of tag:string * nozzles: string list
     // Separator 支
-    | Separator of TagName: string
-    | ElectricalSeparator of TagName: string
-    | GravitationalSeparator of TagName: string
-    | MechanicalSeparator of TagName: string
-    | ScrubbingSeparator of TagName: string
+    | Separator of tag:string * nozzles: string list
+    | ElectricalSeparator of tag:string * nozzles: string list
+    | GravitationalSeparator of tag:string * nozzles: string list
+    | MechanicalSeparator of tag:string * nozzles: string list
+    | ScrubbingSeparator of tag:string * nozzles: string list
     // Sieve 支
-    | Sieve of TagName: string
-    | RevolvingSieve of TagName: string
-    | StationarySieve of TagName: string
-    | VibratingSieve of TagName: string
+    | Sieve of tag:string * nozzles: string list
+    | RevolvingSieve of tag:string * nozzles: string list
+    | StationarySieve of tag:string * nozzles: string list
+    | VibratingSieve of tag:string * nozzles: string list
     // StationaryTransportSystem 支
-    | StationaryTransportSystem of TagName: string
-    | Conveyor of TagName: string
-    | Lift of TagName: string
-    | LoadingUnloadingSystem of TagName: string
+    | StationaryTransportSystem of tag:string * nozzles: string list
+    | Conveyor of tag:string * nozzles: string list
+    | Lift of tag:string * nozzles: string list
+    | LoadingUnloadingSystem of tag:string * nozzles: string list
     // Turbine 支
-    | Turbine of TagName: string
-    | GasTurbine of TagName: string
-    | SteamTurbine of TagName: string
+    | Turbine of tag:string * nozzles: string list
+    | GasTurbine of tag:string * nozzles: string list
+    | SteamTurbine of tag:string * nozzles: string list
     // Vessel 支
-    | Vessel of TagName: string
-    | PressureVessel of TagName: string
-    | Silo of TagName: string
-    | Tank of TagName: string
+    | Vessel of tag:string * nozzles: string list
+    | PressureVessel of tag:string * nozzles: string list
+    | Silo of tag:string * nozzles: string list
+    | Tank of tag:string * nozzles: string list
     // WasteGasEmitter 支
-    | WasteGasEmitter of TagName: string
-    | Chimney of TagName: string
-    | Flare of TagName: string
+    | WasteGasEmitter of tag:string * nozzles: string list
+    | Chimney of tag:string * nozzles: string list
+    | Flare of tag:string * nozzles: string list
     // Weigher 支
-    | Weigher of TagName: string
-    | BatchWeigher of TagName: string
-    | ContinuousWeigher of TagName: string
+    | Weigher of tag:string * nozzles: string list
+    | BatchWeigher of tag:string * nozzles: string list
+    | ContinuousWeigher of tag:string * nozzles: string list
+
