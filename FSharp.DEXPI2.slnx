@@ -4,6 +4,7 @@
   <Project Path="DEXPI2/DEXPI2.fsproj" Id="81668ded-aba7-4271-8a29-7383ef518483" />
   <Project Path="Dexpi2CppGen/Dexpi2CppGen.csproj" />
   <Project Path="FSharp.DEXPI2.Test/FSharp.DEXPI2.Test.fsproj" />
+  <Project Path="DEXPI2.Test/DEXPI2.Test.fsproj" />
   <Project Path="Dexpi2.CSharp.Generator/Dexpi2.CSharp.Generator.fsproj">
     <Build Solution="Debug|*" Project="false" />
   </Project>
