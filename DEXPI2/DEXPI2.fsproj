@@ -6,14 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Nozzle.fs" />
-    <Compile Include="OperatedValve.fs" />
-    <Compile Include="PipeOffPageConnector.fs" />
-    <Compile Include="PipeReducer.fs" />
-    <Compile Include="PipeTee.fs" />
-    <Compile Include="Sensorwell.fs" />
-    <Compile Include="CheckValve.fs" />
     <Compile Include="PipingNodeOwner.fs" />
+    <Compile Include="ProcessEquipment.fs" />
   </ItemGroup>
 
 </Project>
