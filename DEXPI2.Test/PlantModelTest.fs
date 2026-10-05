@@ -7,7 +7,7 @@ open DEXPI2
 module PlantModelTest =
     [<Fact>]
     let ``PlantModel 由设备细节列表与管网系统组成``() =
-        let pump: ProcessEquipment = { TagName = "P-101"; detail = ProcessEquipmentDetail.Pump }
+        let pump: ProcessEquipment = { TagName = "P-101"; Nozzles = []; detail = ProcessEquipmentDetail.Pump }
         let valve: PipingNodeOwner = { tag = "XV-101"; detail = PipingNodeOwnerDetail.OperatedValve }
         let reducer: PipingNodeOwner = { tag = "XR-101"; detail = PipingNodeOwnerDetail.PipeReducer }
         let segment: PipingNetworkSegment =

@@ -243,9 +243,17 @@ module ProcessEquipmentTest =
         Assert.DoesNotContain("TaggedColumnSection", names)
 
     [<Fact>]
-    let ``ProcessEquipment 记录绑定 TagName 与细节``() =
-        let pump: ProcessEquipment = { TagName = "P-101"; detail = ProcessEquipmentDetail.Pump }
+    let ``ProcessEquipment 记录绑定 TagName、Nozzles 与细节``() =
+        let pump: ProcessEquipment =
+            {
+                TagName = "P-101"
+                Nozzles = [ { tag = "N1"; detail = PipingNodeOwnerDetail.Nozzle } ]
+                detail = ProcessEquipmentDetail.Pump
+            }
         Assert.Equal("P-101", pump.TagName)
+        Assert.Equal(1, pump.Nozzles.Length)
+        Assert.Equal("N1", pump.Nozzles.Head.tag)
+        Assert.Equal(PipingNodeOwnerDetail.Nozzle, pump.Nozzles.Head.detail)
         Assert.Equal(ProcessEquipmentDetail.Pump, pump.detail)
         match pump.detail with
         | ProcessEquipmentDetail.Pump -> ()
