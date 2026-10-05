@@ -15,6 +15,7 @@
     <Compile Include="ProcessEquipmentTest.fs" />
     <Compile Include="PipingNodeOwnerTest.fs" />
     <Compile Include="PlantModelTest.fs" />
+    <Compile Include="InPlaceTree.fs" />
   </ItemGroup>
 
   <ItemGroup>
