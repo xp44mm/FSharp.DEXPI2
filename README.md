@@ -158,3 +158,20 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 - `InPlaceTree`：S2 是异径管单例段，S1、S3 用 `PipingNetworkSegmentSingleton(tag = "S2")` 引用；
 - `PumpTree`：S2（XR-101）、S5（XR-102）分别是罐出口侧、泵出口侧异径管的单例段，
   分别由 S1/S3、S4/S6 引用。
+
+## 段的界限：Items 中的引用只连接、不包含
+
+`Items` 中列出的两类引用项，虽然写在 Items 里、充当本段的起始 / 目标
+（SourceItem / TargetItem），但段的界限只是**连接到**它们，**不包括**它们：
+
+- `PipingNodeOwner.Nozzle(equipment = ..., nozzle = ...)`：设备管嘴的引用。
+  管嘴由设备拥有（`ProcessEquipments` 的 `nozzles`），本段从它出发或到它为止；
+- `PipingNodeOwner.PipingNetworkSegmentSingleton(tag = ...)`：其他管段的引用。
+  被引用的段有自己的 `SegmentNumber` 与 `Items`，本段只与它首尾相连。
+
+判断归属：一项是否属于本段，看它是否在本段内**定义**。引用项只是借用
+`PipingNodeOwner` 的槽位来标记段的边界，段真正包含的是它自己定义的管件。
+
+实例：`InPlaceTree` 的 S1 以 `Nozzle(V-101, N1)` 为起点、以
+`PipingNetworkSegmentSingleton(tag = "S2")` 为终点——N1 属于罐 V-101、
+S2 段属于它自己，S1 只与它们相连，不包含它们。
