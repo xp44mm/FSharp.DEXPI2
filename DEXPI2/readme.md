@@ -14,6 +14,9 @@
 - 拓扑语义：本拓扑中的 `PipeTee`（含 tee 单例段）表达**星型连接**——一个入口分叉出多个出口的分叉点，
   **不对应实体的一个三通管件**；实体上是否真有一个三通（也可能用焊接支管、集合管等方式实现分叉）
   是物理细节，属后续轮次。
+- **连续分叉合并**：中间没有其他管件、直接首尾相连的多个三通，合并为**一个**星型连接
+  （取链首段的 `SegmentNumber` 作为代表句柄，其余三通不再单独成段），
+  合并后所有原分支统一挂到该星型点上；判定只看两个三通之间是否有其他管件。
 
 因此分段规则是：
 
@@ -39,8 +42,9 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
   `PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")` 引用；
 - `PumpTree`：S2（XR-101）、S5（XR-102）分别是罐出口侧、泵出口侧异径管的单例段，
   分别由 S1/S3、S4/S6 引用；
-- `ReferencePid`：47125 线引用 47126 线的三通单例段 S3，
-  用 `PipingNetworkSegmentSingleton(lineNumber = "47126", segmentNumber = "S3")`。
+- `ReferencePid`：47126 线的 C1/C3/C4 三个连续三通（中间无其他管件）合并为一个
+  星型连接，代表段为 S1；47125 线从该星型点分出安全阀支路，
+  用 `PipingNetworkSegmentSingleton(lineNumber = "47126", segmentNumber = "S1")`。
 
 ## 共享组件：是否改变流道决定合并还是单独成段
 
@@ -50,7 +54,8 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
    相邻段**合并为一个管段**，组件作为普通项内联进合并段的 `Items`，
    不再作为段边界，模型里它只出现一次。
 2. **改变流道 / 结构**的组件——保持上一条"单独成段"规则：
-   - 三通（`PipeTee`）：一分二、星型连接，最多被三段引用；
+   - 三通（`PipeTee`）：一分二、星型连接，单个三通最多被三段引用；
+     连续三通合并后的代表段可被更多段引用（如 47126 的 S1 被五段引用）；
    - 异径管（`PipeReducer`）：改变管径，上下游段管径不同；
    - 判断标准：是否分叉（改变流道）或改变管径（改变结构）。
 
@@ -58,8 +63,8 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 
 - `ReferencePid` 47124 的止回阀 C2：一进一出、不分支，原 S1/S2 交界，
   两段合并为一个段，C2 内联进 S1；
-- `ReferencePid` 47125 的弹簧安全阀：一进一出（分支在其上游三通 C3 处，
-  即 47126 的单例段 S3），原 S1/S2 合并为一个段，安全阀内联；
+- `ReferencePid` 47125 的弹簧安全阀：一进一出（分支在其上游星型连接处，
+  即 47126 合并后的单例段 S1，原 C1/C3/C4 连续三通），原 S1/S2 合并为一个段，安全阀内联；
 - `ReferencePid` 47124 的异径管 C3：改变管径，仍为单例段 S2，
   S1/S3 用 `PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")` 引用。
 
