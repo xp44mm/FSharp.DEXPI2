@@ -6,7 +6,7 @@ let plantModel: PlantModel =
         ProcessEquipments =
             [
                 Tank(tag = "V-101", nozzles = [ "N1" ])
-                Tank(tag = "V-102", nozzles = [ "N2" ])
+                Tank(tag = "V-102", nozzles = [ "N1" ])
             ]
         PipingNetworkSystems =
             [
@@ -22,7 +22,7 @@ let plantModel: PlantModel =
                                     [
                                         PipingNodeOwner.Nozzle(equipment = "V-101", nozzle = "N1")
                                         PipingNodeOwner.Sensorwell(typeRepresentation = "PT")
-                                        PipingNodeOwner.Nozzle(equipment = "V-102", nozzle = "N2")
+                                        PipingNodeOwner.Nozzle(equipment = "V-102", nozzle = "N1")
                                     ]
                             }
                         ]
