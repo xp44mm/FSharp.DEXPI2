@@ -15,6 +15,7 @@
     <Compile Include="InPlaceTree.fs" />
     <Compile Include="PumpTree.fs" />
     <Compile Include="TeeTree.fs" />
+    <Compile Include="SensorwellTree.fs" />
   </ItemGroup>
 
   <ItemGroup>
