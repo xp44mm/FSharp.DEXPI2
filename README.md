@@ -129,3 +129,32 @@ V-101 (Tank)
 （`InPlaceTree` 罐 → 阀门 → 异径管 → 排出口；`PumpTree` 泵回路；`TeeTree` 三通一分二；
 `SensorwellTree` 两罐间传感器套管测点），每个树都以 `PlantModel` 为工厂入口、
 在位内联对象，并断言段与连接（`Connections`）的拓扑。
+
+## 分段规则：共享管件（异径管 / 三通）必须单独成段
+
+`PipingNodeOwner` 的每一项只属于**一个**段的 `Items`（值语义，不是引用）。
+而异径管（`PipeReducer`）和三通（`PipeTee`）是**被多段共享的节点**：
+
+- 异径管：一个入口 + 一个出口，同时是上游段的末端和下游段的始端，被两个段引用；
+- 三通：一个入口 + 直通 + 支管，最多同时被三个段引用。
+
+因此分段规则是：
+
+1. 共享管件必须**单独放进自己的段**（单例段），段内 `Items` 只含这一个管件；
+2. 该段必须有一个**名称**：`SegmentNumber` 即名称，作为被其他段引用的句柄；
+3. 其他段用 `PipingNodeOwner.PipingNetworkSegmentSingleton(tag = "段名")` 引用它，
+   而不是把管件重复内联进多个段的 `Items`。
+
+构造单例段用 `PipingNetworkSegment.tee` / `PipingNetworkSegment.reducer`
+（`DEXPI2\PipingNetworkSegment.fs`）：
+
+```fsharp
+PipingNetworkSegment.reducer "S2"  // 异径管单例段
+PipingNetworkSegment.tee "T1"      // 三通单例段
+```
+
+实例：
+
+- `InPlaceTree`：S2 是异径管单例段，S1、S3 用 `PipingNetworkSegmentSingleton(tag = "S2")` 引用；
+- `PumpTree`：S2（XR-101）、S5（XR-102）分别是罐出口侧、泵出口侧异径管的单例段，
+  分别由 S1/S3、S4/S6 引用。
