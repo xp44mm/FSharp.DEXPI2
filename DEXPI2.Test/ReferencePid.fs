@@ -321,9 +321,12 @@ let plantModel: PlantModel =
                         [
                             {
                                 SegmentNumber = "S1"
-                                // 开口线：源端为空（界外来流），仅连换热器管嘴 N3
+                                // 开口线：界外来流 → 换热器管嘴 N3（源端补离页入口节点）
                                 Items =
                                     [
+                                        PipingNodeOwner.FlowInPipeOffPageConnector(
+                                            pipeConnectorDescription = ""
+                                        )
                                         PipingNodeOwner.Nozzle(
                                             equipment = "H1007",
                                             nozzle = "N3"
@@ -340,12 +343,15 @@ let plantModel: PlantModel =
                         [
                             {
                                 SegmentNumber = "S1"
-                                // 开口线：目标端为空（流出界外），仅连换热器管嘴 N4
+                                // 开口线：换热器管嘴 N4 → 界外（目标端补离页出口节点）
                                 Items =
                                     [
                                         PipingNodeOwner.Nozzle(
                                             equipment = "H1007",
                                             nozzle = "N4"
+                                        )
+                                        PipingNodeOwner.FlowOutPipeOffPageConnector(
+                                            pipeConnectorDescription = ""
                                         )
                                     ]
                             }
@@ -359,9 +365,12 @@ let plantModel: PlantModel =
                         [
                             {
                                 SegmentNumber = "S1"
-                                // 开口线：源端为空（界外来流），仅连换热器管嘴 N4
+                                // 开口线：界外来流 → 换热器管嘴 N4（源端补离页入口节点）
                                 Items =
                                     [
+                                        PipingNodeOwner.FlowInPipeOffPageConnector(
+                                            pipeConnectorDescription = ""
+                                        )
                                         PipingNodeOwner.Nozzle(
                                             equipment = "H1008",
                                             nozzle = "N4"
@@ -378,7 +387,7 @@ let plantModel: PlantModel =
                         [
                             {
                                 SegmentNumber = "S1"
-                                // 换热器管嘴 N3 → 截止阀 C1 → 界外出口（目标端为空）
+                                // 换热器管嘴 N3 → 截止阀 C1 → 界外出口（目标端补离页出口节点）
                                 Items =
                                     [
                                         PipingNodeOwner.Nozzle(
@@ -386,6 +395,9 @@ let plantModel: PlantModel =
                                             nozzle = "N3"
                                         )
                                         PipingNodeOwner.GlobeValve(tag = "C1")
+                                        PipingNodeOwner.FlowOutPipeOffPageConnector(
+                                            pipeConnectorDescription = ""
+                                        )
                                     ]
                             }
                         ]
