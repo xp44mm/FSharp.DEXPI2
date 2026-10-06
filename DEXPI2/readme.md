@@ -52,3 +52,15 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 实例：`InPlaceTree` 的 S1 以 `Nozzle(V-101, N1)` 为起点、以
 `PipingNetworkSegmentSingleton(tag = "S2")` 为终点——N1 属于罐 V-101、
 S2 段属于它自己，S1 只与它们相连，不包含它们。
+
+## 连接（Connections）是隐含的，由 Items 推导
+
+模型没有显式的 `Connections` 字段（旧 record 模型才有 PipingConnection 列表），
+连接是**隐含**的，由 `Items` 计算出来：
+
+- `Items` 中**每相邻两个节点之间**有一条连接；
+- 有 N 个节点就有 N-1 条连接，依次组成连接列表；
+- 即连接列表 = 相邻对的序列：`(Items[0] → Items[1])`、`(Items[1] → Items[2])`、……
+
+实例：`InPlaceTree` 的 S1 `Items = [Nozzle(V-101, N1); OperatedValve(XV-101); PipingNetworkSegmentSingleton(tag = "S2")]`，
+隐含连接为 `N1 → XV-101`、`XV-101 → S2` 两条——引用项（喷嘴、段引用）同样参与推导。
