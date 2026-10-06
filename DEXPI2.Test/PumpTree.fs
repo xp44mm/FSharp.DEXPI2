@@ -24,7 +24,7 @@ let plantModel: PlantModel =
                                         PipingNodeOwner.Nozzle(equipment = "V-101", nozzle = "N1")
                                         PipingNodeOwner.OperatedValve(tag = "XV-101")
 
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
                                     ]
                             }
 
@@ -35,7 +35,7 @@ let plantModel: PlantModel =
                                 // 异径管 XR-101 → 泵入口喷嘴 N2
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
 
                                         PipingNodeOwner.Nozzle(equipment = "P-101", nozzle = "inlet")
                                     ]
@@ -47,7 +47,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNodeOwner.Nozzle(equipment = "P-101", nozzle = "outlet")
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S5")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S5")
                                     ]
                             }
 

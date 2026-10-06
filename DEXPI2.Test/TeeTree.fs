@@ -22,7 +22,7 @@ let plantModel: PlantModel =
                                         PipingNodeOwner.Nozzle(equipment = "V-101", nozzle = "N1")
                                         PipingNodeOwner.OperatedValve(tag = "XV-101")
 
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
                                     ]
                             }
 
@@ -35,7 +35,7 @@ let plantModel: PlantModel =
                                 // 三通直通 → 出口 Outlet1
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
 
                                         PipingNodeOwner.PipeOffPageConnector(pipeConnectorDescription = "Outlet1")
                                     ]
@@ -46,7 +46,7 @@ let plantModel: PlantModel =
                                 // 三通支管 → 出口 Outlet2
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
+                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
 
                                         PipingNodeOwner.PipeOffPageConnector(pipeConnectorDescription = "Outlet2")
                                     ]

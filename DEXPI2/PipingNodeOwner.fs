@@ -1,8 +1,10 @@
 ﻿namespace DEXPI2
 
 /// <summary>DEXPI 2.0 模型类 PipingNodeOwner（XMI id ID996）的可区分联合：全部派生类型（含抽象中间类）</summary>
+/// 规则：不允许跨系统（跨 LineNumber）引用管段；PipingNetworkSegmentSingleton 引用的单例段
+/// 必须与引用段同属一个 PipingNetworkSystem，故只保留 segmentNumber 一个句柄
 type PipingNodeOwner =
-    | PipingNetworkSegmentSingleton of lineNumber: string * segmentNumber: string
+    | PipingNetworkSegmentSingleton of segmentNumber: string
     // Nozzle 支
     | Nozzle of equipment: string * nozzle: string
 
