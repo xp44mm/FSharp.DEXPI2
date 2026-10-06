@@ -28,14 +28,7 @@ let plantModel: PlantModel =
                                     ]
                             }
 
-                            {
-                                SegmentNumber = "S2"
-                                Items =
-                                    [
-                                        PipingNodeOwner.PipeReducer
-                                    ]
-
-                            }
+                            PipingNetworkSegment.reducer "S2"
 
                             {
                                 SegmentNumber = "S3"
