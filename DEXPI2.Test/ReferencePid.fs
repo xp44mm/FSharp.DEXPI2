@@ -28,7 +28,6 @@ let plantModel: PlantModel =
             [
                 {
                     LineNumber = "47121"
-
                     Segments =
                         [
                             {
@@ -37,7 +36,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNodeOwner.FlowInPipeOffPageConnector(
-                                            connector = "FlowInPipeOffPageConnector1"
+                                            connector = "来自界外"
                                         )
                                         PipingNodeOwner.Nozzle(
                                             equipment = "P4711",
@@ -50,7 +49,6 @@ let plantModel: PlantModel =
 
                 {
                     LineNumber = "47122"
-
                     Segments =
                         [
                             {
@@ -285,7 +283,7 @@ let plantModel: PlantModel =
                                     [
                                         PipingNetworkSegmentSingleton(tag = "S8")
                                         PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                            connector = "FlowOutPipeOffPageConnector1"
+                                            connector = "流出界外"
                                         )
                                     ]
                             }
