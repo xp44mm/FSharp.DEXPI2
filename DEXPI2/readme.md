@@ -19,8 +19,11 @@
 
 1. 共享管件必须**单独放进自己的段**（单例段），段内 `Items` 只含这一个管件；
 2. 该段必须有一个**名称**：`SegmentNumber` 即名称，作为被其他段引用的句柄；
-3. 其他段用 `PipingNodeOwner.PipingNetworkSegmentSingleton(tag = "段名")` 引用它，
-   而不是把管件重复内联进多个段的 `Items`。
+3. 其他段用 `PipingNodeOwner.PipingNetworkSegmentSingleton(lineNumber = "线号", segmentNumber = "段名")`
+   引用它，而不是把管件重复内联进多个段的 `Items`；
+4. 引用需要**两级**（`LineNumber`, `SegmentNumber`）：
+   **`LineNumber` 为空字符串表示"在本 line 内"**——省略线号，只指同一
+   `LineNumber` 下的单例段；跨线引用时填目标线的 `LineNumber`。
 
 构造单例段用 `PipingNetworkSegment.tee` / `PipingNetworkSegment.reducer`
 （`PipingNetworkSegment.fs`）：
@@ -32,9 +35,12 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 
 实例：
 
-- `InPlaceTree`：S2 是异径管单例段，S1、S3 用 `PipingNetworkSegmentSingleton(tag = "S2")` 引用；
+- `InPlaceTree`：S2 是异径管单例段，S1、S3 用
+  `PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")` 引用；
 - `PumpTree`：S2（XR-101）、S5（XR-102）分别是罐出口侧、泵出口侧异径管的单例段，
-  分别由 S1/S3、S4/S6 引用。
+  分别由 S1/S3、S4/S6 引用；
+- `ReferencePid`：47125 线引用 47126 线的三通单例段 S3，
+  用 `PipingNetworkSegmentSingleton(lineNumber = "47126", segmentNumber = "S3")`。
 
 ## 共享组件：是否改变流道决定合并还是单独成段
 
@@ -55,7 +61,7 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 - `ReferencePid` 47125 的弹簧安全阀：一进一出（分支在其上游三通 C3 处，
   即 47126 的单例段 S3），原 S1/S2 合并为一个段，安全阀内联；
 - `ReferencePid` 47124 的异径管 C3：改变管径，仍为单例段 S2，
-  S1/S3 用 `PipingNetworkSegmentSingleton(tag = "S2")` 引用。
+  S1/S3 用 `PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")` 引用。
 
 ## 段的界限：Items 中的引用只连接、不包含
 
@@ -64,14 +70,16 @@ PipingNetworkSegment.tee "T1"      // 三通单例段
 
 - `PipingNodeOwner.Nozzle(equipment = ..., nozzle = ...)`：设备管嘴的引用。
   管嘴由设备拥有（`ProcessEquipments` 的 `nozzles`），本段从它出发或到它为止；
-- `PipingNodeOwner.PipingNetworkSegmentSingleton(tag = ...)`：其他管段的引用。
+- `PipingNodeOwner.PipingNetworkSegmentSingleton(lineNumber = ..., segmentNumber = ...)`：
+  其他管段的引用。引用分**两级**：`segmentNumber` 是被引用的单例段名，
+  `lineNumber` 是被引用的线号；**`lineNumber` 为空字符串表示同一 `LineNumber` 内**。
   被引用的段有自己的 `SegmentNumber` 与 `Items`，本段只与它首尾相连。
 
 判断归属：一项是否属于本段，看它是否在本段内**定义**。引用项只是借用
 `PipingNodeOwner` 的槽位来标记段的边界，段真正包含的是它自己定义的管件。
 
 实例：`InPlaceTree` 的 S1 以 `Nozzle(V-101, N1)` 为起点、以
-`PipingNetworkSegmentSingleton(tag = "S2")` 为终点——N1 属于罐 V-101、
+`PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")` 为终点——N1 属于罐 V-101、
 S2 段属于它自己，S1 只与它们相连，不包含它们。
 
 ## 连接（Connections）是隐含的，由 Items 推导
@@ -83,5 +91,5 @@ S2 段属于它自己，S1 只与它们相连，不包含它们。
 - 有 N 个节点就有 N-1 条连接，依次组成连接列表；
 - 即连接列表 = 相邻对的序列：`(Items[0] → Items[1])`、`(Items[1] → Items[2])`、……
 
-实例：`InPlaceTree` 的 S1 `Items = [Nozzle(V-101, N1); OperatedValve(XV-101); PipingNetworkSegmentSingleton(tag = "S2")]`，
+实例：`InPlaceTree` 的 S1 `Items = [Nozzle(V-101, N1); OperatedValve(XV-101); PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")]`，
 隐含连接为 `N1 → XV-101`、`XV-101 → S2` 两条——引用项（喷嘴、段引用）同样参与推导。

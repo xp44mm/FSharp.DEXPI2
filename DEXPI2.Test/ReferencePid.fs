@@ -36,7 +36,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNodeOwner.FlowInPipeOffPageConnector(
-                                            connector = "来自界外"
+                                            pipeConnectorDescription = ""
                                         )
                                         PipingNodeOwner.Nozzle(
                                             equipment = "P4711",
@@ -110,7 +110,7 @@ let plantModel: PlantModel =
                                         )
                                         PipingNodeOwner.ButterflyValve(tag = "C1")
                                         PipingNodeOwner.SwingCheckValve(tag = "C2")
-                                        PipingNetworkSegmentSingleton(tag = "S2")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
                                     ]
                             }
 
@@ -122,7 +122,7 @@ let plantModel: PlantModel =
                                 // 异径管 → 球阀 C4 → 泵入口 N1
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S2")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
                                         PipingNodeOwner.BallValve(tag = "C4")
                                         PipingNodeOwner.Nozzle(
                                             equipment = "P4712",
@@ -144,7 +144,7 @@ let plantModel: PlantModel =
                                 // （安全阀一进一出、不分支，原 XML 段 S1/S2 合并，内联本段）
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S3@47126")
+                                        PipingNetworkSegmentSingleton(lineNumber = "47126", segmentNumber = "S3")
                                         PipingNodeOwner.SpringLoadedGlobeSafetyValve(
                                             tag = "SpringLoadedGlobeSafetyValve1"
                                         )
@@ -174,7 +174,7 @@ let plantModel: PlantModel =
                                             equipment = "P4712",
                                             nozzle = "N2"
                                         )
-                                        PipingNetworkSegmentSingleton(tag = "S1")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S1")
                                     ]
                             }
 
@@ -183,7 +183,7 @@ let plantModel: PlantModel =
                                 // 三通 C1 → 球阀 C2
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S1")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S1")
                                         PipingNodeOwner.BallValve(tag = "C2")
                                     ]
                             }
@@ -196,8 +196,8 @@ let plantModel: PlantModel =
                                 // 三通 C1 → 三通 C3（原 XML 段 S3 的连接部分）
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S1")
-                                        PipingNetworkSegmentSingleton(tag = "S3")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S1")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S3")
                                     ]
                             }
 
@@ -209,8 +209,8 @@ let plantModel: PlantModel =
                                 // 三通 C3 → 三通 C4（原 XML 段 S4 的连接部分）
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S3")
-                                        PipingNetworkSegmentSingleton(tag = "S4")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S3")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S4")
                                     ]
                             }
 
@@ -219,7 +219,7 @@ let plantModel: PlantModel =
                                 // 三通 C4 → 球阀 C5 → 盲板 C6
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S4")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S4")
                                         PipingNodeOwner.BallValve(tag = "C5")
                                         PipingNodeOwner.BlindFlange
                                     ]
@@ -230,9 +230,9 @@ let plantModel: PlantModel =
                                 // 三通 C4 → 球阀 C7 → 三通 C8（C8 拆出为单例段 S11）
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S4")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S4")
                                         PipingNodeOwner.BallValve(tag = "C7")
-                                        PipingNetworkSegmentSingleton(tag = "S11")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S11")
                                     ]
                             }
 
@@ -244,7 +244,7 @@ let plantModel: PlantModel =
                                 // 三通 C8 → 换热器 H1008 入口 N1
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S11")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S11")
                                         PipingNodeOwner.Nozzle(
                                             equipment = "H1008",
                                             nozzle = "N1"
@@ -260,8 +260,8 @@ let plantModel: PlantModel =
                                 // 三通 C8 → 三通 C9（原 XML 段 S8 的连接部分）
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S11")
-                                        PipingNetworkSegmentSingleton(tag = "S8")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S11")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S8")
                                     ]
                             }
 
@@ -270,7 +270,7 @@ let plantModel: PlantModel =
                                 // 三通 C9 → 球阀 C10 → 盲板 C11
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S8")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S8")
                                         PipingNodeOwner.BallValve(tag = "C10")
                                         PipingNodeOwner.BlindFlange
                                     ]
@@ -281,9 +281,9 @@ let plantModel: PlantModel =
                                 // 三通 C9 → 界外出口连接器
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S8")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S8")
                                         PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                            connector = "流出界外"
+                                            pipeConnectorDescription = ""
                                         )
                                     ]
                             }

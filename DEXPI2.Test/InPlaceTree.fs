@@ -24,7 +24,7 @@ let plantModel: PlantModel =
                                             nozzle = "N1"
                                         )
                                         PipingNodeOwner.OperatedValve(tag = "XV-101")
-                                        PipingNetworkSegmentSingleton(tag = "S2")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
                                     ]
                             }
 
@@ -34,9 +34,9 @@ let plantModel: PlantModel =
                                 SegmentNumber = "S3"
                                 Items =
                                     [
-                                        PipingNetworkSegmentSingleton(tag = "S2")
+                                        PipingNetworkSegmentSingleton(lineNumber = "", segmentNumber = "S2")
                                         PipingNodeOwner.PipeOffPageConnector(
-                                            connector = "To Sewer"
+                                            pipeConnectorDescription = "To Sewer"
                                         )
                                     ]
                             }
