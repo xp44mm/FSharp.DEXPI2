@@ -16,16 +16,7 @@
     <Compile Include="PumpTree.fs" />
     <Compile Include="TeeTree.fs" />
     <Compile Include="SensorwellTree.fs" />
-    <Compile Include="Reference47121.fs" />
-    <Compile Include="Reference47123.fs" />
-    <Compile Include="Reference47124.fs" />
-    <Compile Include="Reference47125.fs" />
-    <Compile Include="Reference47126.fs" />
-    <Compile Include="Reference47127.fs" />
-    <Compile Include="Reference47130.fs" />
-    <Compile Include="Reference47131.fs" />
-    <Compile Include="Reference47140.fs" />
-    <Compile Include="Reference47141.fs" />
+    <Compile Include="ReferencePid.fs" />
   </ItemGroup>
 
   <ItemGroup>
