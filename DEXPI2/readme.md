@@ -97,5 +97,5 @@ S2 段属于它自己，S1 只与它们相连，不包含它们。
 - 有 N 个节点就有 N-1 条连接，依次组成连接列表；
 - 即连接列表 = 相邻对的序列：`(Items[0] → Items[1])`、`(Items[1] → Items[2])`、……
 
-实例：`InPlaceTree` 的 S1 `Items = [Nozzle(V-101, N1); OperatedValve(XV-101); PipingNetworkSegmentSingleton(segmentNumber = "S2")]`，
+实例：`InPlaceTree` 的 S1 `Items = [Nozzle(V-101, N1); OperatedValve(XV-101, Manual); PipingNetworkSegmentSingleton(segmentNumber = "S2")]`，
 隐含连接为 `N1 → XV-101`、`XV-101 → S2` 两条——引用项（喷嘴、段引用）同样参与推导。

@@ -1,5 +1,21 @@
 ﻿namespace DEXPI2
 
+/// <summary>阀门执行机构（actuator）类型。</summary>
+/// DEXPI 2.0 标准数据模型无此闭枚举：执行机构种类写在
+/// <c>ControlledActuator.DeviceTypeName</c> 的自由文本中（如 general / diaphragm / piston / motor / solenoid），
+/// 手动 / 气动 / 电动 / 电磁等主要由 P&amp;ID 图形符号区分。本类型为 F# 侧的强类型映射。
+type ActuatorType =
+    /// 手动（手轮 / 杠杆）
+    | Manual
+    /// 气动
+    | Pneumatic
+    /// 电动
+    | Electric
+    /// 电磁阀
+    | Solenoid
+    /// 自动
+    | Auto
+
 /// <summary>DEXPI 2.0 模型类 PipingNodeOwner（XMI id ID996）的可区分联合：全部派生类型（含抽象中间类）</summary>
 /// 规则：不允许跨系统（跨 LineNumber）引用管段；PipingNetworkSegmentSingleton 引用的单例段
 /// 必须与引用段同属一个 PipingNetworkSystem，故只保留 segmentNumber 一个句柄
@@ -34,7 +50,7 @@ type PipingNodeOwner =
     | VenturiTube of tag: string
     | VolumeFlowMeasuringElement of tag: string
     // OperatedValve 支
-    | OperatedValve of tag: string
+    | OperatedValve of tag: string * actuatorType: ActuatorType
     | AngleBallValve of tag: string
     | AngleGlobeValve of tag: string
     | AnglePlugValve of tag: string

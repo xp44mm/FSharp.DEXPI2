@@ -23,7 +23,7 @@ let plantModel: PlantModel =
                                             equipment = "V-101",
                                             nozzle = "N1"
                                         )
-                                        PipingNodeOwner.OperatedValve(tag = "XV-101")
+                                        PipingNodeOwner.OperatedValve(tag = "XV-101", actuatorType = Manual)
                                         PipingNetworkSegmentSingleton(segmentNumber = "S2")
                                     ]
                             }
