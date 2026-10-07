@@ -51,17 +51,17 @@ type PipingNodeOwner =
     | VolumeFlowMeasuringElement of tag: string
     // OperatedValve 支
     | OperatedValve of tag: string * actuatorType: ActuatorType
-    | AngleBallValve of tag: string
-    | AngleGlobeValve of tag: string
-    | AnglePlugValve of tag: string
-    | AngleValve of tag: string
-    | BallValve of tag: string
-    | ButterflyValve of tag: string
-    | GateValve of tag: string
-    | GlobeValve of tag: string
-    | NeedleValve of tag: string
-    | PlugValve of tag: string
-    | StraightwayValve of tag: string
+    | AngleBallValve of tag: string * actuatorType: ActuatorType
+    | AngleGlobeValve of tag: string * actuatorType: ActuatorType
+    | AnglePlugValve of tag: string * actuatorType: ActuatorType
+    | AngleValve of tag: string * actuatorType: ActuatorType
+    | BallValve of tag: string * actuatorType: ActuatorType
+    | ButterflyValve of tag: string * actuatorType: ActuatorType
+    | GateValve of tag: string * actuatorType: ActuatorType
+    | GlobeValve of tag: string * actuatorType: ActuatorType
+    | NeedleValve of tag: string * actuatorType: ActuatorType
+    | PlugValve of tag: string * actuatorType: ActuatorType
+    | StraightwayValve of tag: string * actuatorType: ActuatorType
     // PipeFitting 支
     | PipeFitting
     | BlindFlange

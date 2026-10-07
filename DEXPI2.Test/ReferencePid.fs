@@ -83,7 +83,7 @@ let plantModel: PlantModel =
                                             equipment = "H1007",
                                             nozzle = "N2"
                                         )
-                                        PipingNodeOwner.GlobeValve(tag = "C1")
+                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
                                         PipingNodeOwner.Nozzle(
                                             equipment = "T4750",
                                             nozzle = "N1"
@@ -108,7 +108,7 @@ let plantModel: PlantModel =
                                             equipment = "T4750",
                                             nozzle = "N2"
                                         )
-                                        PipingNodeOwner.ButterflyValve(tag = "C1")
+                                        PipingNodeOwner.ButterflyValve(tag = "C1", actuatorType = Manual)
                                         PipingNodeOwner.SwingCheckValve(tag = "C2")
                                         PipingNetworkSegmentSingleton(segmentNumber = "S2")
                                     ]
@@ -123,7 +123,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNetworkSegmentSingleton(segmentNumber = "S2")
-                                        PipingNodeOwner.BallValve(tag = "C4")
+                                        PipingNodeOwner.BallValve(tag = "C4", actuatorType = Manual)
                                         PipingNodeOwner.Nozzle(
                                             equipment = "P4712",
                                             nozzle = "N1"
@@ -159,7 +159,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C2")
+                                        PipingNodeOwner.BallValve(tag = "C2", actuatorType = Manual)
                                     ]
                             }
 
@@ -213,7 +213,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C5")
+                                        PipingNodeOwner.BallValve(tag = "C5", actuatorType = Manual)
                                         PipingNodeOwner.BlindFlange
                                     ]
                             }
@@ -224,7 +224,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C7")
+                                        PipingNodeOwner.BallValve(tag = "C7", actuatorType = Manual)
                                         PipingNetworkSegmentSingleton(segmentNumber = "S11")
                                     ]
                             }
@@ -264,7 +264,7 @@ let plantModel: PlantModel =
                                 Items =
                                     [
                                         PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                                        PipingNodeOwner.BallValve(tag = "C10")
+                                        PipingNodeOwner.BallValve(tag = "C10", actuatorType = Manual)
                                         PipingNodeOwner.BlindFlange
                                     ]
                             }
@@ -297,7 +297,7 @@ let plantModel: PlantModel =
                                             equipment = "H1008",
                                             nozzle = "N2"
                                         )
-                                        PipingNodeOwner.GlobeValve(tag = "C1")
+                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
                                         PipingNodeOwner.Nozzle(
                                             equipment = "T4750",
                                             nozzle = "N6"
@@ -387,7 +387,7 @@ let plantModel: PlantModel =
                                             equipment = "H1008",
                                             nozzle = "N3"
                                         )
-                                        PipingNodeOwner.GlobeValve(tag = "C1")
+                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
                                         PipingNodeOwner.FlowOutPipeOffPageConnector(
                                             pipeConnectorDescription = ""
                                         )
