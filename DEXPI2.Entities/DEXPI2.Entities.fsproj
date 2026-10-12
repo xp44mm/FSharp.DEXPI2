@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ProcessEquipmentCategory.fs" />
+    <Compile Include="PipingNodeOwnerCategory.fs" />
+    <Compile Include="PipingNetworkSystemRow.fs" />
+    <Compile Include="NozzleRow.fs" />
+    <Compile Include="EquipmentRow.fs" />
+    <Compile Include="SegmentItemRow.fs" />
+    <Compile Include="HubSegmentRow.fs" />
+    <Compile Include="SegmentRow.fs" />
+    <Compile Include="ModelEntities.fs" />
+    <Compile Include="PlantModelProperty.fs" />
+    <Compile Include="Setter.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DEXPI2\DEXPI2.fsproj" />
+  </ItemGroup>
+
+</Project>

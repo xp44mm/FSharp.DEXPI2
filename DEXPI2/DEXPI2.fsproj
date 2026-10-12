@@ -8,17 +8,26 @@
 
   <ItemGroup>
     <Compile Include="ProcessEquipment.fs" />
+    <Compile Include="ActuatorType.fs" />
     <Compile Include="PipingNodeOwner.fs" />
     <Compile Include="PipingNetworkSegment.fs" />
     <Compile Include="PipingNetworkSystem.fs" />
     <Compile Include="PlantModel.fs" />
+    <Compile Include="PlantModelDb.fs" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="schema.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="readme.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.119" />
   </ItemGroup>
 
 </Project>

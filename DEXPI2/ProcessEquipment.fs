@@ -131,3 +131,19 @@ type ProcessEquipment =
     | BatchWeigher of tag:string * nozzles: string list
     | ContinuousWeigher of tag:string * nozzles: string list
 
+module ProcessEquipment =
+    open Microsoft.FSharp.Reflection
+
+    /// 输出 (tag, kind)，对应 Equipment 表的 tag/kind 列。
+    /// kind 为可区分联合变体名（如 "CentrifugalPump"、"Tank"）。
+    let toSqlite (eq: ProcessEquipment) : string * string =
+        let uci, fields = FSharpValue.GetUnionFields(eq, typeof<ProcessEquipment>)
+        let tag = fields.[0] :?> string
+        tag, uci.Name
+
+    /// 从 (tag, kind, nozzles) 还原 ProcessEquipment。
+    /// nozzles 由 Nozzle 表按 equipment_tag 聚合得到。
+    let fromSqlite (tag: string) (kind: string) (nozzles: string list) : ProcessEquipment =
+        let ucis = FSharpType.GetUnionCases(typeof<ProcessEquipment>)
+        let uci = ucis |> Array.find (fun c -> c.Name = kind)
+        FSharpValue.MakeUnion(uci, [| box tag; box nozzles |]) :?> ProcessEquipment

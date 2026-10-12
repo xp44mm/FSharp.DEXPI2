@@ -17,6 +17,7 @@
     <Compile Include="TeeTree.fs" />
     <Compile Include="SensorwellTree.fs" />
     <Compile Include="ReferencePid.fs" />
+    <Compile Include="SetterTest.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +29,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DEXPI2\DEXPI2.fsproj" />
+    <ProjectReference Include="..\DEXPI2.Entities\DEXPI2.Entities.fsproj" />
   </ItemGroup>
 
 </Project>

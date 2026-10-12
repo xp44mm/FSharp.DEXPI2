@@ -1,5 +1,8 @@
 ﻿module DEXPI2.ReferencePid
 
+open Xunit
+open System.IO
+
 /// 参考 P&ID（reference_pid.xml）完整拓扑：5 台设备 + 10 条管线系统（47125 安全阀支路已并入 47126）
 /// 设备均为完整实体（管嘴全量）；三通/异径管单例段按 DEXPI2/readme.md 规则拆分
 let plantModel: PlantModel =
@@ -30,20 +33,18 @@ let plantModel: PlantModel =
                     LineNumber = "47121"
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 界外入口连接器 → 泵吸入口 N1（无中间管件）
-                                Items =
-                                    [
-                                        PipingNodeOwner.FlowInPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "P4711",
-                                            nozzle = "N1"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+                                [
+                                    PipingNodeOwner.FlowInPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "P4711",
+                                        nozzle = "N1"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -51,21 +52,19 @@ let plantModel: PlantModel =
                     LineNumber = "47122"
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 泵出口 N2 → 换热器入口 N1（无中间管件）
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "P4711",
-                                            nozzle = "N2"
-                                        )
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1007",
-                                            nozzle = "N1"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "P4711",
+                                        nozzle = "N2"
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1007",
+                                        nozzle = "N1"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -74,22 +73,23 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 换热器出口 N2 → 截止阀 C1 → 罐入口 N1
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1007",
-                                            nozzle = "N2"
-                                        )
-                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "T4750",
-                                            nozzle = "N1"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1007",
+                                        nozzle = "N2"
+                                    )
+                                    PipingNodeOwner.GlobeValve(
+                                        tag = "C1",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "T4750",
+                                        nozzle = "N1"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -98,38 +98,39 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 罐出口 N2 → 蝶阀 C1 → 止回阀 C2 → 异径管单例段 S2
-                                // （止回阀一进一出、不改变流道，原 XML 段 S1/S2 合并，内联本段）
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "T4750",
-                                            nozzle = "N2"
-                                        )
-                                        PipingNodeOwner.ButterflyValve(tag = "C1", actuatorType = Manual)
-                                        PipingNodeOwner.SwingCheckValve(tag = "C2")
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "T4750",
+                                        nozzle = "N2"
+                                    )
+                                    PipingNodeOwner.ButterflyValve(
+                                        tag = "C1",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.SwingCheckValve(tag = "C2")
+                                    SegmentRef(segmentNumber = "S2")
+                                ]
+                            )
 
-                            // 异径管 C3 单例段（改变管径，须单独成段）
-                            PipingNetworkSegment.reducer "S2"
+                            HubSegment "S2"
 
-                            {
-                                SegmentNumber = "S3"
-                                // 异径管 → 球阀 C4 → 泵入口 N1
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S2")
-                                        PipingNodeOwner.BallValve(tag = "C4", actuatorType = Manual)
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "P4712",
-                                            nozzle = "N1"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S3",
+
+                                [
+                                    SegmentRef(segmentNumber = "S2")
+                                    PipingNodeOwner.BallValve(
+                                        tag = "C4",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "P4712",
+                                        nozzle = "N1"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -138,148 +139,106 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S12"
-                                // 泵出口 N2 → 三通 C1（原 XML 段 S1 的连接部分）
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "P4712",
-                                            nozzle = "N2"
-                                        )
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                    ]
-                            }
-                            // 三通 C1 单例段：星型连接（C1/C3/C4 连续三通合并为一个分叉点），被 S12、S2、S5、S6 及 47125 线引用
-                            PipingNetworkSegment.tee "S1"
+                            Segment(
+                                "S12",
 
-                            {
-                                SegmentNumber = "S2"
-                                // 三通 C1 → 球阀 C2
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C2", actuatorType = Manual)
-                                    ]
-                            }
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "P4712",
+                                        nozzle = "N2"
+                                    )
+                                    SegmentRef(segmentNumber = "S1")
+                                ]
+                            )
+                            HubSegment "S1"
 
-                            {
-                                SegmentNumber = "S13"
-                                // 三通 C1（星型连接）→ 弹簧安全阀 → 罐入口 N5
-                                // （原 47125 线并入本系统，消除跨线引用，同线引用 S1；
-                                //   安全阀一进一出、不分支，原 XML 段 S1/S2 合并，内联本段）
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.SpringLoadedGlobeSafetyValve(
-                                            tag = "SpringLoadedGlobeSafetyValve1"
-                                        )
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "T4750",
-                                            nozzle = "N5"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S2",
 
-                            // 三通 C3 已并入 S1 星型连接（原单例段注销；原连接段 S13 段号已由并入的安全阀支路使用）
-                            //PipingNetworkSegment.tee "S3"
+                                [
+                                    SegmentRef(segmentNumber = "S1")
+                                    PipingNodeOwner.BallValve(
+                                        tag = "C2",
+                                        actuatorType = Manual
+                                    )
+                                ]
+                            )
 
-                            //{
-                            //    SegmentNumber = "S13"
-                            //    // 三通 C1 → 三通 C3（原 XML 段 S3 的连接部分）
-                            //    Items =
-                            //        [
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S3")
-                            //        ]
-                            //}
+                            Segment(
+                                "S13",
+                                [
+                                    SegmentRef(segmentNumber = "S1")
+                                    PipingNodeOwner.SpringLoadedGlobeSafetyValve(
+                                        tag = "SpringLoadedGlobeSafetyValve1"
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "T4750",
+                                        nozzle = "N5"
+                                    )
+                                ]
+                            )
 
-                            // 三通 C4 已并入 S1 星型连接（原单例段及连接段 S14 注销）
-                            //PipingNetworkSegment.tee "S4"
+                            Segment(
+                                "S5",
+                                [
+                                    SegmentRef(segmentNumber = "S1")
+                                    PipingNodeOwner.BallValve(
+                                        tag = "C5",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.BlindFlange
+                                ]
+                            )
 
-                            //{
-                            //    SegmentNumber = "S14"
-                            //    // 三通 C3 → 三通 C4（原 XML 段 S4 的连接部分）
-                            //    Items =
-                            //        [
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S3")
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S4")
-                            //        ]
-                            //}
+                            Segment(
+                                "S6",
+                                [
+                                    SegmentRef(segmentNumber = "S1")
+                                    PipingNodeOwner.BallValve(
+                                        tag = "C7",
+                                        actuatorType = Manual
+                                    )
+                                    SegmentRef(segmentNumber = "S11")
+                                ]
+                            )
 
-                            {
-                                SegmentNumber = "S5"
-                                // 三通 C1 → 球阀 C5 → 盲板 C6
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C5", actuatorType = Manual)
-                                        PipingNodeOwner.BlindFlange
-                                    ]
-                            }
+                            HubSegment "S11"
 
-                            {
-                                SegmentNumber = "S6"
-                                // 三通 C1 → 球阀 C7 → 三通 C8（C8 拆出为单例段 S11）
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S1")
-                                        PipingNodeOwner.BallValve(tag = "C7", actuatorType = Manual)
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                                    ]
-                            }
+                            Segment(
+                                "S7",
 
-                            // 三通 C8 单例段（由原 S6 拆出）：星型连接（C8/C9 连续三通合并为一个分叉点），被 S6、S7、S9、S10 引用
-                            PipingNetworkSegment.tee "S11"
+                                [
+                                    SegmentRef(segmentNumber = "S11")
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1008",
+                                        nozzle = "N1"
+                                    )
+                                ]
+                            )
 
-                            {
-                                SegmentNumber = "S7"
-                                // 三通 C8 → 换热器 H1008 入口 N1
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1008",
-                                            nozzle = "N1"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S9",
 
-                            //// 三通 C9 已并入 S11 星型连接（原单例段及连接段 S15 注销）
-                            //PipingNetworkSegment.tee "S8"
+                                [
+                                    SegmentRef(segmentNumber = "S11")
+                                    PipingNodeOwner.BallValve(
+                                        tag = "C10",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.BlindFlange
+                                ]
+                            )
 
-                            //{
-                            //    SegmentNumber = "S15"
-                            //    // 三通 C8 → 三通 C9（原 XML 段 S8 的连接部分）
-                            //    Items =
-                            //        [
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                            //            PipingNetworkSegmentSingleton(segmentNumber = "S8")
-                            //        ]
-                            //}
+                            Segment(
+                                "S10",
 
-                            {
-                                SegmentNumber = "S9"
-                                // 三通 C8 → 球阀 C10 → 盲板 C11
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                                        PipingNodeOwner.BallValve(tag = "C10", actuatorType = Manual)
-                                        PipingNodeOwner.BlindFlange
-                                    ]
-                            }
-
-                            {
-                                SegmentNumber = "S10"
-                                // 三通 C8 → 界外出口连接器
-                                Items =
-                                    [
-                                        PipingNetworkSegmentSingleton(segmentNumber = "S11")
-                                        PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                    ]
-                            }
+                                [
+                                    SegmentRef(segmentNumber = "S11")
+                                    PipingNodeOwner.FlowOutPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -288,22 +247,24 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 换热器出口 N2 → 截止阀 C1 → 罐入口 N6
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1008",
-                                            nozzle = "N2"
-                                        )
-                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "T4750",
-                                            nozzle = "N6"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1008",
+                                        nozzle = "N2"
+                                    )
+                                    PipingNodeOwner.GlobeValve(
+                                        tag = "C1",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "T4750",
+                                        nozzle = "N6"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -312,20 +273,19 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 开口线：界外来流 → 换热器管嘴 N3（源端补离页入口节点）
-                                Items =
-                                    [
-                                        PipingNodeOwner.FlowInPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1007",
-                                            nozzle = "N3"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+
+                                [
+                                    PipingNodeOwner.FlowInPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1007",
+                                        nozzle = "N3"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -334,20 +294,19 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 开口线：换热器管嘴 N4 → 界外（目标端补离页出口节点）
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1007",
-                                            nozzle = "N4"
-                                        )
-                                        PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1007",
+                                        nozzle = "N4"
+                                    )
+                                    PipingNodeOwner.FlowOutPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -356,20 +315,19 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 开口线：界外来流 → 换热器管嘴 N4（源端补离页入口节点）
-                                Items =
-                                    [
-                                        PipingNodeOwner.FlowInPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1008",
-                                            nozzle = "N4"
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+
+                                [
+                                    PipingNodeOwner.FlowInPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1008",
+                                        nozzle = "N4"
+                                    )
+                                ]
+                            )
                         ]
                 }
 
@@ -378,22 +336,217 @@ let plantModel: PlantModel =
 
                     Segments =
                         [
-                            {
-                                SegmentNumber = "S1"
-                                // 换热器管嘴 N3 → 截止阀 C1 → 界外出口（目标端补离页出口节点）
-                                Items =
-                                    [
-                                        PipingNodeOwner.Nozzle(
-                                            equipment = "H1008",
-                                            nozzle = "N3"
-                                        )
-                                        PipingNodeOwner.GlobeValve(tag = "C1", actuatorType = Manual)
-                                        PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                            pipeConnectorDescription = ""
-                                        )
-                                    ]
-                            }
+                            Segment(
+                                "S1",
+
+                                [
+                                    PipingNodeOwner.Nozzle(
+                                        equipment = "H1008",
+                                        nozzle = "N3"
+                                    )
+                                    PipingNodeOwner.GlobeValve(
+                                        tag = "C1",
+                                        actuatorType = Manual
+                                    )
+                                    PipingNodeOwner.FlowOutPipeOffPageConnector(
+                                        pipeConnectorDescription = ""
+                                    )
+                                ]
+                            )
                         ]
                 }
             ]
     }
+
+/// PN 由 PipingClassCode 等级相对大小取值：75HB13（较高）→ 1600 kPa；73HG12（较低）→ 1000 kPa。
+/// 各线 fluid/pn/dn 来自 reference_pid.xml 的系统级属性；73HG12 低压段（47124/S2 异径管、S3、
+/// 47126/S13 原 47125 安全阀支路）用段级覆盖。
+let setprops () =
+    PlantModelProperty.getEntities
+        plantModel
+        [
+            // ---- 47121 泵吸入线：MNb / 75HB13 / DN80
+            PlantModelProperty.NetworkFluid("47121", "MNb")
+            PlantModelProperty.NetworkPN("47121", 1600)
+            PlantModelProperty.NetworkDN("47121", 80)
+            // ---- 47122 泵出→换热器：MNb / 75HB13 / DN80
+            PlantModelProperty.NetworkFluid("47122", "MNb")
+            PlantModelProperty.NetworkPN("47122", 1600)
+            PlantModelProperty.NetworkDN("47122", 80)
+            // ---- 47123 换热器→罐：MNb / 75HB13 / DN80
+            PlantModelProperty.NetworkFluid("47123", "MNb")
+            PlantModelProperty.NetworkPN("47123", 1600)
+            PlantModelProperty.NetworkDN("47123", 80)
+            // ---- 47124 罐→泵：MNc / 75HB13 / DN80；S2 异径管、S3 球阀段为 73HG12 低压
+            PlantModelProperty.NetworkFluid("47124", "MNc")
+            PlantModelProperty.NetworkPN("47124", 1600)
+            PlantModelProperty.NetworkDN("47124", 80)
+            PlantModelProperty.SegmentPN("47124", "S2", 1000)
+            PlantModelProperty.SegmentPN("47124", "S3", 1000)
+            PlantModelProperty.SegmentDN("47124", "S3", 50)
+            // ---- 47126 泵出支路：MNc / 75HB13 / DN50；S13（原 47125 安全阀支路）为 73HG12 / DN25
+            PlantModelProperty.NetworkFluid("47126", "MNc")
+            PlantModelProperty.NetworkPN("47126", 1600)
+            PlantModelProperty.NetworkDN("47126", 50)
+            PlantModelProperty.SegmentPN("47126", "S13", 1000)
+            PlantModelProperty.SegmentDN("47126", "S13", 25)
+            // ---- 47127 换热器→罐：MNc / 75HB13 / DN50
+            PlantModelProperty.NetworkFluid("47127", "MNc")
+            PlantModelProperty.NetworkPN("47127", 1600)
+            PlantModelProperty.NetworkDN("47127", 50)
+            // ---- 47130/47131 H1007 公用工程线：WKa/WKb / 75HB13 / DN50
+            PlantModelProperty.NetworkFluid("47130", "WKa")
+            PlantModelProperty.NetworkPN("47130", 1600)
+            PlantModelProperty.NetworkDN("47130", 50)
+            PlantModelProperty.NetworkFluid("47131", "WKb")
+            PlantModelProperty.NetworkPN("47131", 1600)
+            PlantModelProperty.NetworkDN("47131", 50)
+            // ---- 47140/47141 H1008 公用工程线：QSa/QSb / 75HB13 / DN50
+            PlantModelProperty.NetworkFluid("47140", "QSa")
+            PlantModelProperty.NetworkPN("47140", 1600)
+            PlantModelProperty.NetworkDN("47140", 50)
+            PlantModelProperty.NetworkFluid("47141", "QSb")
+            PlantModelProperty.NetworkPN("47141", 1600)
+            PlantModelProperty.NetworkDN("47141", 50)
+        ]
+
+/// 断言 ModelEntities 各表属性符合 reference_pid.xml 参考值（setprops 应用后的正确结果）。
+let assertExpected (e: ModelEntities) =
+    // 常规段：fluid/pn/dn（pn 由 NetworkPN 1600 打底，73HG12 低压段被 SegmentPN 覆盖 1000；
+    // dn 由 NetworkDN 打底，47124/S3 与 47126/S13 被 SegmentDN 覆盖 50/25）
+    let seg line num =
+        e.Segments
+        |> List.find(fun r ->
+            r.LineNumber = line
+            && r.SegmentNumber = num
+        )
+    for line, fluid, dn in
+        [
+            "47121", "MNb", 80
+            "47122", "MNb", 80
+            "47123", "MNb", 80
+            "47127", "MNc", 50
+            "47130", "WKa", 50
+            "47131", "WKb", 50
+            "47140", "QSa", 50
+            "47141", "QSb", 50
+        ] do
+        let r = seg line "S1"
+        Assert.Equal(fluid, r.Fluid)
+        Assert.Equal(1600, r.PN)
+        Assert.Equal(dn, r.DN)
+
+    // 47124：S1 主段 1600/80；S3（73HG12 球阀段）覆盖 1000/50
+    Assert.Equal("MNc", (seg "47124" "S1").Fluid)
+    Assert.Equal(1600, (seg "47124" "S1").PN)
+    Assert.Equal(80, (seg "47124" "S1").DN)
+    Assert.Equal("MNc", (seg "47124" "S3").Fluid)
+    Assert.Equal(1000, (seg "47124" "S3").PN)
+    Assert.Equal(50, (seg "47124" "S3").DN)
+
+    // 47126 各段（S12/S2/S5/S6/S7/S9/S10 主段 1600/50；S13 覆盖 1000/25）
+    for num in
+        [
+            "S12"
+            "S2"
+            "S5"
+            "S6"
+            "S7"
+            "S9"
+            "S10"
+        ] do
+        let r = seg "47126" num
+        Assert.Equal("MNc", r.Fluid)
+        Assert.Equal(1600, r.PN)
+        Assert.Equal(50, r.DN)
+    Assert.Equal("MNc", (seg "47126" "S13").Fluid)
+    Assert.Equal(1000, (seg "47126" "S13").PN)
+    Assert.Equal(25, (seg "47126" "S13").DN)
+
+    // 枢纽段：
+    // 47124/S2 异径管：NetworkDN 复制 [80;80]，S3 段级联追加 50 → [50;80;80]；PN 覆盖 1000
+    // 47126/S1 三通：NetworkDN 复制 [50×5]，S13 段级联追加 25 → [25;50;50;50;50;50]；
+    //   PN 被 S13 递归覆盖 1000（SegmentRef S1）
+    // 47126/S11 三通：NetworkDN 复制 [50×4]，无段级覆盖 → [50;50;50;50]/1600
+    let hub line num =
+        e.HubSegments
+        |> List.find(fun r ->
+            r.LineNumber = line
+            && r.SegmentNumber = num
+        )
+    let h2 = hub "47124" "S2"
+    Assert.Equal("MNc", h2.Fluid)
+    Assert.Equal(1000, h2.PN)
+    Assert.Equal<int list>([ 50; 80; 80 ], h2.DNs)
+    let h1 = hub "47126" "S1"
+    Assert.Equal("MNc", h1.Fluid)
+    Assert.Equal(1000, h1.PN)
+    Assert.Equal<int list>([ 25; 50; 50; 50; 50; 50 ], h1.DNs)
+    let h11 = hub "47126" "S11"
+    Assert.Equal("MNc", h11.Fluid)
+    Assert.Equal(1600, h11.PN)
+    Assert.Equal<int list>([ 50; 50; 50; 50 ], h11.DNs)
+
+    // 管嘴：Network* 级联不写管嘴行，仅段级级联写入被引用管嘴——
+    // P4712/N1 由 47124/S3 级联写 1000/50；T4750/N5 由 47126/S13 级联写 1000/25；其余保持默认
+    let nz eq n =
+        e.Nozzles
+        |> List.find(fun r -> r.Equipment = eq && r.Nozzle = n)
+    let p4712n1 = nz "P4712" "N1"
+    Assert.Equal(1000, p4712n1.PN)
+    Assert.Equal(50, p4712n1.DN)
+    let t4750n5 = nz "T4750" "N5"
+    Assert.Equal(1000, t4750n5.PN)
+    Assert.Equal(25, t4750n5.DN)
+    let p4711n1 = nz "P4711" "N1"
+    Assert.Equal("", p4711n1.Fluid)
+    Assert.Equal(0, p4711n1.PN)
+    Assert.Equal(0, p4711n1.DN)
+
+    // 代表性段项：S13 弹簧安全阀与 S3 球阀 C4 随段级联写（MNc/1000/25、MNc/1000/50）
+    let item line num tag =
+        e.SegmentItems
+        |> List.find(fun r ->
+            r.LineNumber = line
+            && r.SegmentNumber = num
+            && r.Tag = tag
+        )
+    let sv = item "47126" "S13" "SpringLoadedGlobeSafetyValve1"
+    Assert.Equal("MNc", sv.Fluid)
+    Assert.Equal(1000, sv.PN)
+    Assert.Equal(25, sv.DN)
+    let bv = item "47124" "S3" "C4"
+    Assert.Equal("MNc", bv.Fluid)
+    Assert.Equal(1000, bv.PN)
+    Assert.Equal(50, bv.DN)
+
+/// 级联传播测试：应用 setprops 后，ModelEntities 各表属性符合 XML 参考值。
+type ReferencePidTest(output: ITestOutputHelper) =
+
+    [<Fact>]
+    member _.``setprops 后 ModelEntities 各表属性符合 reference_pid.xml 参考值``() =
+        assertExpected(setprops())
+
+    [<Fact>]
+    member _.``PlantModel 保存到 SQLite``() =
+        // 数据库放到本测试项目根目录，测试结束保留文件供查看
+        let dbPath = Path.GetFullPath(Path.Combine("..", "..", "..", "reference_pid.db"))
+        if File.Exists dbPath then
+            try File.Delete dbPath with _ -> ()
+        use conn = PlantModelDb.createDatabase dbPath
+        PlantModelDb.saveModel conn plantModel
+        output.WriteLine(sprintf "数据库已生成：%s" dbPath)
+
+    [<Fact>]
+    member _.``往返测试：独立模型保存后加载与原模型完全一致``() =
+        let dbPath = Path.GetFullPath(Path.Combine("..", "..", "..", "referencepid_roundtrip.db"))
+        if File.Exists dbPath then
+            try File.Delete dbPath with _ -> ()
+        try
+            use conn = PlantModelDb.createDatabase dbPath
+            PlantModelDb.saveModel conn plantModel
+            let loaded = PlantModelDb.loadModel conn
+            Assert.Equal(plantModel, loaded)
+        finally
+            if File.Exists dbPath then
+                try File.Delete dbPath with _ -> ()
