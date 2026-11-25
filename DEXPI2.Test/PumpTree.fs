@@ -58,7 +58,8 @@ let plantModel: PlantModel =
                                 [
                                     PipingNodeOwner.CheckValve(tag = "CV-101")
                                     PipingNodeOwner.PipeOffPageConnector(
-                                        pipeConnectorDescription = "排污管道"
+                                        network = "排污管道",
+                                        segment = ""
                                     )
                                 ]
                             )

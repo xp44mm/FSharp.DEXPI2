@@ -41,7 +41,8 @@ let plantModel: PlantModel =
                                     SegmentRef(segmentNumber = "S2")
 
                                     PipingNodeOwner.PipeOffPageConnector(
-                                        pipeConnectorDescription = "Outlet1"
+                                        network = "Outlet1",
+                                        segment = ""
                                     )
                                 ]
                             )
@@ -52,7 +53,8 @@ let plantModel: PlantModel =
                                     SegmentRef(segmentNumber = "S2")
 
                                     PipingNodeOwner.PipeOffPageConnector(
-                                        pipeConnectorDescription = "Outlet2"
+                                        network = "Outlet2",
+                                        segment = ""
                                     )
                                 ]
                             )

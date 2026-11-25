@@ -37,7 +37,8 @@ let plantModel: PlantModel =
                                 [
                                     SegmentRef(segmentNumber = "S2")
                                     PipingNodeOwner.PipeOffPageConnector(
-                                        pipeConnectorDescription = "To Sewer"
+                                        network = "Sewer",
+                                        segment = ""
                                     )
                                 ]
                             )

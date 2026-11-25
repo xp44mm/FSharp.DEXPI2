@@ -15,9 +15,9 @@ type PipingNodeOwner =
     //| ProcessNozzle of ProcessEquipment * string
 
     // PipeOffPageConnector 支（含抽象中间类）
-    | PipeOffPageConnector of pipeConnectorDescription: string
-    | FlowInPipeOffPageConnector of pipeConnectorDescription: string
-    | FlowOutPipeOffPageConnector of pipeConnectorDescription: string
+    | PipeOffPageConnector of network: string *segment:string
+    | FlowInPipeOffPageConnector of network: string *segment:string
+    | FlowOutPipeOffPageConnector of network: string *segment:string
 
     // PipingComponent 支（含抽象中间类）
     | PipingComponent of tag: string
@@ -94,19 +94,25 @@ module PipingNodeOwner =
     ///       单 tag 项 -> tag 值
     ///       Nozzle(eq,nz) -> "eq nz"
     ///       SegmentRef(num) -> num
-    ///       PipeOffPageConnector 支 -> description
+    ///       PipeOffPageConnector(n,s) -> "n s"（任一为空时省略空格）
     ///       Sensorwell(typeRep) -> nodeKind 形如 "Sensorwell <typeRep>"，tag 为空串
     ///       无参数项 -> tag 为空串 ""
     let toSqlite (node: PipingNodeOwner) : string * string =
         let act a = ActuatorType.toSqlite a
         let valveKind opvalve a = sprintf "%s %s" (act a) opvalve
+        let join2 a b =
+            match a, b with
+            | "", "" -> ""
+            | "", b -> b
+            | a, "" -> a
+            | a, b -> a + " " + b
 
         match node with
         | SegmentRef(num) -> "SegmentRef", num
         | Nozzle(eq, nz) -> "Nozzle", sprintf "%s %s" eq nz
-        | PipeOffPageConnector(desc) -> "PipeOffPageConnector", desc
-        | FlowInPipeOffPageConnector(desc) -> "FlowInPipeOffPageConnector", desc
-        | FlowOutPipeOffPageConnector(desc) -> "FlowOutPipeOffPageConnector", desc
+        | PipeOffPageConnector(n,s) -> "PipeOffPageConnector", join2 n s
+        | FlowInPipeOffPageConnector(n,s) -> "FlowInPipeOffPageConnector", join2 n s
+        | FlowOutPipeOffPageConnector(n,s) -> "FlowOutPipeOffPageConnector", join2 n s
         | PipingComponent(tag) -> "PipingComponent", tag
         | CheckValve(tag) -> "CheckValve", tag
         | GlobeCheckValve(tag) -> "GlobeCheckValve", tag
@@ -185,14 +191,21 @@ module PipingNodeOwner =
             match actuator with
             | Some a -> ctor (tag, a)
             | None -> failwithf "valve kind %s missing actuator" nodeKind
+
+        let pipeConnector ctor =
+            let np = if isNull tag then [||] else tag.Split(' ')
+            match np.Length with
+            | 0 -> ctor ("", "")
+            | 1 -> ctor (np.[0], "")
+            | _ -> ctor (np.[0], String.Join(" ", np.[1..]))
         match kindName with
         | "SegmentRef" -> SegmentRef(tag)
         | "Nozzle" ->
             let np = if isNull tag then [||] else tag.Split(' ')
             Nozzle(np.[0], np.[1])
-        | "PipeOffPageConnector" -> PipeOffPageConnector(tag)
-        | "FlowInPipeOffPageConnector" -> FlowInPipeOffPageConnector(tag)
-        | "FlowOutPipeOffPageConnector" -> FlowOutPipeOffPageConnector(tag)
+        | "PipeOffPageConnector" -> pipeConnector PipeOffPageConnector
+        | "FlowInPipeOffPageConnector" -> pipeConnector FlowInPipeOffPageConnector
+        | "FlowOutPipeOffPageConnector" -> pipeConnector FlowOutPipeOffPageConnector
         | "PipingComponent" -> PipingComponent(tag)
         | "CheckValve" -> CheckValve(tag)
         | "GlobeCheckValve" -> GlobeCheckValve(tag)

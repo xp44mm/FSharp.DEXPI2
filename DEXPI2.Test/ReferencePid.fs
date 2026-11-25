@@ -37,7 +37,8 @@ let plantModel: PlantModel =
                                 "S1",
                                 [
                                     PipingNodeOwner.FlowInPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                     PipingNodeOwner.Nozzle(
                                         equipment = "P4711",
@@ -235,7 +236,8 @@ let plantModel: PlantModel =
                                 [
                                     SegmentRef(segmentNumber = "S11")
                                     PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                 ]
                             )
@@ -278,7 +280,8 @@ let plantModel: PlantModel =
 
                                 [
                                     PipingNodeOwner.FlowInPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                     PipingNodeOwner.Nozzle(
                                         equipment = "H1007",
@@ -303,7 +306,8 @@ let plantModel: PlantModel =
                                         nozzle = "N4"
                                     )
                                     PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                 ]
                             )
@@ -320,7 +324,8 @@ let plantModel: PlantModel =
 
                                 [
                                     PipingNodeOwner.FlowInPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                     PipingNodeOwner.Nozzle(
                                         equipment = "H1008",
@@ -349,7 +354,8 @@ let plantModel: PlantModel =
                                         actuatorType = Manual
                                     )
                                     PipingNodeOwner.FlowOutPipeOffPageConnector(
-                                        pipeConnectorDescription = ""
+                                        network = "",
+                                        segment = ""
                                     )
                                 ]
                             )
